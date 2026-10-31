@@ -3,23 +3,15 @@ Let's make a game!
   author: BeKindRewind
 
 Layout
-*main
-  contains:res, buttons
-  *res
+  *resources
     contains:Resources
-    class:fullWidth
-  *buttons
-    contains:Buttons
-*store
-  contains:buildings, upgrades
+    header:These are your resources.
   *buildings
-    contains:BulkDisplay, Buildings
-    header:Buildings
+    contains:Buildings
+    header:These are things you can build.
     tooltip origin:left
-  *upgrades
-    contains:Upgrades
-    header:Upgrades
-    costs:hide
+  *unlockables
+    contains:Upgrades, Achievements
     names:hide
 
 Resources
