@@ -20,3 +20,8 @@ Let's make a game!
     header:Upgrades
     costs:hide
     names:hide
+
+Resources
+  *pie
+    name:Pie
+    desc:A delicious pie
