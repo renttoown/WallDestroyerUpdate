@@ -2,6 +2,7 @@ Let's make a game!
   name: learning the game
   author: BeKindRewind
 
+Layout
 *main
   contains:res, buttons
   *res
