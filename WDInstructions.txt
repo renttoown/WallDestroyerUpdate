@@ -2,7 +2,7 @@ Let's make a game!
 name:Wall Destroyer
 author:Tellurium
 created:21/04/2014
-updated:23/07/2023
+updated:11/02/2026
 version:2.5
 
 // Converted from the legacy Idle Game Maker format.
