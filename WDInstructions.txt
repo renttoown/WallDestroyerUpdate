@@ -144,6 +144,14 @@ Includes
 
 Resources
 
+// Manual damage rate sampled once per game second.
+*wdHandPrevious
+  hidden
+  tags:wdinternal
+*wdHandRate
+  hidden
+  tags:wdinternal
+
 *wdrep1
   hidden
   tags:wdinternal
@@ -618,7 +626,7 @@ Resources
   hidden
   name:hand damage
 
-  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="handDamage:ps"]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wdHandRate"]/s)
 *totalBricks
   hidden
   name:total bricks
@@ -1229,6 +1237,8 @@ Buttons
     totalMoney is 0
     nothing is nothing+handDamage
     handDamage is 0
+    wdHandPrevious is 0
+    wdHandRate is 0
     nothing is nothing+puncherDamage
     puncherDamage is 0
     nothing is nothing+clubberDamage
@@ -1572,6 +1582,8 @@ Buildings
   start with:1
   name:timeCounter
   on tick:
+    wdHandRate is max(0,handDamage-wdHandPrevious)
+    wdHandPrevious is handDamage
     if (resetTimes>=1) yield 0.016666666666666666 timeSinceReset
     yield 0.016666666666666666 timePlayed
     if (totalWalls>=300) show strangeGlitch
@@ -2113,6 +2125,10 @@ Buildings
     if (prestige>0) show prestige
     if (timesWon>0) show timesWon
     if (resetTimes>0) show resetTimes
+  end
+  on load:
+    wdHandPrevious is handDamage
+    wdHandRate is 0
   end
 
 *destroyWall
