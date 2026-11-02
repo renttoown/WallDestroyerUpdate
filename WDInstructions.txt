@@ -2052,419 +2052,6 @@ Buildings
     if (prestige>=10000000 and timesActuallyWon>=5) show trophy24
     if (prestige>=20000000 and timesActuallyWon>=6) show trophy25
     if (prestige>=33333333 and timesActuallyWon>=7) show trophy26
-    if ((totalMoney>=1) and no Overnab) yield Overnab
-    if ((totalMoney>=100) and no Scrub) yield Scrub
-    if ((totalMoney>=1000) and no LessScrub) yield LessScrub
-    if ((totalMoney>=10000) and no WallTapper) yield WallTapper
-    if ((totalMoney>=1000000) and no WallPuncher) yield WallPuncher
-    if ((totalMoney>=10000000) and no WallBreaker) yield WallBreaker
-    if ((totalMoney>=1000000000) and no WallSmasher) yield WallSmasher
-    if ((totalMoney>=100000000000) and no WallCrusher) yield WallCrusher
-    if ((wallsDestroyed>=1) and no wallDestroyer) yield wallDestroyer
-    if ((wallsDestroyed>=2) and no wallDestroyer2) yield wallDestroyer2
-    if ((wallsDestroyed>=3) and no wallDestroyer3) yield wallDestroyer3
-    if ((wallsDestroyed>=4) and no wallDestroyer4) yield wallDestroyer4
-    if ((wallsDestroyed>=5) and no wallDestroyer5) yield wallDestroyer5
-    if ((meshBossPoint>=1 and meshBricks>=1) and no wallTellurium) yield wallTellurium
-    if ((meshBossPoint>=4 and meshBricks>=1) and no wallTellurium2) yield wallTellurium2
-    if ((meshBossPoint>=9 and meshBricks>=1) and no wallTellurium3) yield wallTellurium3
-    if ((meshBossPoint>=14 and meshBricks>=1) and no wallTellurium4) yield wallTellurium4
-    if ((meshBossPoint>=19 and meshBricks>=1) and no wallTellurium5) yield wallTellurium5
-    if ((meshBossPoint>=24 and meshBricks>=1) and no wallTellurium6) yield wallTellurium6
-    if ((meshBossPoint>=29 and meshBricks>=1) and no wallTellurium7) yield wallTellurium7
-    if ((meshBossPoint>=39 and meshBricks>=1) and no wallTellurium8) yield wallTellurium8
-    if ((meshBossPoint>=49 and meshBricks>=1) and no wallTellurium9) yield wallTellurium9
-    if ((meshBossPoint>=59 and meshBricks>=1) and no wallTellurium10) yield wallTellurium10
-    if ((meshBossPoint>=69 and meshBricks>=1) and no wallTellurium11) yield wallTellurium11
-    if ((meshBossPoint>=79 and meshBricks>=1) and no wallTellurium12) yield wallTellurium12
-    if ((meshBossPoint>=89 and meshBricks>=1) and no wallTellurium13) yield wallTellurium13
-    if ((meshBossPoint>=99 and meshBricks>=1) and no wallTellurium14) yield wallTellurium14
-    if ((money>=5200000000000) and no moneySpecific01) yield moneySpecific01
-    if ((money>=5000000000000000) and no moneySpecific02) yield moneySpecific02
-    if ((money>=26900000000000000000000000000000) and no moneySpecific03) yield moneySpecific03
-    if ((money>=1000000000000000) and no moneyAchieve01) yield moneyAchieve01
-    if ((money>=1000000000000000000) and no moneyAchieve02) yield moneyAchieve02
-    if ((money>=1000000000000000000000) and no moneyAchieve03) yield moneyAchieve03
-    if ((money>=1000000000000000000000000) and no moneyAchieve04) yield moneyAchieve04
-    if ((money>=1000000000000000000000000000) and no moneyAchieve05) yield moneyAchieve05
-    if ((money>=1000000000000000000000000000000) and no moneyAchieve06) yield moneyAchieve06
-    if ((money>=1000000000000000000000000000000000) and no moneyAchieve07) yield moneyAchieve07
-    if ((money>=1000000000000000000000000000000000000) and no moneyAchieve08) yield moneyAchieve08
-    if ((money>=1000000000000000000000000000000000000000) and no moneyAchieve09) yield moneyAchieve09
-    if ((money>=1000000000000000000000000000000000000000000) and no moneyAchieve10) yield moneyAchieve10
-    if ((money>=1000000000000000000000000000000000000000000000) and no moneyAchieve11) yield moneyAchieve11
-    if ((money>=1000000000000000000000000000000000000000000000000) and no moneyAchieve12) yield moneyAchieve12
-    if ((tesseractDamage>=100000000000000000) and no wd154) yield wd154
-    if ((tesseractDamage>=100000000000000000000) and no wd155) yield wd155
-    if ((tesseractDamage>=100000000000000000000000) and no wd156) yield wd156
-    if ((tesseractDamage>=100000000000000000000000000) and no wd157) yield wd157
-    if ((tesseractDamage>=100000000000000000000000000000) and no wd158) yield wd158
-    if ((tesseractDamage>=100000000000000000000000000000000) and no wd159) yield wd159
-    if ((tesseractDamage>=100000000000000000000000000000000000000) and no wd160) yield wd160
-    if ((tesseractDamage>=100000000000000000000000000000000000000000000) and no wd161) yield wd161
-    if ((tesseractDamage>=100000000000000000000000000000000000000000000000) and no wd162) yield wd162
-    if ((resetTimes>=10) and no resetTimesAchieve01) yield resetTimesAchieve01
-    if ((resetTimes>=50) and no resetTimesAchieve02) yield resetTimesAchieve02
-    if ((resetTimes>=100) and no resetTimesAchieve03) yield resetTimesAchieve03
-    if ((resetTimes>=500) and no resetTimesAchieve04) yield resetTimesAchieve04
-    if ((timePlayed>=15) and no tellIsLameAchieve) yield tellIsLameAchieve
-    if ((timePlayed>=30) and no tellIsLameAchieve2) yield tellIsLameAchieve2
-    if ((timePlayed>=60) and no tellIsLameAchieve3) yield tellIsLameAchieve3
-    if ((timePlayed>=120) and no tellIsLameAchieve4) yield tellIsLameAchieve4
-    if ((timePlayed>=180) and no tellIsLameAchieve5) yield tellIsLameAchieve5
-    if ((timePlayed>=360) and no tellIsLameAchieve6) yield tellIsLameAchieve6
-    if ((timePlayed>=540) and no tellIsLameAchieve7) yield tellIsLameAchieve7
-    if ((timePlayed>=720) and no tellIsLameAchieve8) yield tellIsLameAchieve8
-    if ((timePlayed>=1080) and no tellIsLameAchieve9) yield tellIsLameAchieve9
-    if ((timePlayed>=1440) and no tellIsLameAchieve10) yield tellIsLameAchieve10
-    if ((timePlayed>=4320) and no tellIsLameAchieve11) yield tellIsLameAchieve11
-    if ((timePlayed>=7200) and no tellIsLameAchieve12) yield tellIsLameAchieve12
-    if ((timePlayed>=10080) and no tellIsLameAchieve13) yield tellIsLameAchieve13
-    if ((timePlayed>=20160) and no tellIsLameAchieve14) yield tellIsLameAchieve14
-    if ((timePlayed>=30240) and no tellIsLameAchieve14a) yield tellIsLameAchieve14a
-    if ((timePlayed>=40320) and no tellIsLameAchieve15) yield tellIsLameAchieve15
-    if ((timePlayed>=60480) and no tellIsLameAchieve16) yield tellIsLameAchieve16
-    if ((timePlayed>=80640) and no tellIsLameAchieve17) yield tellIsLameAchieve17
-    if ((timePlayed>=100800) and no tellIsLameAchieve18) yield tellIsLameAchieve18
-    if ((timePlayed>=151200) and no tellIsLameAchieve19) yield tellIsLameAchieve19
-    if ((timePlayed>=262800) and no tellIsLameAchieve20) yield tellIsLameAchieve20
-    if ((timePlayed>=350400) and no tellIsLameAchieve21) yield tellIsLameAchieve21
-    if ((timePlayed>=525600) and no tellIsLameAchieve22) yield tellIsLameAchieve22
-    if ((handDamage>=100) and no handDamage1) yield handDamage1
-    if ((handDamage>=10000) and no handDamage2) yield handDamage2
-    if ((handDamage>=1000000) and no handDamage3) yield handDamage3
-    if ((handDamage>=100000000) and no handDamage4) yield handDamage4
-    if ((handDamage>=10000000000) and no handDamage5) yield handDamage5
-    if ((handDamage>=1000000000000) and no handDamage6) yield handDamage6
-    if ((handDamage>=100000000000000) and no handDamage7) yield handDamage7
-    if ((handDamage>=10000000000000000) and no handDamage8) yield handDamage8
-    if ((handDamage>=1000000000000000000) and no handDamage9) yield handDamage9
-    if ((handDamage>=100000000000000000000) and no handDamage10) yield handDamage10
-    if ((handDamage>=10000000000000000000000) and no handDamage11) yield handDamage11
-    if ((handDamage>=1000000000000000000000000) and no handDamage12) yield handDamage12
-    if ((handDamage>=100000000000000000000000000) and no handDamage13) yield handDamage13
-    if ((handDamage>=10000000000000000000000000000) and no handDamage14) yield handDamage14
-    if ((handDamage>=10000000000000000000000000000000) and no handDamage15) yield handDamage15
-    if ((handDamage>=10000000000000000000000000000000000) and no handDamage16) yield handDamage16
-    if ((handDamage>=10000000000000000000000000000000000000) and no handDamage17) yield handDamage17
-    if ((handDamage>=10000000000000000000000000000000000000000) and no handDamage18) yield handDamage18
-    if ((handDamage>=10000000000000000000000000000000000000000000) and no handDamage19) yield handDamage19
-    if ((handBricks>=100) and no HandBrickAchieve1) yield HandBrickAchieve1
-    if ((handBricks>=10000) and no HandBrickAchieve2) yield HandBrickAchieve2
-    if ((handBricks>=1000000) and no HandBrickAchieve3) yield HandBrickAchieve3
-    if ((handBricks>=100000000) and no HandBrickAchieve4) yield HandBrickAchieve4
-    if ((handBricks>=10000000000) and no HandBrickAchieve5) yield HandBrickAchieve5
-    if ((handBricks>=1000000000000) and no HandBrickAchieve6) yield HandBrickAchieve6
-    if ((handBricks>=100000000000000) and no HandBrickAchieve7) yield HandBrickAchieve7
-    if ((handBricks>=10000000000000000) and no HandBrickAchieve8) yield HandBrickAchieve8
-    if ((handBricks>=1000000000000000000) and no HandBrickAchieve9) yield HandBrickAchieve9
-    if ((handBricks>=1000000000000000000000) and no HandBrickAchieve10) yield HandBrickAchieve10
-    if ((handBricks>=1000000000000000000000000) and no HandBrickAchieve11) yield HandBrickAchieve11
-    if ((handBricks>=1000000000000000000000000000) and no HandBrickAchieve12) yield HandBrickAchieve12
-    if ((puncher>=1) and no puncherAchieve1) yield puncherAchieve1
-    if ((puncher>=10) and no puncherAchieve2) yield puncherAchieve2
-    if ((puncher>=50) and no puncherAchieve3) yield puncherAchieve3
-    if ((puncher>=100) and no puncherAchieve4) yield puncherAchieve4
-    if ((puncher>=150) and no puncherAchieve5) yield puncherAchieve5
-    if ((puncher>=200) and no puncherAchieve6) yield puncherAchieve6
-    if ((puncher>=300) and no puncherAchieve7) yield puncherAchieve7
-    if ((puncher>=400) and no puncherAchieve8) yield puncherAchieve8
-    if ((puncher>=500) and no puncherAchieve9) yield puncherAchieve9
-    if ((puncher>=600) and no puncherAchieve10) yield puncherAchieve10
-    if ((puncher>=700) and no puncherAchieve11) yield puncherAchieve11
-    if ((puncher>=800) and no puncherAchieve12) yield puncherAchieve12
-    if ((puncher>=900) and no puncherAchieve13) yield puncherAchieve13
-    if ((puncher>=1000) and no puncherAchieve14) yield puncherAchieve14
-    if ((puncher>=1100) and no puncherAchieve15) yield puncherAchieve15
-    if ((puncherDamage>=1000000000) and no puncherDamageAchieve) yield puncherDamageAchieve
-    if ((puncherDamage>=1000000000000) and no wd163) yield wd163
-    if ((puncherDamage>=1000000000000000000) and no wd164) yield wd164
-    if ((puncherDamage>=1000000000000000000000000000) and no wd165) yield wd165
-    if ((puncherDamage>=1000000000000000000000000000000000) and no wd166) yield wd166
-    if ((puncherDamage>=1000000000000000000000000000000000000000) and no wd167) yield wd167
-    if ((clubber>=1) and no clubberAchieve1) yield clubberAchieve1
-    if ((clubber>=10) and no clubberAchieve2) yield clubberAchieve2
-    if ((clubber>=50) and no clubberAchieve3) yield clubberAchieve3
-    if ((clubber>=100) and no clubberAchieve4) yield clubberAchieve4
-    if ((clubber>=150) and no clubberAchieve5) yield clubberAchieve5
-    if ((clubber>=200) and no clubberAchieve6) yield clubberAchieve6
-    if ((clubber>=300) and no clubberAchieve7) yield clubberAchieve7
-    if ((clubber>=400) and no clubberAchieve8) yield clubberAchieve8
-    if ((clubber>=500) and no clubberAchieve9) yield clubberAchieve9
-    if ((clubber>=600) and no clubberAchieve10) yield clubberAchieve10
-    if ((clubber>=700) and no clubberAchieve11) yield clubberAchieve11
-    if ((clubber>=800) and no clubberAchieve12) yield clubberAchieve12
-    if ((clubber>=900) and no clubberAchieve13) yield clubberAchieve13
-    if ((clubber>=1000) and no clubberAchieve14) yield clubberAchieve14
-    if ((clubber>=1100) and no clubberAchieve15) yield clubberAchieve15
-    if ((clubberDamage>=10000000000) and no clubberDamageAchieve) yield clubberDamageAchieve
-    if ((clubberDamage>=10000000000000) and no wd168) yield wd168
-    if ((clubberDamage>=10000000000000000000) and no wd169) yield wd169
-    if ((clubberDamage>=10000000000000000000000000000) and no wd170) yield wd170
-    if ((clubberDamage>=10000000000000000000000000000000000) and no wd171) yield wd171
-    if ((clubberDamage>=10000000000000000000000000000000000000000) and no wd172) yield wd172
-    if ((swordsman>=1) and no swordsmanAchieve1) yield swordsmanAchieve1
-    if ((swordsman>=10) and no swordsmanAchieve2) yield swordsmanAchieve2
-    if ((swordsman>=50) and no swordsmanAchieve3) yield swordsmanAchieve3
-    if ((swordsman>=100) and no swordsmanAchieve4) yield swordsmanAchieve4
-    if ((swordsman>=150) and no swordsmanAchieve5) yield swordsmanAchieve5
-    if ((swordsman>=200) and no swordsmanAchieve6) yield swordsmanAchieve6
-    if ((swordsman>=300) and no swordsmanAchieve7) yield swordsmanAchieve7
-    if ((swordsman>=400) and no swordsmanAchieve8) yield swordsmanAchieve8
-    if ((swordsman>=500) and no swordsmanAchieve9) yield swordsmanAchieve9
-    if ((swordsman>=600) and no swordsmanAchieve10) yield swordsmanAchieve10
-    if ((swordsman>=700) and no swordsmanAchieve11) yield swordsmanAchieve11
-    if ((swordsman>=800) and no swordsmanAchieve12) yield swordsmanAchieve12
-    if ((swordsman>=900) and no swordsmanAchieve13) yield swordsmanAchieve13
-    if ((swordsman>=1000) and no swordsmanAchieve14) yield swordsmanAchieve14
-    if ((swordsmanDamage>=100000000000) and no swordDamageAchieve) yield swordDamageAchieve
-    if ((swordsmanDamage>=100000000000000) and no swordDamageAchieve2) yield swordDamageAchieve2
-    if ((swordsmanDamage>=100000000000000000000) and no swordDamageAchieve3) yield swordDamageAchieve3
-    if ((swordsmanDamage>=100000000000000000000000000000) and no swordDamageAchieve4) yield swordDamageAchieve4
-    if ((swordsmanDamage>=100000000000000000000000000000000000) and no swordDamageAchieve5) yield swordDamageAchieve5
-    if ((swordsmanDamage>=100000000000000000000000000000000000000000) and no swordDamageAchieve6) yield swordDamageAchieve6
-    if ((gunner>=1) and no gunnerAchieve1) yield gunnerAchieve1
-    if ((gunner>=10) and no gunnerAchieve2) yield gunnerAchieve2
-    if ((gunner>=50) and no gunnerAchieve3) yield gunnerAchieve3
-    if ((gunner>=100) and no gunnerAchieve4) yield gunnerAchieve4
-    if ((gunner>=150) and no gunnerAchieve5) yield gunnerAchieve5
-    if ((gunner>=200) and no gunnerAchieve6) yield gunnerAchieve6
-    if ((gunner>=300) and no gunnerAchieve7) yield gunnerAchieve7
-    if ((gunner>=400) and no gunnerAchieve8) yield gunnerAchieve8
-    if ((gunner>=500) and no gunnerAchieve9) yield gunnerAchieve9
-    if ((gunner>=600) and no gunnerAchieve10) yield gunnerAchieve10
-    if ((gunner>=700) and no gunnerAchieve11) yield gunnerAchieve11
-    if ((gunner>=800) and no gunnerAchieve12) yield gunnerAchieve12
-    if ((gunner>=900) and no gunnerAchieve13) yield gunnerAchieve13
-    if ((gunner>=1000) and no gunnerAchieve14) yield gunnerAchieve14
-    if ((gunnerDamage>=1000000000000) and no gunnerDamageAchieve) yield gunnerDamageAchieve
-    if ((gunnerDamage>=1000000000000000) and no gunnerDamageAchieve2) yield gunnerDamageAchieve2
-    if ((gunnerDamage>=1000000000000000000000) and no gunnerDamageAchieve3) yield gunnerDamageAchieve3
-    if ((gunnerDamage>=1000000000000000000000000000000) and no gunnerDamageAchieve4) yield gunnerDamageAchieve4
-    if ((gunnerDamage>=1000000000000000000000000000000000000) and no gunnerDamageAchieve5) yield gunnerDamageAchieve5
-    if ((gunnerDamage>=1000000000000000000000000000000000000000000) and no gunnerDamageAchieve6) yield gunnerDamageAchieve6
-    if ((grenade>=1) and no grenadeAchieve1) yield grenadeAchieve1
-    if ((grenade>=10) and no grenadeAchieve2) yield grenadeAchieve2
-    if ((grenade>=50) and no grenadeAchieve3) yield grenadeAchieve3
-    if ((grenade>=100) and no grenadeAchieve4) yield grenadeAchieve4
-    if ((grenade>=150) and no grenadeAchieve5) yield grenadeAchieve5
-    if ((grenade>=200) and no grenadeAchieve6) yield grenadeAchieve6
-    if ((grenade>=300) and no grenadeAchieve7) yield grenadeAchieve7
-    if ((grenade>=400) and no grenadeAchieve8) yield grenadeAchieve8
-    if ((grenade>=500) and no grenadeAchieve9) yield grenadeAchieve9
-    if ((grenade>=600) and no grenadeAchieve10) yield grenadeAchieve10
-    if ((grenade>=700) and no grenadeAchieve11) yield grenadeAchieve11
-    if ((grenade>=800) and no grenadeAchieve12) yield grenadeAchieve12
-    if ((grenade>=900) and no grenadeAchieve13) yield grenadeAchieve13
-    if ((grenade>=1000) and no grenadeAchieve14) yield grenadeAchieve14
-    if ((grenadeDamage>=10000000000000) and no grenadeDamageAchieve) yield grenadeDamageAchieve
-    if ((grenadeDamage>=10000000000000000) and no wd173) yield wd173
-    if ((grenadeDamage>=10000000000000000000000) and no wd174) yield wd174
-    if ((grenadeDamage>=10000000000000000000000000000000) and no wd175) yield wd175
-    if ((grenadeDamage>=10000000000000000000000000000000000000) and no wd176) yield wd176
-    if ((grenadeDamage>=10000000000000000000000000000000000000000000) and no wd177) yield wd177
-    if ((wreckingBall>=1) and no wreckingBallAchieve1) yield wreckingBallAchieve1
-    if ((wreckingBall>=10) and no wreckingBallAchieve2) yield wreckingBallAchieve2
-    if ((wreckingBall>=50) and no wreckingBallAchieve3) yield wreckingBallAchieve3
-    if ((wreckingBall>=100) and no wreckingBallAchieve4) yield wreckingBallAchieve4
-    if ((wreckingBall>=150) and no wreckingBallAchieve5) yield wreckingBallAchieve5
-    if ((wreckingBall>=200) and no wreckingBallAchieve6) yield wreckingBallAchieve6
-    if ((wreckingBall>=300) and no wreckingBallAchieve7) yield wreckingBallAchieve7
-    if ((wreckingBall>=400) and no wreckingBallAchieve8) yield wreckingBallAchieve8
-    if ((wreckingBall>=500) and no wreckingBallAchieve9) yield wreckingBallAchieve9
-    if ((wreckingBall>=600) and no wd178) yield wd178
-    if ((wreckingBall>=700) and no wd179) yield wd179
-    if ((wreckingBall>=800) and no wd180) yield wd180
-    if ((wreckingBall>=900) and no wd181) yield wd181
-    if ((wreckingBallDamage>=100000000000000) and no wd182) yield wd182
-    if ((wreckingBallDamage>=100000000000000000) and no wd183) yield wd183
-    if ((wreckingBallDamage>=100000000000000000000000) and no wd184) yield wd184
-    if ((wreckingBallDamage>=100000000000000000000000000000000) and no wd185) yield wd185
-    if ((wreckingBallDamage>=100000000000000000000000000000000000000) and no wd186) yield wd186
-    if ((wreckingBallDamage>=100000000000000000000000000000000000000000000) and no wd187) yield wd187
-    if ((bulldozer>=1) and no bulldozerAchieve1) yield bulldozerAchieve1
-    if ((bulldozer>=10) and no bulldozerAchieve2) yield bulldozerAchieve2
-    if ((bulldozer>=50) and no bulldozerAchieve3) yield bulldozerAchieve3
-    if ((bulldozer>=100) and no bulldozerAchieve4) yield bulldozerAchieve4
-    if ((bulldozer>=150) and no bulldozerAchieve5) yield bulldozerAchieve5
-    if ((bulldozer>=200) and no bulldozerAchieve6) yield bulldozerAchieve6
-    if ((bulldozer>=300) and no bulldozerAchieve7) yield bulldozerAchieve7
-    if ((bulldozer>=400) and no bulldozerAchieve8) yield bulldozerAchieve8
-    if ((bulldozer>=500) and no bulldozerAchieve9) yield bulldozerAchieve9
-    if ((bulldozer>=600) and no bulldozerAchieve10) yield bulldozerAchieve10
-    if ((bulldozer>=700) and no bulldozerAchieve11) yield bulldozerAchieve11
-    if ((bulldozer>=800) and no bulldozerAchieve12) yield bulldozerAchieve12
-    if ((bulldozerDamage>=200000000000000) and no wd188) yield wd188
-    if ((bulldozerDamage>=200000000000000000) and no wd189) yield wd189
-    if ((bulldozerDamage>=200000000000000000000000) and no wd190) yield wd190
-    if ((bulldozerDamage>=200000000000000000000000000000000) and no wd191) yield wd191
-    if ((bulldozerDamage>=200000000000000000000000000000000000000) and no wd192) yield wd192
-    if ((bulldozerDamage>=200000000000000000000000000000000000000000000) and no wd193) yield wd193
-    if ((airstrike>=1) and no airstrikeAchieve1) yield airstrikeAchieve1
-    if ((airstrike>=10) and no airstrikeAchieve2) yield airstrikeAchieve2
-    if ((airstrike>=50) and no airstrikeAchieve3) yield airstrikeAchieve3
-    if ((airstrike>=100) and no airstrikeAchieve4) yield airstrikeAchieve4
-    if ((airstrike>=150) and no airstrikeAchieve5) yield airstrikeAchieve5
-    if ((airstrike>=200) and no airstrikeAchieve6) yield airstrikeAchieve6
-    if ((airstrike>=300) and no airstrikeAchieve7) yield airstrikeAchieve7
-    if ((airstrike>=400) and no airstrikeAchieve8) yield airstrikeAchieve8
-    if ((airstrike>=500) and no airstrikeAchieve9) yield airstrikeAchieve9
-    if ((airstrike>=600) and no airstrikeAchieve10) yield airstrikeAchieve10
-    if ((airstrike>=700) and no airstrikeAchieve11) yield airstrikeAchieve11
-    if ((airstrike>=800) and no airstrikeAchieve12) yield airstrikeAchieve12
-    if ((airstrikeDamage>=2000000000000000) and no wd194) yield wd194
-    if ((airstrikeDamage>=2000000000000000000) and no wd195) yield wd195
-    if ((airstrikeDamage>=2000000000000000000000000) and no wd196) yield wd196
-    if ((airstrikeDamage>=2000000000000000000000000000000) and no wd197) yield wd197
-    if ((airstrikeDamage>=2000000000000000000000000000000000000) and no wd198) yield wd198
-    if ((airstrikeDamage>=2000000000000000000000000000000000000000000) and no wd199) yield wd199
-    if ((necromancer>=1) and no necromancerAchieve1) yield necromancerAchieve1
-    if ((necromancer>=10) and no necromancerAchieve2) yield necromancerAchieve2
-    if ((necromancer>=50) and no necromancerAchieve3) yield necromancerAchieve3
-    if ((necromancer>=100) and no necromancerAchieve4) yield necromancerAchieve4
-    if ((necromancer>=150) and no necromancerAchieve5) yield necromancerAchieve5
-    if ((necromancer>=200) and no necromancerAchieve6) yield necromancerAchieve6
-    if ((necromancer>=300) and no necromancerAchieve7) yield necromancerAchieve7
-    if ((necromancer>=400) and no necromancerAchieve8) yield necromancerAchieve8
-    if ((necromancer>=500) and no necromancerAchieve9) yield necromancerAchieve9
-    if ((necromancer>=600) and no necromancerAchieve10) yield necromancerAchieve10
-    if ((necromancerDamage>=100000000000000000) and no wd200) yield wd200
-    if ((necromancerDamage>=100000000000000000000000) and no wd201) yield wd201
-    if ((necromancerDamage>=100000000000000000000000000) and no wd202) yield wd202
-    if ((necromancerDamage>=100000000000000000000000000000000000) and no wd203) yield wd203
-    if ((necromancerDamage>=100000000000000000000000000000000000000000) and no wd204) yield wd204
-    if ((giant>=1) and no giantAchieve1) yield giantAchieve1
-    if ((giant>=10) and no giantAchieve2) yield giantAchieve2
-    if ((giant>=50) and no giantAchieve3) yield giantAchieve3
-    if ((giant>=100) and no giantAchieve4) yield giantAchieve4
-    if ((giant>=150) and no giantAchieve5) yield giantAchieve5
-    if ((giant>=200) and no giantAchieve6) yield giantAchieve6
-    if ((giant>=300) and no giantAchieve7) yield giantAchieve7
-    if ((giant>=400) and no giantAchieve8) yield giantAchieve8
-    if ((giant>=500) and no giantAchieve9) yield giantAchieve9
-    if ((giant>=600) and no giantAchieve10) yield giantAchieve10
-    if ((giantDamage>=300000000000000000) and no giantDamageAchieve) yield giantDamageAchieve
-    if ((giantDamage>=300000000000000000000000) and no giantDamageAchieve2) yield giantDamageAchieve2
-    if ((giantDamage>=300000000000000000000000000) and no giantDamageAchieve3) yield giantDamageAchieve3
-    if ((giantDamage>=300000000000000000000000000000000000) and no giantDamageAchieve4) yield giantDamageAchieve4
-    if ((giantDamage>=300000000000000000000000000000000000000000) and no giantDamageAchieve5) yield giantDamageAchieve5
-    if ((brickFactory>=1) and no brickFactoryAchieve1) yield brickFactoryAchieve1
-    if ((brickFactory>=10) and no brickFactoryAchieve2) yield brickFactoryAchieve2
-    if ((brickFactory>=50) and no brickFactoryAchieve3) yield brickFactoryAchieve3
-    if ((brickFactory>=100) and no brickFactoryAchieve4) yield brickFactoryAchieve4
-    if ((brickFactory>=150) and no brickFactoryAchieve5) yield brickFactoryAchieve5
-    if ((brickFactory>=200) and no brickFactoryAchieve6) yield brickFactoryAchieve6
-    if ((brickFactory>=300) and no brickFactoryAchieve7) yield brickFactoryAchieve7
-    if ((brickFactory>=400) and no brickFactoryAchieve8) yield brickFactoryAchieve8
-    if ((brickFactory>=500) and no brickFactoryAchieve9) yield brickFactoryAchieve9
-    if ((brickFactory>=600) and no wd205) yield wd205
-    if ((demon>=1) and no DemonAchieve1) yield DemonAchieve1
-    if ((demon>=10) and no DemonAchieve2) yield DemonAchieve2
-    if ((demon>=50) and no DemonAchieve3) yield DemonAchieve3
-    if ((demon>=100) and no DemonAchieve4) yield DemonAchieve4
-    if ((demon>=150) and no DemonAchieve5) yield DemonAchieve5
-    if ((demon>=200) and no DemonAchieve6) yield DemonAchieve6
-    if ((demon>=300) and no DemonAchieve7) yield DemonAchieve7
-    if ((demon>=400) and no DemonAchieve8) yield DemonAchieve8
-    if ((demon>=500) and no demonAchieve9) yield demonAchieve9
-    if ((demon>=600) and no demonAchieve10) yield demonAchieve10
-    if ((demon>=666) and no wd206) yield wd206
-    if ((demonDamage>=600000000000000000) and no demonDamageAchieve) yield demonDamageAchieve
-    if ((demonDamage>=600000000000000000000000) and no demonDamageAchieve2) yield demonDamageAchieve2
-    if ((demonDamage>=600000000000000000000000000) and no demonDamageAchieve3) yield demonDamageAchieve3
-    if ((demonDamage>=600000000000000000000000000000000000) and no demonDamageAchieve4) yield demonDamageAchieve4
-    if ((demonDamage>=600000000000000000000000000000000000000000) and no demonDamageAchieve5) yield demonDamageAchieve5
-    if ((compromiser>=1) and no compromiserAchieve) yield compromiserAchieve
-    if ((compromiser>=10) and no compromiserAchieve2) yield compromiserAchieve2
-    if ((compromiser>=50) and no compromiserAchieve3) yield compromiserAchieve3
-    if ((compromiser>=100) and no compromiserAchieve4) yield compromiserAchieve4
-    if ((compromiser>=150) and no compromiserAchieve5) yield compromiserAchieve5
-    if ((compromiser>=200) and no compromiserAchieve6) yield compromiserAchieve6
-    if ((compromiser>=300) and no compromiserAchieve7) yield compromiserAchieve7
-    if ((compromiser>=400) and no compromiserAchieve8) yield compromiserAchieve8
-    if ((compromiser>=500) and no compromiserAchieve9) yield compromiserAchieve9
-    if ((compromiser>=600) and no compromiserAchieve10) yield compromiserAchieve10
-    if ((compromiserDamage>=1000000000000000000) and no wd207) yield wd207
-    if ((compromiserDamage>=1000000000000000000000000) and no wd208) yield wd208
-    if ((compromiserDamage>=1000000000000000000000000000) and no wd209) yield wd209
-    if ((compromiserDamage>=1000000000000000000000000000000000000) and no wd210) yield wd210
-    if ((compromiserDamage>=1000000000000000000000000000000000000000000) and no wd211) yield wd211
-    if ((lastBuilding>=1) and no lastBuildingAchieve) yield lastBuildingAchieve
-    if ((lastBuilding>=10) and no lastBuildingAchieve2) yield lastBuildingAchieve2
-    if ((lastBuilding>=50) and no lastBuildingAchieve3) yield lastBuildingAchieve3
-    if ((lastBuilding>=100) and no lastBuildingAchieve4) yield lastBuildingAchieve4
-    if ((lastBuilding>=150) and no lastBuildingAchieve5) yield lastBuildingAchieve5
-    if ((lastBuilding>=200) and no lastBuildingAchieve6) yield lastBuildingAchieve6
-    if ((lastBuilding>=300) and no lastBuildingAchieve7) yield lastBuildingAchieve7
-    if ((lastBuilding>=400) and no lastBuildingAchieve8) yield lastBuildingAchieve8
-    if ((lastBuilding>=500) and no lastBuildingAchieve9) yield lastBuildingAchieve9
-    if ((lastBuilding>=600) and no wd212) yield wd212
-    if ((lastDamage>=1000000000000000000000000) and no lastDamageAchieve) yield lastDamageAchieve
-    if ((lastDamage>=1000000000000000000000000000) and no lastDamageAchieve2) yield lastDamageAchieve2
-    if ((lastDamage>=1000000000000000000000000000000000) and no lastDamageAchieve3) yield lastDamageAchieve3
-    if ((lastDamage>=1000000000000000000000000000000000000000000) and no lastDamageAchieve4) yield lastDamageAchieve4
-    if ((lastDamage>=100000000000000000000000000000000000000000000) and no lastDamageAchieve5) yield lastDamageAchieve5
-    if ((singularityBuilding>=1) and no wd213) yield wd213
-    if ((singularityBuilding>=10) and no wd214) yield wd214
-    if ((singularityBuilding>=50) and no wd215) yield wd215
-    if ((singularityBuilding>=100) and no wd216) yield wd216
-    if ((singularityBuilding>=150) and no wd217) yield wd217
-    if ((singularityBuilding>=200) and no wd218) yield wd218
-    if ((singularityBuilding>=300) and no wd219) yield wd219
-    if ((singularityBuilding>=400) and no wd220) yield wd220
-    if ((singularityBuilding>=500) and no wd221) yield wd221
-    if ((singularityBuilding>=600) and no wd222) yield wd222
-    if ((singularityDamage>=100000000000000000000000000000) and no singDamageAchieve) yield singDamageAchieve
-    if ((singularityDamage>=10000000000000000000000000000000) and no singDamageAchieve2) yield singDamageAchieve2
-    if ((singularityDamage>=100000000000000000000000000000000000) and no singDamageAchieve3) yield singDamageAchieve3
-    if ((singularityDamage>=100000000000000000000000000000000000000000000) and no singDamageAchieve4) yield singDamageAchieve4
-    if ((edgeBeing>=1) and no edgeBeingAchieve1) yield edgeBeingAchieve1
-    if ((edgeBeing>=10) and no edgeBeingAchieve2) yield edgeBeingAchieve2
-    if ((edgeBeing>=50) and no edgeBeingAchieve3) yield edgeBeingAchieve3
-    if ((edgeBeing>=100) and no edgeBeingAchieve4) yield edgeBeingAchieve4
-    if ((edgeBeing>=150) and no edgeBeingAchieve5) yield edgeBeingAchieve5
-    if ((edgeBeing>=200) and no edgeBeingAchieve6) yield edgeBeingAchieve6
-    if ((edgeBeing>=300) and no edgeBeingAchieve7) yield edgeBeingAchieve7
-    if ((edgeBeing>=400) and no edgeBeingAchieve8) yield edgeBeingAchieve8
-    if ((edgeBeing>=500) and no edgeBeingAchieve9) yield edgeBeingAchieve9
-    if ((edgeBeingDamage>=500000000000000000000000000000000) and no wd223) yield wd223
-    if ((edgeBeingDamage>=500000000000000000000000000000000000) and no wd224) yield wd224
-    if ((edgeBeingDamage>=500000000000000000000000000000000000000000) and no wd225) yield wd225
-    if ((edgeBeingDamage>=500000000000000000000000000000000000000000000) and no wd226) yield wd226
-    if ((strangeGlitch>=1) and no glitchAchieve1) yield glitchAchieve1
-    if ((strangeGlitch>=10) and no glitchAchieve2) yield glitchAchieve2
-    if ((strangeGlitch>=25) and no glitchAchieve3) yield glitchAchieve3
-    if ((strangeGlitch>=50) and no glitchAchieve4) yield glitchAchieve4
-    if ((building>=100) and no buildingAchieve1) yield buildingAchieve1
-    if ((building>=500) and no buildingAchieve2) yield buildingAchieve2
-    if ((building>=1000) and no buildingAchieve3) yield buildingAchieve3
-    if ((building>=2000) and no buildingAchieve4) yield buildingAchieve4
-    if ((building>=3000) and no buildingAchieve5) yield buildingAchieve5
-    if ((building>=5000) and no buildingAchieve6) yield buildingAchieve6
-    if ((building>=7500) and no buildingAchieve7) yield buildingAchieve7
-    if ((building>=10000) and no buildingAchieve8) yield buildingAchieve8
-    if ((building>=12500) and no buildingAchieve9) yield buildingAchieve9
-    if ((building>=15000) and no buildingAchieve10) yield buildingAchieve10
-    if ((buildings>=10000) and no wd227) yield wd227
-    if ((buildings>=20000) and no wd228) yield wd228
-    if ((buildings>=30000) and no wd229) yield wd229
-    if ((buildings>=50000) and no wd230) yield wd230
-    if ((buildings>=75000) and no wd231) yield wd231
-    if ((buildings>=100000) and no wd232) yield wd232
-    if ((buildings>=150000) and no wd233) yield wd233
-    if ((buildings>=200000) and no wd234) yield wd234
-    if ((totalWalls>=100) and no totalWallsAchieve1) yield totalWallsAchieve1
-    if ((totalWalls>=250) and no totalWallsAchieve2) yield totalWallsAchieve2
-    if ((totalWalls>=500) and no totalWallsAchieve3) yield totalWallsAchieve3
-    if ((totalWalls>=750) and no totalWallsAchieve4) yield totalWallsAchieve4
-    if ((totalWalls>=1000) and no totalWallsAchieve5) yield totalWallsAchieve5
-    if ((totalWalls>=2000) and no totalWallsAchieve6) yield totalWallsAchieve6
-    if ((totalWalls>=3000) and no totalWallsAchieve7) yield totalWallsAchieve7
-    if ((totalWalls>=4000) and no totalWallsAchieve8) yield totalWallsAchieve8
-    if ((totalWalls>=5000) and no totalWallsAchieve9) yield totalWallsAchieve9
-    if ((totalWalls>=7500) and no totalWallsAchieve10) yield totalWallsAchieve10
-    if ((totalWalls>=10000) and no totalWallsAchieve11) yield totalWallsAchieve11
-    if ((totalWalls>=12500) and no totalWallsAchieve12) yield totalWallsAchieve12
     if (tesseractDamage>0) show tesseractDamage
     if (fourthWallMatter>0) show fourthWallMatter
     if (artSpaceBricks>0) show artSpaceBricks
@@ -13801,7 +13388,7 @@ Achievements
   desc:Damage the wall.
   name:Overnab
   icon:https://i.imgur.com/OasIKlg.png
-  req:0
+  req:((totalMoney>=1))
   shown
   hidden when 0
 
@@ -13810,7 +13397,7 @@ Achievements
   desc:Deal <b>100</b> damage to the wall.
   name:Scrub
   icon:https://i.imgur.com/YU4cmkc.png
-  req:0
+  req:((totalMoney>=100))
   shown
   hidden when 0
 
@@ -13819,7 +13406,7 @@ Achievements
   desc:Deal <b>1,000</b> damage to the wall.
   name:Less of a Scrub
   icon:https://i.imgur.com/PIqpwX7.png
-  req:0
+  req:((totalMoney>=1000))
   shown
   hidden when 0
 
@@ -13828,7 +13415,7 @@ Achievements
   desc:Deal <b>10,000</b> damage to the wall.
   name:Wall Tapper
   icon:https://i.imgur.com/aBSHBRg.png
-  req:0
+  req:((totalMoney>=10000))
   shown
   hidden when 0
 
@@ -13837,7 +13424,7 @@ Achievements
   desc:Deal <b>1,000,000</b> damage to the wall.
   name:Wall Puncher
   icon:https://i.imgur.com/4RLBfmU.png
-  req:0
+  req:((totalMoney>=1000000))
   shown
   hidden when 0
 
@@ -13846,7 +13433,7 @@ Achievements
   desc:Deal <b>10,000,000</b> damage to the wall.
   name:Wall Breaker
   icon:https://i.imgur.com/4YlP9Fb.png
-  req:0
+  req:((totalMoney>=10000000))
   shown
   hidden when 0
 
@@ -13855,7 +13442,7 @@ Achievements
   desc:Deal <b>1,000,000,000</b> damage to the wall.
   name:Wall Smasher
   icon:https://i.imgur.com/9sXkECH.png
-  req:0
+  req:((totalMoney>=1000000000))
   shown
   hidden when 0
 
@@ -13864,7 +13451,7 @@ Achievements
   desc:Deal <b>100,000,000,000</b> damage to the wall.
   name:Wall Crusher
   icon:https://i.imgur.com/HahEAOn.png
-  req:0
+  req:((totalMoney>=100000000000))
   shown
   hidden when 0
 
@@ -13873,7 +13460,7 @@ Achievements
   desc:Destroy your first wall.</><i>You've earned the title!</i>
   name:Wall Destroyer
   icon:https://i.imgur.com/9ura7DM.png
-  req:0
+  req:((wallsDestroyed>=1))
   shown
   hidden when 0
 
@@ -13882,7 +13469,7 @@ Achievements
   desc:Destroy the big second wall.</><i>"gettin sum slays" ~1337 sn1p3r #108</i>
   icon:https://i.imgur.com/2JuJIGw.png
   name:Wall Slayer
-  req:0
+  req:((wallsDestroyed>=2))
   shown
   hidden when 0
 
@@ -13891,7 +13478,7 @@ Achievements
   desc:Destroy the huge third wall.
   name:Wall Conqueror
   icon:https://i.imgur.com/J0E0p9z.png
-  req:0
+  req:((wallsDestroyed>=3))
   shown
   hidden when 0
 
@@ -13900,7 +13487,7 @@ Achievements
   desc:Destroy the massive fourth wall.
   name:Sudden Awareness
   icon:https://i.imgur.com/CZZmh2H.png
-  req:0
+  req:((wallsDestroyed>=4))
   shown
   hidden when 0
 
@@ -13909,7 +13496,7 @@ Achievements
   desc:Destroy the final wall.</><i>*sounds of incredibly crappy 8-bit horns*</i>
   name:You're Winner!
   icon:https://i.imgur.com/XYrRLkX.png
-  req:0
+  req:((wallsDestroyed>=5))
   shown
   hidden when 0
 
@@ -14044,7 +13631,7 @@ Achievements
   desc:Destroy all the walls <b>twice</b>.</><i>"The air in here is dense with tryhardiness, I can feel it. It's horrible." ~Agent Johnson</i>
   name:Tryhard
   icon:https://i.imgur.com/BdGmywz.png
-  req:0
+  req:((meshBossPoint>=1 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14053,7 +13640,7 @@ Achievements
   desc:Destroy all the walls <b>5</b> times.
   name:Ultimate
   icon:https://i.imgur.com/pRgCwIf.png
-  req:0
+  req:((meshBossPoint>=4 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14062,7 +13649,7 @@ Achievements
   desc:Destroy all the walls <b>10</b> times.
   name:Legendary
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=9 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14071,7 +13658,7 @@ Achievements
   desc:Destroy all the walls <b>15</b> times.
   name:Alpha Beta Gamma Delta Eta Theta Iota
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=14 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14080,7 +13667,7 @@ Achievements
   desc:Destroy all the walls <b>20</b> times.</><i>Greek Alphabet - Return, coming soon at the cinemas 154455 AD May 32th</i>
   name:Epsilon Tau Phi Chi Psi Pi Sigma Omega
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=19 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14089,7 +13676,7 @@ Achievements
   desc:Destroy all the walls <b>25</b> times.
   name:Nobody Is Asking You To Be So Tryhard
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=24 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14098,7 +13685,7 @@ Achievements
   desc:Destroy all the walls <b>30</b> times.
   name:Reality Calamity
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=29 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14107,7 +13694,7 @@ Achievements
   desc:Destroy all the walls <b>40</b> times.
   name:Blue Screen of Death
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=39 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14116,7 +13703,7 @@ Achievements
   desc:Destroy all the walls <b>50</b> times.
   name:Forgotten_Password.rar
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=49 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14125,7 +13712,7 @@ Achievements
   desc:Destroy all the walls <b>60</b> times.
   name:B:/Folder/Hidden_Reality.rar
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=59 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14134,7 +13721,7 @@ Achievements
   desc:Destroy all the walls <b>70</b> times.
   name:Computer Death
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=69 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14143,7 +13730,7 @@ Achievements
   desc:Destroy all the walls <b>80</b> times.
   name:Nonsense
   icon:https://i.imgur.com/jsCyq5a.png
-  req:0
+  req:((meshBossPoint>=79 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14152,7 +13739,7 @@ Achievements
   desc:Destroy all the walls <b>90</b> times.
   name:Questioning
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((meshBossPoint>=89 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14161,7 +13748,7 @@ Achievements
   desc:Destroy all the walls <b>100</b> times. </>Congratulations! I don't know what to tell you.</br>
   name:Centennial
   icon:https://i.imgur.com/aCU88Ro.png
-  req:0
+  req:((meshBossPoint>=99 and meshBricks>=1))
   shown
   hidden when 0
 
@@ -14170,7 +13757,7 @@ Achievements
   desc:Have all money that exists on earth.</><i>Which is 5.2 trillion, apparently.</>May the bad title games begin!</i>
   name:Moneyllionaire
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=5200000000000))
   shown
   hidden when 0
 
@@ -14179,7 +13766,7 @@ Achievements
   desc:Have as much money as much as Earth is worth.</><i>Which is 5 quadrillion, apparently.</i>
   name:Earthillion
   icon:https://i.imgur.com/lJ8A4Wn.png
-  req:0
+  req:((money>=5000000000000000))
   shown
   hidden when 0
 
@@ -14188,7 +13775,7 @@ Achievements
   desc:Have as much money as much as PSR J1719-1438 B is worth.</><i>Which is 26.9 nonillion, apparently.</i>
   name:Full Diamond Armor
   icon:https://i.imgur.com/ynoLa6v.png
-  req:0
+  req:((money>=26900000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14197,7 +13784,7 @@ Achievements
   desc:Gain <b>1 Quadrillion</b> dollars from wall damaging.
   name:Thousa-Million-Millionaire
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000))
   shown
   hidden when 0
 
@@ -14206,7 +13793,7 @@ Achievements
   desc:Gain <b>1 Quintillion</b> dollars from wall damaging.
   name:Millionaire Cubed
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000))
   shown
   hidden when 0
 
@@ -14215,7 +13802,7 @@ Achievements
   desc:Gain <b>1 Sextillion</b> dollars from wall damaging.
   name:Yens yens
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000))
   shown
   hidden when 0
 
@@ -14224,7 +13811,7 @@ Achievements
   desc:Gain <b>1 Septillion</b> dollars from wall damaging.
   name:Millionaire Tesseracted
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000000))
   shown
   hidden when 0
 
@@ -14233,7 +13820,7 @@ Achievements
   desc:Gain <b>1 Octillion</b> dollars from wall damaging.
   name:Market value of Agent Johnson's bad jokes
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14242,7 +13829,7 @@ Achievements
   desc:Gain <b>1 Nonillion</b> dollars from wall damaging.
   name:Nonillionaire
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14251,7 +13838,7 @@ Achievements
   desc:Gain <b>1 Decillion</b> dollars from wall damaging.
   name:Thirty-Three
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14260,7 +13847,7 @@ Achievements
   desc:Gain <b>1 Undecillion</b> dollars from wall damaging.
   name:36Illion
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14269,7 +13856,7 @@ Achievements
   desc:Gain <b>1 Duodecillion</b> dollars from wall damaging.
   name:78/2 Yllion
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14278,7 +13865,7 @@ Achievements
   desc:Gain <b>1 Tredecillion</b> dollars from wall damaging.
   name:The Day When You Will Stop...
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14287,7 +13874,7 @@ Achievements
   desc:Gain <b>1 Quattuordecillion</b> dollars from wall damaging.
   name:...Will Never Come?
   icon:https://i.imgur.com/lZaWfwJ.png
-  req:0
+  req:((money>=1000000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14296,7 +13883,7 @@ Achievements
   desc:Gain <b>1 Quindecillion</b> dollars from wall damaging. Well, maybe not as priceless... as your life.
   name:Priceless
   icon:https://i.imgur.com/ynoLa6v.png
-  req:0
+  req:((money>=1000000000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14306,7 +13893,7 @@ Achievements
   desc:Have <b>100 Quadrillion</b> Fourth Dimensional damage.</><i>Boom! It's gone.</i>
   name:It's all gone.
   icon:https://i.imgur.com/7zQX9bv.png
-  req:0
+  req:((tesseractDamage>=100000000000000000))
   shown
   hidden when 0
 
@@ -14316,7 +13903,7 @@ Achievements
   desc:Have <b>100 Quintillion</b> Fourth Dimensional damage.</><i>Where the fifth dimension at?</i>
   name:Dimensional Crisis
   icon:https://i.imgur.com/DYku895.png
-  req:0
+  req:((tesseractDamage>=100000000000000000000))
   shown
   hidden when 0
 
@@ -14326,7 +13913,7 @@ Achievements
   desc:Have <b>100 Sextillion</b> Fourth dimensional damage.</><i>Doesn't actually obliterate bricks.</i>
   name:Brick Obliterator
   icon:https://i.imgur.com/9ura7DM.png
-  req:0
+  req:((tesseractDamage>=100000000000000000000000))
   shown
   hidden when 0
 
@@ -14336,7 +13923,7 @@ Achievements
   desc:Have <b>100 Septillion</b> Fourth dimensional damage.</><i>Oh boy, punching walls sure does HURTT.</i>
   name:Hurtt
   icon:https://i.imgur.com/jLrZJ3N.png
-  req:0
+  req:((tesseractDamage>=100000000000000000000000000))
   shown
   hidden when 0
 
@@ -14346,7 +13933,7 @@ Achievements
   desc:Have <b>100 Octillion</b> Fourth dimensional damage.</><i>We're talking about punchers. Those which can't even fourth dimension.</i>
   name:Underestimated
   icon:https://i.imgur.com/nm7ACjC.png
-  req:0
+  req:((tesseractDamage>=100000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14356,7 +13943,7 @@ Achievements
   desc:Have <b>100 Nonillion</b> Fourth dimensional damage.</><i>Knock knock?</>Who's there?</>Wipe.</>Wipe who?</>Wipe yo fucking save.</i>
   name:Underestimated
   icon:https://i.imgur.com/QZDKfl0.png
-  req:0
+  req:((tesseractDamage>=100000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14366,7 +13953,7 @@ Achievements
   desc:Have <b>100 Undecillion</b> Fourth dimensional damage.</><i>True meaning of life.</i>
   name:The No Life Zone
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((tesseractDamage>=100000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14376,7 +13963,7 @@ Achievements
   desc:Have <b>100 Tredecillion</b> Fourth dimensional damage.
   name:Giving Up
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((tesseractDamage>=100000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14386,7 +13973,7 @@ Achievements
   desc:Have <b>100 Quattuordecillion</b> Fourth dimensional damage.
   name:BIGG FOOT
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((tesseractDamage>=100000000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14395,7 +13982,7 @@ Achievements
   desc:Reset the game <b>10</b> times.
   name:Amalgamite
   icon:https://i.imgur.com/M4T5Aol.png
-  req:0
+  req:((resetTimes>=10))
   shown
   hidden when 0
 
@@ -14404,7 +13991,7 @@ Achievements
   desc:Reset the game <b>50</b> times.
   name:Pre-Lemonbread
   icon:https://i.imgur.com/Q6oG66i.png
-  req:0
+  req:((resetTimes>=50))
   shown
   hidden when 0
 
@@ -14413,7 +14000,7 @@ Achievements
   desc:Reset the game <b>100</b> times.
   name:True Endogeny
   icon:https://i.imgur.com/agDvwRg.png
-  req:0
+  req:((resetTimes>=100))
   shown
   hidden when 0
 
@@ -14422,7 +14009,7 @@ Achievements
   desc:Reset the game <b>500</b> times.
   name:Real Form of Tetrapurplesad
   icon:https://i.imgur.com/VElmg8j.png
-  req:0
+  req:((resetTimes>=500))
   shown
   hidden when 0
 
@@ -14431,7 +14018,7 @@ Achievements
   desc:Play for <b>15 minutes.</b></><i>These achievements weren't actually coded by Tellurium, because he's a total noob that doesn't recognize real talent.</i>
   name:Getting Started
   icon:https://i.imgur.com/h3ee0tJ.png
-  req:0
+  req:((timePlayed>=15))
   shown
   hidden when 0
 
@@ -14440,7 +14027,7 @@ Achievements
   desc:Play for <b>30 minutes.</b> Lunch can also be eaten while playing this game, you know.
   name:Lunch Break
   icon:https://imgur.com/41rYk3A.png
-  req:0
+  req:((timePlayed>=30))
   shown
   hidden when 0
 
@@ -14449,7 +14036,7 @@ Achievements
   desc:Play for <b>1 hour.</b> You had fun with that hour, right?
   name:The Wasted Hour
   icon:https://i.imgur.com/8VwF5Vl.png
-  req:0
+  req:((timePlayed>=60))
   shown
   hidden when 0
 
@@ -14458,7 +14045,7 @@ Achievements
   desc:Play for <b>2 hours.</b>
   name:Better Than a Movie
   icon:https://imgur.com/vFu3nDx.png
-  req:0
+  req:((timePlayed>=120))
   shown
   hidden when 0
 
@@ -14467,7 +14054,7 @@ Achievements
   desc:Play for <b>3 hours.</b>
   name:Casual Player
   icon:https://imgur.com/pyQYGnt.png
-  req:0
+  req:((timePlayed>=180))
   shown
   hidden when 0
 
@@ -14476,7 +14063,7 @@ Achievements
   desc:Play for <b>6 hours.</b>
   name:Killing Time
   icon:https://imgur.com/Oq1fjcB.png
-  req:0
+  req:((timePlayed>=360))
   shown
   hidden when 0
 
@@ -14485,7 +14072,7 @@ Achievements
   desc:Play for <b>9 hours.</b>
   name:I Love Idling
   icon:https://imgur.com/f7joGQD.png
-  req:0
+  req:((timePlayed>=540))
   shown
   hidden when 0
 
@@ -14494,7 +14081,7 @@ Achievements
   desc:Play for <b>12 hours.</b>
   name:Wall Destroyer Fan
   icon:https://i.imgur.com/vfxGDiw.png
-  req:0
+  req:((timePlayed>=720))
   shown
   hidden when 0
 
@@ -14503,7 +14090,7 @@ Achievements
   desc:Play for <b>18 hours.</b>
   name:Serious Player
   icon:https://imgur.com/Du1OSfD.png
-  req:0
+  req:((timePlayed>=1080))
   shown
   hidden when 0
 
@@ -14512,7 +14099,7 @@ Achievements
   desc:Play for <b>1 day.</b> Would you trade that for a day of punching real walls in real life?
   name:Another Day Down the Drain
   icon:https://imgur.com/9WXZmxI.png
-  req:0
+  req:((timePlayed>=1440))
   shown
   hidden when 0
 
@@ -14521,7 +14108,7 @@ Achievements
   desc:Play for <b>3 days.</b> You should take a break.
   name:Hardcore Player
   icon:https://imgur.com/Cv7FDSP.png
-  req:0
+  req:((timePlayed>=4320))
   shown
   hidden when 0
 
@@ -14530,7 +14117,7 @@ Achievements
   desc:Play for <b>5 days.</b> Now you probably have an addiction.
   name:Coming Back for More
   icon:https://i.imgur.com/PcY222f.png
-  req:0
+  req:((timePlayed>=7200))
   shown
   hidden when 0
 
@@ -14539,7 +14126,7 @@ Achievements
   desc:Play for <b>1 week.</b> You can stop soon or right now, if you want. Just don't say I didn't warn you.
   name:Mark Your Calendars
   icon:https://imgur.com/rz39KsC.png
-  req:0
+  req:((timePlayed>=10080))
   shown
   hidden when 0
 
@@ -14548,7 +14135,7 @@ Achievements
   desc:Play for <b>2 weeks.</b>
   name:Completely Addicted
   icon:https://imgur.com/zXhVJaC.png
-  req:0
+  req:((timePlayed>=20160))
   shown
   hidden when 0
 
@@ -14557,7 +14144,7 @@ Achievements
   desc:Play for <b>3 weeks.</b>
   name:No-Life
   icon:https://i.imgur.com/ghiCqU3.png
-  req:0
+  req:((timePlayed>=30240))
   shown
   hidden when 0
 
@@ -14566,7 +14153,7 @@ Achievements
   desc:Play for <b>4 weeks.</b>
   name:Best Month Ever
   icon:https://imgur.com/bWRjWlv.png
-  req:0
+  req:((timePlayed>=40320))
   shown
   hidden when 0
 
@@ -14575,7 +14162,7 @@ Achievements
   desc:Play for <b>6 weeks.</b>They said, once you come in, you can never come out. ...Maybe not.
   name:No Way Out
   icon:https://i.imgur.com/D1IuKeT.png
-  req:0
+  req:((timePlayed>=60480))
   shown
   hidden when 0
 
@@ -14584,7 +14171,7 @@ Achievements
   desc:Play for <b>8 weeks.</b>That's about 2 months.
   name:Lord Idler
   icon:https://i.imgur.com/qqUiR6b.png
-  req:0
+  req:((timePlayed>=80640))
   shown
   hidden when 0
 
@@ -14593,7 +14180,7 @@ Achievements
   desc:Play for <b>10 weeks.
   name:X Weeks
   icon:https://i.imgur.com/efrBHOd.png
-  req:0
+  req:((timePlayed>=100800))
   shown
   hidden when 0
 
@@ -14602,7 +14189,7 @@ Achievements
   desc:Play for <b>15 weeks.</b>
   name:Hellalot of Time
   icon:https://i.imgur.com/L8h6CHD.png
-  req:0
+  req:((timePlayed>=151200))
   shown
   hidden when 0
 
@@ -14611,7 +14198,7 @@ Achievements
   desc:Play for <b>half a year</b>. You should've backtracked while you had the chance. For your information, there's 2 time achievements left.
   name:Timeless Tick Tocking
   icon:https://i.imgur.com/YCYFJFn.png
-  req:0
+  req:((timePlayed>=262800))
   shown
   hidden when 0
 
@@ -14620,7 +14207,7 @@ Achievements
   desc:Play for <b>Two thirds a year</b>. I don't know if the contents made this game was even made to last this long.
   name:T-ioioioioioioio-ck
   icon:https://i.imgur.com/Xrr0euS.png
-  req:0
+  req:((timePlayed>=350400))
   shown
   hidden when 0
 
@@ -14629,7 +14216,7 @@ Achievements
   desc:Play for <b>a year</b>. Well. Did you win?
   name:Hours, Days and Nights
   icon:https://i.imgur.com/1Gh7frq.png
-  req:0
+  req:((timePlayed>=525600))
   shown
   hidden when 0
 
@@ -14737,7 +14324,7 @@ Achievements
   desc:Deal <b>100</b> damage by hand.
   name:Puncher
   icon:https://i.imgur.com/c3mfsZ7.png
-  req:0
+  req:((handDamage>=100))
   shown
   hidden when 0
 
@@ -14746,7 +14333,7 @@ Achievements
   desc:Deal <b>10,000</b> damage by hand.
   name:Boxer
   icon:https://i.imgur.com/1VAyqoa.png
-  req:0
+  req:((handDamage>=10000))
   shown
   hidden when 0
 
@@ -14755,7 +14342,7 @@ Achievements
   desc:Deal <b>1,000,000</b> damage by hand.
   name:Brawler
   icon:https://i.imgur.com/3pMJrsL.png
-  req:0
+  req:((handDamage>=1000000))
   shown
   hidden when 0
 
@@ -14764,7 +14351,7 @@ Achievements
   desc:Deal <b>100,000,000</b> damage by hand.
   name:Blood, Sweat, and Tears
   icon:https://i.imgur.com/bOLxNz7.png
-  req:0
+  req:((handDamage>=100000000))
   shown
   hidden when 0
 
@@ -14773,7 +14360,7 @@ Achievements
   desc:Deal <b>10,000,000,000</b> damage by hand.
   name:Karate Master
   icon:https://i.imgur.com/PtmkAH3.png
-  req:0
+  req:((handDamage>=10000000000))
   shown
   hidden when 0
 
@@ -14782,7 +14369,7 @@ Achievements
   desc:Deal <b>1,000,000,000,000</b> damage by hand.
   name:Doing God's Work
   icon:https://i.imgur.com/ouFA8Lg.png
-  req:0
+  req:((handDamage>=1000000000000))
   shown
   hidden when 0
 
@@ -14791,7 +14378,7 @@ Achievements
   desc:Deal <b>100,000,000,000,000</b> damage by hand.
   name:The Hero Gotham Deserves
   icon:https://i.imgur.com/ee3LJxJ.png
-  req:0
+  req:((handDamage>=100000000000000))
   shown
   hidden when 0
 
@@ -14800,7 +14387,7 @@ Achievements
   desc:Deal <b>10,000,000,000,000,000</b> damage by hand.
   name:The Grandmaster
   icon:https://i.imgur.com/YZfg6Vg.png
-  req:0
+  req:((handDamage>=10000000000000000))
   shown
   hidden when 0
 
@@ -14809,7 +14396,7 @@ Achievements
   desc:Deal <b>1,000,000,000,000,000,000</b> damage by hand.
   name:The Champion of The World
   icon:https://i.imgur.com/0fHTOjH.png
-  req:0
+  req:((handDamage>=1000000000000000000))
   shown
   hidden when 0
 
@@ -14818,7 +14405,7 @@ Achievements
   desc:Deal <b>100,000,000,000,000,000,000</b> damage by hand.
   name:The Chosen One
   icon:https://i.imgur.com/uKozUUJ.png
-  req:0
+  req:((handDamage>=100000000000000000000))
   shown
   hidden when 0
 
@@ -14827,7 +14414,7 @@ Achievements
   desc:Deal <b>10 sextillion</b> damage by hand.</><i>Not actually though. Keep going.</i>
   name:The Winner
   icon:https://i.imgur.com/VywN1Do.png
-  req:0
+  req:((handDamage>=10000000000000000000000))
   shown
   hidden when 0
 
@@ -14836,7 +14423,7 @@ Achievements
   desc:Deal <b>1 septillion</b> damage by hand.</><i>The amount of time you've wasted has reached evil status.</i>
   name:Agent of The Devil
   icon:https://i.imgur.com/XSPPdpX.png
-  req:0
+  req:((handDamage>=1000000000000000000000000))
   shown
   hidden when 0
 
@@ -14845,7 +14432,7 @@ Achievements
   desc:Deal <b>100 septillion</b> damage by hand.</><i>"Pff, as if we weren't past </i>that<i> years ago." ~Head of R&D</i>
   name:Beyond Reality
   icon:https://i.imgur.com/QJ6t0uF.png
-  req:0
+  req:((handDamage>=100000000000000000000000000))
   shown
   hidden when 0
 
@@ -14854,7 +14441,7 @@ Achievements
   desc:Deal <b>10 octillion</b> damage by hand.</><i>The harbinger of the final destruction of all these damn walls, that is!</i>
   name:The Harbinger
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((handDamage>=10000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14863,7 +14450,7 @@ Achievements
   desc:Deal <b>10 nonillion</b> damage by hand.</><i>You've reached maximum level. The divine message: punch harder.</i>
   name:Missionary of The Divine
   icon:https://i.imgur.com/uCnJqSI.png
-  req:0
+  req:((handDamage>=10000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14872,7 +14459,7 @@ Achievements
   desc:Deal <b>10 decillion</b> damage by hand.</><i>Now on floor 4. Knuckles, fake biceps and redbull.</i>
   name:Transcendentifical Shopping
   icon:https://i.imgur.com/8QZA7su.png
-  req:0
+  req:((handDamage>=10000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14881,7 +14468,7 @@ Achievements
   desc:Deal <b>10 undecillion</b> damage by hand.</><i>Keeping the eye on the wall.</i>
   name:Never Enough
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((handDamage>=10000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14890,7 +14477,7 @@ Achievements
   desc:Deal <b>10 duodecillion</b> damage by hand.</><i>You will never do it.</i>
   name:Punch.
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((handDamage>=10000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14899,7 +14486,7 @@ Achievements
   desc:Deal <b>10 tredecillion</b> damage by hand.</><i>The blood of the walls is on your hands.</i>
   name:Blood
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((handDamage>=10000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -14908,7 +14495,7 @@ Achievements
   desc:Make <b>100</b> bricks by hand.
   name:Dark Magician
   icon:https://i.imgur.com/LeHD80E.png
-  req:0
+  req:((handBricks>=100))
   shown
   hidden when 0
 
@@ -14917,7 +14504,7 @@ Achievements
   desc:Make <b>10,000</b> bricks by hand.
   name:Incantation
   icon:https://i.imgur.com/BLAoizu.png
-  req:0
+  req:((handBricks>=10000))
   shown
   hidden when 0
 
@@ -14926,7 +14513,7 @@ Achievements
   desc:Make <b>1,000,000</b> bricks by hand.
   name:Evil Power
   icon:https://i.imgur.com/vZmmM5e.png
-  req:0
+  req:((handBricks>=1000000))
   shown
   hidden when 0
 
@@ -14935,7 +14522,7 @@ Achievements
   desc:Make <b>100,000,000</b> bricks by hand.
   name:Corruption
   icon:https://i.imgur.com/WohZpox.png
-  req:0
+  req:((handBricks>=100000000))
   shown
   hidden when 0
 
@@ -14944,7 +14531,7 @@ Achievements
   desc:Make <b>10,000,000,000</b> bricks by hand.
   name:Brainwashing
   icon:https://i.imgur.com/1n3yBA4.png
-  req:0
+  req:((handBricks>=10000000000))
   shown
   hidden when 0
 
@@ -14953,7 +14540,7 @@ Achievements
   desc:Make <b>1,000,000,000,000</b> bricks by hand.
   name:Puppet of Darkness
   icon:https://i.imgur.com/mLO2JCX.png
-  req:0
+  req:((handBricks>=1000000000000))
   shown
   hidden when 0
 
@@ -14962,7 +14549,7 @@ Achievements
   desc:Make <b>100,000,000,000,000</b> bricks by hand.
   name:Shadow of the Night
   icon:https://i.imgur.com/m5peORa.png
-  req:0
+  req:((handBricks>=100000000000000))
   shown
   hidden when 0
 
@@ -14971,7 +14558,7 @@ Achievements
   desc:Make <b>10,000,000,000,000,000</b> bricks by hand.
   name:Dissolving Emptiness
   icon:https://i.imgur.com/3vgirnY.png
-  req:0
+  req:((handBricks>=10000000000000000))
   shown
   hidden when 0
 
@@ -14980,7 +14567,7 @@ Achievements
   desc:Make <b>1,000,000,000,000,000,000</b> bricks by hand.
   name:Infinite Void
   icon:https://i.imgur.com/FDoBvUl.png
-  req:0
+  req:((handBricks>=1000000000000000000))
   shown
   hidden when 0
 
@@ -14989,7 +14576,7 @@ Achievements
   desc:Make <b>1 sextillion</b> bricks by hand.
   name:Path to Nothing and Nowhere
   icon:https://i.imgur.com/IDv4G9r.png
-  req:0
+  req:((handBricks>=1000000000000000000000))
   shown
   hidden when 0
 
@@ -14998,7 +14585,7 @@ Achievements
   desc:Make <b>1 septillion</b> bricks by hand.
   name:Dark Tablet Phychiatry
   icon:https://i.imgur.com/KCdcX5m.png
-  req:0
+  req:((handBricks>=1000000000000000000000000))
   shown
   hidden when 0
 
@@ -15007,7 +14594,7 @@ Achievements
   desc:Make <b>1 octillion</b> bricks by hand.
   name:Mesh Clicker
   icon:https://i.imgur.com/NswH8VP.png
-  req:0
+  req:((handBricks>=1000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15016,7 +14603,7 @@ Achievements
   desc:Hire <b>1</b> puncher.
   name:Hired Help
   icon:https://i.imgur.com/tzwF920.png
-  req:0
+  req:((puncher>=1))
   shown
   hidden when 0
 
@@ -15025,7 +14612,7 @@ Achievements
   desc:Hire <b>10</b> punchers.
   name:Get The Fist Of It
   icon:https://i.imgur.com/uwEoJ22.png
-  req:0
+  req:((puncher>=10))
   shown
   hidden when 0
 
@@ -15034,7 +14621,7 @@ Achievements
   desc:Hire <b>50</b> punchers.
   name:Unarmed Army
   icon:https://i.imgur.com/ukeWk4S.png
-  req:0
+  req:((puncher>=50))
   shown
   hidden when 0
 
@@ -15043,7 +14630,7 @@ Achievements
   desc:Hire <b>100</b> punchers.
   name:Armada of Punches
   icon:https://i.imgur.com/Un2IBSH.png
-  req:0
+  req:((puncher>=100))
   shown
   hidden when 0
 
@@ -15052,7 +14639,7 @@ Achievements
   desc:Hire <b>150</b> punchers.
   name:Legion of Fists
   icon:https://i.imgur.com/ZWHQHkW.png
-  req:0
+  req:((puncher>=150))
   shown
   hidden when 0
 
@@ -15061,7 +14648,7 @@ Achievements
   desc:Hire <b>200</b> punchers.
   name:Punch City
   icon:https://i.imgur.com/rVykEWs.png
-  req:0
+  req:((puncher>=200))
   shown
   hidden when 0
 
@@ -15070,7 +14657,7 @@ Achievements
   desc:Hire <b>300</b> punchers.
   name:Punch Nation
   icon:https://i.imgur.com/GfoMaz4.png
-  req:0
+  req:((puncher>=300))
   shown
   hidden when 0
 
@@ -15079,7 +14666,7 @@ Achievements
   desc:Hire <b>400</b> punchers.
   name:The World Punched to Pieces
   icon:https://i.imgur.com/KoB491g.png
-  req:0
+  req:((puncher>=400))
   shown
   hidden when 0
 
@@ -15088,7 +14675,7 @@ Achievements
   desc:Hire <b>500</b> punchers.
   name:Thanks A Punch
   icon:https://i.imgur.com/wxsTySo.png
-  req:0
+  req:((puncher>=500))
   shown
   hidden when 0
 
@@ -15097,7 +14684,7 @@ Achievements
   desc:Hire <b>600</b> punchers.
   name:A Sock In The Park
   icon:https://i.imgur.com/hIw2jGW.png
-  req:0
+  req:((puncher>=600))
   shown
   hidden when 0
 
@@ -15106,7 +14693,7 @@ Achievements
   desc:Hire <b>700</b> punchers.</><i>Yeah, you need to punch something that much times to kill it.</i>
   name:Eight Hundred Punch Man
   icon:https://i.imgur.com/PhxmHqr.png
-  req:0
+  req:((puncher>=700))
   shown
   hidden when 0
 
@@ -15115,7 +14702,7 @@ Achievements
   desc:Hire <b>800</b> punchers.
   name:Rebellion
   icon:https://i.imgur.com/wy0NkCV.png
-  req:0
+  req:((puncher>=800))
   shown
   hidden when 0
 
@@ -15124,7 +14711,7 @@ Achievements
   desc:Hire <b>900</b> punchers.
   name:Punchamanjaro
   icon:https://i.imgur.com/41dXhwN.png
-  req:0
+  req:((puncher>=900))
   shown
   hidden when 0
 
@@ -15133,7 +14720,7 @@ Achievements
   desc:Hire <b>1,000</b> punchers.</><i>"Obviously, it's a quintillion." ~Agent Johnson</i>
   name:Punchillion
   icon:https://i.imgur.com/TRuR1pM.png
-  req:0
+  req:((puncher>=1000))
   shown
   hidden when 0
 
@@ -15142,7 +14729,7 @@ Achievements
   desc:Hire <b>1,100</b> punchers.
   name:Professor UNCH
   icon:https://i.imgur.com/ens3Bhe.png
-  req:0
+  req:((puncher>=1100))
   shown
   hidden when 0
 
@@ -15151,7 +14738,7 @@ Achievements
   desc:Deal <b>1,000,000,000</b> damage to the wall with your punchers.
   name:No Such Thing as a Free Punch
   icon:https://i.imgur.com/tzwF920.png
-  req:0
+  req:((puncherDamage>=1000000000))
   shown
   hidden when 0
 
@@ -15161,7 +14748,7 @@ Achievements
   desc:Deal <b>1,000,000,000,000</b> damage to the wall with your punchers.
   name:There Is Such Thing as a Free Punch
   icon:https://i.imgur.com/j4Am1sa.png
-  req:0
+  req:((puncherDamage>=1000000000000))
   shown
   hidden when 0
 
@@ -15171,7 +14758,7 @@ Achievements
   desc:Deal <b>1 quitillion</b> damage to the wall with your punchers.
   name:Beat Me Up Inside
   icon:https://i.imgur.com/ZGB4TiX.png
-  req:0
+  req:((puncherDamage>=1000000000000000000))
   shown
   hidden when 0
 
@@ -15181,7 +14768,7 @@ Achievements
   desc:Deal <b>1 octillion</b> damage to the wall with your punchers.
   name:Inside Bleeding
   icon:https://i.imgur.com/5bqbpYi.png
-  req:0
+  req:((puncherDamage>=1000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15191,7 +14778,7 @@ Achievements
   desc:Deal <b>1 decillion</b> damage to the wall with your punchers.
   name:Handjob
   icon:https://i.imgur.com/hIw2jGW.png
-  req:0
+  req:((puncherDamage>=1000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15201,7 +14788,7 @@ Achievements
   desc:Deal <b>1 duodecillion</b> damage to the wall with your punchers.
   name:Mortally Combated Tenth Time
   icon:https://i.imgur.com/wy0NkCV.png
-  req:0
+  req:((puncherDamage>=1000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15210,7 +14797,7 @@ Achievements
   desc:Hire <b>1</b> clubber.
   name:Clubstep
   icon:https://i.imgur.com/k6W8MW9.png
-  req:0
+  req:((clubber>=1))
   shown
   hidden when 0
 
@@ -15219,7 +14806,7 @@ Achievements
   desc:Hire <b>10</b> clubbers.
   name:Club Party
   icon:https://i.imgur.com/LRhDWi7.png
-  req:0
+  req:((clubber>=10))
   shown
   hidden when 0
 
@@ -15228,7 +14815,7 @@ Achievements
   desc:Hire <b>50</b> clubbers.
   name:The Clubhouse
   icon:https://i.imgur.com/tIHqvj8.png
-  req:0
+  req:((clubber>=50))
   shown
   hidden when 0
 
@@ -15237,7 +14824,7 @@ Achievements
   desc:Hire <b>100</b> clubbers.
   name:Club the Nation
   icon:https://i.imgur.com/zIFpGEb.png
-  req:0
+  req:((clubber>=100))
   shown
   hidden when 0
 
@@ -15246,7 +14833,7 @@ Achievements
   desc:Hire <b>150</b> clubbers.
   name:Club the World
   icon:https://i.imgur.com/2Kpfgha.png
-  req:0
+  req:((clubber>=150))
   shown
   hidden when 0
 
@@ -15255,7 +14842,7 @@ Achievements
   desc:Hire <b>200</b> clubbers.
   name:Club the Universe
   icon:https://i.imgur.com/sqh5GGD.png
-  req:0
+  req:((clubber>=200))
   shown
   hidden when 0
 
@@ -15264,7 +14851,7 @@ Achievements
   desc:Hire <b>300</b> clubbers.
   name:Club Reality
   icon:https://i.imgur.com/4wh5BY0.png
-  req:0
+  req:((clubber>=300))
   shown
   hidden when 0
 
@@ -15273,7 +14860,7 @@ Achievements
   desc:Hire <b>400</b> clubbers.
   name:Club to Infinity
   icon:https://i.imgur.com/JruQMzO.png
-  req:0
+  req:((clubber>=400))
   shown
   hidden when 0
 
@@ -15282,7 +14869,7 @@ Achievements
   desc:Hire <b>500</b> clubbers.
   name:Beelzeclub
   icon:https://i.imgur.com/eecKJ8i.png
-  req:0
+  req:((clubber>=500))
   shown
   hidden when 0
 
@@ -15291,7 +14878,7 @@ Achievements
   desc:Hire <b>600</b> clubbers.
   name:Club-Niggurath
   icon:https://i.imgur.com/ofHYvwo.png
-  req:0
+  req:((clubber>=600))
   shown
   hidden when 0
 
@@ -15300,7 +14887,7 @@ Achievements
   desc:Hire <b>700</b> clubbers.
   name:Club-Ragnarok
   icon:https://i.imgur.com/20i38CD.png
-  req:0
+  req:((clubber>=700))
   shown
   hidden when 0
 
@@ -15309,7 +14896,7 @@ Achievements
   desc:Hire <b>800</b> clubbers.
   name:Club-Adamantium Hydra
   icon:https://i.imgur.com/RIWt6UD.png
-  req:0
+  req:((clubber>=800))
   shown
   hidden when 0
 
@@ -15318,7 +14905,7 @@ Achievements
   desc:Hire <b>900</b> clubbers.
   name:Singularity Clubbers
   icon:https://i.imgur.com/B9RKy58.png
-  req:0
+  req:((clubber>=900))
   shown
   hidden when 0
 
@@ -15327,7 +14914,7 @@ Achievements
   desc:Hire <b>1,000</b> clubbers.
   name:Plularity Clubbers
   icon:https://i.imgur.com/tujIoWM.png
-  req:0
+  req:((clubber>=1000))
   shown
   hidden when 0
 
@@ -15336,7 +14923,7 @@ Achievements
   desc:Hire <b>1,100</b> clubbers.
   name:Waveλength Clubbers
   icon:https://i.imgur.com/P5HYLEo.png
-  req:0
+  req:((clubber>=1100))
   shown
   hidden when 0
 
@@ -15345,7 +14932,7 @@ Achievements
   desc:Deal <b>10,000,000,000</b> damage to the wall with your clubbers.
   name:Clubbed to Death
   icon:https://i.imgur.com/k6W8MW9.png
-  req:0
+  req:((clubberDamage>=10000000000))
   shown
   hidden when 0
 
@@ -15355,7 +14942,7 @@ Achievements
   desc:Deal <b>10,000,000,000,000</b> damage to the wall with your clubbers.
   name:Silent Clubstep
   icon:https://i.imgur.com/JZbeJbZ.png
-  req:0
+  req:((clubberDamage>=10000000000000))
   shown
   hidden when 0
 
@@ -15365,7 +14952,7 @@ Achievements
   desc:Deal <b>10 quintillion</b> damage to the wall with your clubbers.
   name:Sailent Clubstar
   icon:https://i.imgur.com/Tb9Rpht.png
-  req:0
+  req:((clubberDamage>=10000000000000000000))
   shown
   hidden when 0
 
@@ -15375,7 +14962,7 @@ Achievements
   desc:Deal <b>10 octillion</b> damage to the wall with your clubbers.
   name:Silent Engine II
   icon:https://i.imgur.com/IpEk7wV.png
-  req:0
+  req:((clubberDamage>=10000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15385,7 +14972,7 @@ Achievements
   desc:Deal <b>10 decillion</b> damage to the wall with your clubbers.
   name:Satanic Slaughterhouse
   icon:https://i.imgur.com/ofHYvwo.png
-  req:0
+  req:((clubberDamage>=10000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15395,7 +14982,7 @@ Achievements
   desc:Deal <b>10 duodecillion</b> damage to the wall with your clubbers.
   name:Minus World V
   icon:https://i.imgur.com/RIWt6UD.png
-  req:0
+  req:((clubberDamage>=10000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15404,7 +14991,7 @@ Achievements
   desc:Hire <b>1</b> swordsman.
   name:Wallslicer
   icon:https://i.imgur.com/U0XqNYE.png
-  req:0
+  req:((swordsman>=1))
   shown
   hidden when 0
 
@@ -15413,7 +15000,7 @@ Achievements
   desc:Hire <b>10</b> swordsmen.
   name:Hack 'n Slash
   icon:https://i.imgur.com/roZk4Yj.png
-  req:0
+  req:((swordsman>=10))
   shown
   hidden when 0
 
@@ -15422,7 +15009,7 @@ Achievements
   desc:Hire <b>50</b> swordsmen.
   name:Smorgasword
   icon:https://i.imgur.com/hmaylF0.png
-  req:0
+  req:((swordsman>=50))
   shown
   hidden when 0
 
@@ -15431,7 +15018,7 @@ Achievements
   desc:Hire <b>100</b> swordsmen.
   name:Blade Battalion
   icon:https://i.imgur.com/ciaHQnB.png
-  req:0
+  req:((swordsman>=100))
   shown
   hidden when 0
 
@@ -15440,7 +15027,7 @@ Achievements
   desc:Hire <b>150</b> swordsmen.
   name:The Cavalry
   icon:https://i.imgur.com/Jk4qhmJ.png
-  req:0
+  req:((swordsman>=150))
   shown
   hidden when 0
 
@@ -15449,7 +15036,7 @@ Achievements
   desc:Hire <b>200</b> swordsmen.
   name:The Crusaders
   icon:https://i.imgur.com/w6XsCGU.png
-  req:0
+  req:((swordsman>=200))
   shown
   hidden when 0
 
@@ -15458,7 +15045,7 @@ Achievements
   desc:Hire <b>300</b> swordsmen.
   name:Blade Runner
   icon:https://i.imgur.com/s8DBCzK.png
-  req:0
+  req:((swordsman>=300))
   shown
   hidden when 0
 
@@ -15467,7 +15054,7 @@ Achievements
   desc:Hire <b>400</b> swordsmen.
   name:All The King's Men
   icon:https://i.imgur.com/vtFhIQk.png
-  req:0
+  req:((swordsman>=400))
   shown
   hidden when 0
 
@@ -15476,7 +15063,7 @@ Achievements
   desc:Hire <b>500</b> swordsmen.</><i>"As if we weren't already, am I right?" ~Swordsman Project Leader</i>
   name:The Conquerors of The World
   icon:https://i.imgur.com/iPTUQJx.png
-  req:0
+  req:((swordsman>=500))
   shown
   hidden when 0
 
@@ -15485,7 +15072,7 @@ Achievements
   desc:Hire <b>600</b> swordsmen.
   name:The Conquerors of The Solar System
   icon:https://i.imgur.com/nYJudXF.png
-  req:0
+  req:((swordsman>=600))
   shown
   hidden when 0
 
@@ -15494,7 +15081,7 @@ Achievements
   desc:Hire <b>700</b> swordsmen.</><i>Agent Johnson's proposal to build a T. Rex-shaped sword was shot down before it even caught air.</i>
   name:Tyrannoswordus Rex
   icon:https://i.imgur.com/WljzKK3.png
-  req:0
+  req:((swordsman>=700))
   shown
   hidden when 0
 
@@ -15503,7 +15090,7 @@ Achievements
   desc:Hire <b>800</b> swordsmen.
   name:Mandelbrutal
   icon:https://i.imgur.com/ZiK08m9.png
-  req:0
+  req:((swordsman>=800))
   shown
   hidden when 0
 
@@ -15512,7 +15099,7 @@ Achievements
   desc:Hire <b>900</b> swordsmen.
   name:Slice the Dice
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((swordsman>=900))
   shown
   hidden when 0
 
@@ -15521,7 +15108,7 @@ Achievements
   desc:Hire <b>1,000</b> swordsmen.</><i>Our swords will cut through absolutely anything.</i>
   name:1000 Degree Glowing Sword
   icon:https://i.imgur.com/kLc5SXU.png
-  req:0
+  req:((swordsman>=1000))
   shown
   hidden when 0
 
@@ -15530,7 +15117,7 @@ Achievements
   desc:Deal <b>100,000,000,000</b> damage to the wall with your swordsmen.
   name:Castle Crashers
   icon:https://i.imgur.com/U0XqNYE.png
-  req:0
+  req:((swordsmanDamage>=100000000000))
   shown
   hidden when 0
 
@@ -15539,7 +15126,7 @@ Achievements
   desc:Deal <b>100,000,000,000,000</b> damage to the wall with your swordsmen.
   name:Kingdom Rulers
   icon:https://i.imgur.com/1bc1Ufp.png
-  req:0
+  req:((swordsmanDamage>=100000000000000))
   shown
   hidden when 0
 
@@ -15548,7 +15135,7 @@ Achievements
   desc:Deal <b>100 quitillion</b> damage to the wall with your swordsmen.
   name:Medieval
   icon:https://i.imgur.com/3xcSNC8.png
-  req:0
+  req:((swordsmanDamage>=100000000000000000000))
   shown
   hidden when 0
 
@@ -15557,7 +15144,7 @@ Achievements
   desc:Deal <b>100 octillion</b> damage to the wall with your swordsmen.
   name:Unleash The Genji
   icon:https://i.imgur.com/BVw5a9o.png
-  req:0
+  req:((swordsmanDamage>=100000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15566,7 +15153,7 @@ Achievements
   desc:Deal <b>100 decillion</b> damage to the wall with your swordsmen.
   name:Be The Genji
   icon:https://i.imgur.com/nYJudXF.png
-  req:0
+  req:((swordsmanDamage>=100000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15575,7 +15162,7 @@ Achievements
   desc:Deal <b>100 duodecillion</b> damage to the wall with your swordsmen.</><i>This is a children game, I suppose.</i>
   name:Fr*ck The Genji
   icon:https://i.imgur.com/ZiK08m9.png
-  req:0
+  req:((swordsmanDamage>=100000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15584,7 +15171,7 @@ Achievements
   desc:Hire <b>1</b> gunshooter.
   name:Shooter of Guns
   icon:https://i.imgur.com/d6qPAe1.png
-  req:0
+  req:((gunner>=1))
   shown
   hidden when 0
 
@@ -15593,7 +15180,7 @@ Achievements
   desc:Hire <b>10</b> gunshooters.
   name:Firing Squad
   icon:https://i.imgur.com/rJl9TeZ.png
-  req:0
+  req:((gunner>=10))
   shown
   hidden when 0
 
@@ -15602,7 +15189,7 @@ Achievements
   desc:Hire <b>50</b> gunshooters.
   name:Blast Battalion
   icon:https://i.imgur.com/IyI3G2S.png
-  req:0
+  req:((gunner>=50))
   shown
   hidden when 0
 
@@ -15611,7 +15198,7 @@ Achievements
   desc:Hire <b>100</b> gunshooters.
   name:The Old West
   icon:https://i.imgur.com/ZexRC2F.png
-  req:0
+  req:((gunner>=100))
   shown
   hidden when 0
 
@@ -15620,7 +15207,7 @@ Achievements
   desc:Hire <b>150</b> gunshooters.
   name:The Military
   icon:https://i.imgur.com/eAFR8kh.png
-  req:0
+  req:((gunner>=150))
   shown
   hidden when 0
 
@@ -15629,7 +15216,7 @@ Achievements
   desc:Hire <b>200</b> gunshooters.
   name:Armament Armada
   icon:https://i.imgur.com/2oIB7lS.png
-  req:0
+  req:((gunner>=200))
   shown
   hidden when 0
 
@@ -15638,7 +15225,7 @@ Achievements
   desc:Hire <b>300</b> gunshooters.
   name:Gun With The Wind
   icon:https://i.imgur.com/1QXsFlH.png
-  req:0
+  req:((gunner>=300))
   shown
   hidden when 0
 
@@ -15647,7 +15234,7 @@ Achievements
   desc:Hire <b>400</b> gunshooters.</><i>"Oh wait, I'm done already. I mean... I'm GUN already." ~Chief of <del>Guns</del> Puns</i>
   name:Couldn't Think of a Good Gun
   icon:https://i.imgur.com/OrTrCod.png
-  req:0
+  req:((gunner>=400))
   shown
   hidden when 0
 
@@ -15656,7 +15243,7 @@ Achievements
   desc:Hire <b>500</b> gunshooters.
   name:When All Is Said And Gun
   icon:https://i.imgur.com/V95QmIo.png
-  req:0
+  req:((gunner>=500))
   shown
   hidden when 0
 
@@ -15665,7 +15252,7 @@ Achievements
   desc:Hire <b>600</b> gunshooters.
   name:Top Gek
   icon:https://i.imgur.com/GQyW8ni.png
-  req:0
+  req:((gunner>=600))
   shown
   hidden when 0
 
@@ -15674,7 +15261,7 @@ Achievements
   desc:Hire <b>700</b> gunshooters.</><i>"ALL. ALL GUN. AAAAAAALLL." ~Automated RUC complaint responder</i>
   name:All Are Gun & Gun Is All
   icon:https://i.imgur.com/zZXuikn.png
-  req:0
+  req:((gunner>=700))
   shown
   hidden when 0
 
@@ -15683,7 +15270,7 @@ Achievements
   desc:Hire <b>800</b> gunshooters.
   name:Elder Rifles
   icon:https://i.imgur.com/zS1s1Fp.png
-  req:0
+  req:((gunner>=800))
   shown
   hidden when 0
 
@@ -15692,7 +15279,7 @@ Achievements
   desc:Hire <b>900</b> gunshooters.
   name:Bizarre
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((gunner>=900))
   shown
   hidden when 0
 
@@ -15701,7 +15288,7 @@ Achievements
   desc:Hire <b>1,000</b> gunshooters.
   name:Exotic GunGunner
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((gunner>=1000))
   shown
   hidden when 0
 
@@ -15710,7 +15297,7 @@ Achievements
   desc:Deal <b>1,000,000,000,000</b> damage to the wall with your gunshooters.
   name:Swiss Cheese
   icon:https://i.imgur.com/d6qPAe1.png
-  req:0
+  req:((gunnerDamage>=1000000000000))
   shown
   hidden when 0
 
@@ -15719,7 +15306,7 @@ Achievements
   desc:Deal <b>1,000,000,000,000,000</b> damage to the wall with your gunshooters.
   name:Cheddar Cheese
   icon:https://i.imgur.com/IbegX1u.png
-  req:0
+  req:((gunnerDamage>=1000000000000000))
   shown
   hidden when 0
 
@@ -15728,7 +15315,7 @@ Achievements
   desc:Deal <b>1 sextillion</b> damage to the wall with your gunshooters.
   name:Wall Desliceration
   icon:https://i.imgur.com/4Lzho0L.png
-  req:0
+  req:((gunnerDamage>=1000000000000000000000))
   shown
   hidden when 0
 
@@ -15737,7 +15324,7 @@ Achievements
   desc:Deal <b>1 nonillion</b> damage to the wall with your gunshooters.</><i>A man with a gun never needs a life.</i>
   name:No Sword - No Life
   icon:https://i.imgur.com/pTa1WAu.png
-  req:0
+  req:((gunnerDamage>=1000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15746,7 +15333,7 @@ Achievements
   desc:Deal <b>1 undecillion</b> damage to the wall with your gunshooters.
   name:FurryCon Shooter
   icon:https://i.imgur.com/GQyW8ni.png
-  req:0
+  req:((gunnerDamage>=1000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15755,7 +15342,7 @@ Achievements
   desc:Deal <b>1 tredecillion</b> damage to the wall with your gunshooters.
   name:All Shooter
   icon:https://i.imgur.com/zS1s1Fp.png
-  req:0
+  req:((gunnerDamage>=1000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15764,7 +15351,7 @@ Achievements
   desc:Hire <b>1</b> grenademan.
   name:The Man With the Grenade
   icon:https://i.imgur.com/IiBqHel.png
-  req:0
+  req:((grenade>=1))
   shown
   hidden when 0
 
@@ -15773,7 +15360,7 @@ Achievements
   desc:Hire <b>10</b> grenademen.
   name:The Barrage
   icon:https://i.imgur.com/R9gZAzL.png
-  req:0
+  req:((grenade>=10))
   shown
   hidden when 0
 
@@ -15782,7 +15369,7 @@ Achievements
   desc:Hire <b>50</b> grenademen.
   name:Nade Barricade
   icon:https://i.imgur.com/iygAO3d.png
-  req:0
+  req:((grenade>=50))
   shown
   hidden when 0
 
@@ -15791,7 +15378,7 @@ Achievements
   desc:Hire <b>100</b> grenademen.
   name:Rain of Grenades
   icon:https://i.imgur.com/4Ro8woi.png
-  req:0
+  req:((grenade>=100))
   shown
   hidden when 0
 
@@ -15800,7 +15387,7 @@ Achievements
   desc:Hire <b>150</b> grenademen.
   name:Grenade Gale
   icon:https://i.imgur.com/fXuVuxM.png
-  req:0
+  req:((grenade>=150))
   shown
   hidden when 0
 
@@ -15809,7 +15396,7 @@ Achievements
   desc:Hire <b>200</b> grenademen.
   name:Ocean of Grenades
   icon:https://i.imgur.com/POTBoez.png
-  req:0
+  req:((grenade>=200))
   shown
   hidden when 0
 
@@ -15818,7 +15405,7 @@ Achievements
   desc:Hire <b>300</b> grenademen.
   name:Bomb The World
   icon:https://i.imgur.com/fMBo2SN.png
-  req:0
+  req:((grenade>=300))
   shown
   hidden when 0
 
@@ -15827,7 +15414,7 @@ Achievements
   desc:Hire <b>400</b> grenademen.
   name:Nade It Through
   icon:https://i.imgur.com/LX0Sy7U.png
-  req:0
+  req:((grenade>=400))
   shown
   hidden when 0
 
@@ -15836,7 +15423,7 @@ Achievements
   desc:Hire <b>500</b> grenademen.
   name:The Divine Bombedy
   icon:https://i.imgur.com/FzLeFau.png
-  req:0
+  req:((grenade>=500))
   shown
   hidden when 0
 
@@ -15845,7 +15432,7 @@ Achievements
   desc:Hire <b>600</b> grenademen.
   name:Captain Explosion
   icon:https://i.imgur.com/J7oP3HO.png
-  req:0
+  req:((grenade>=600))
   shown
   hidden when 0
 
@@ -15854,7 +15441,7 @@ Achievements
   desc:Hire <b>700</b> grenademen.</><i>"I quit." ~Chief of Puns</i>
   name:Grenademan Achievement #11
   icon:https://i.imgur.com/8EFEm0M.png
-  req:0
+  req:((grenade>=700))
   shown
   hidden when 0
 
@@ -15863,7 +15450,7 @@ Achievements
   desc:Hire <b>800</b> grenademen.
   name:Tsar Bomb Out Of Grenades
   icon:https://i.imgur.com/VcNgtva.png
-  req:0
+  req:((grenade>=800))
   shown
   hidden when 0
 
@@ -15872,7 +15459,7 @@ Achievements
   desc:Hire <b>900</b> grenademen.
   name:Bomber XXIV
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((grenade>=900))
   shown
   hidden when 0
 
@@ -15881,7 +15468,7 @@ Achievements
   desc:Hire <b>1,000</b> grenademen.</><i>Didn't we learn from history or something?</i>
   name:Forced Hiroshima
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((grenade>=1000))
   shown
   hidden when 0
 
@@ -15890,7 +15477,7 @@ Achievements
   desc:Deal <b>10,000,000,000,000</b> damage to the wall with your grenademen.
   name:Endless War
   icon:https://i.imgur.com/IiBqHel.png
-  req:0
+  req:((grenadeDamage>=10000000000000))
   shown
   hidden when 0
 
@@ -15900,7 +15487,7 @@ Achievements
   desc:Deal <b>10,000,000,000,000,000</b> damage to the wall with your grenademen.
   name:World War
   icon:https://i.imgur.com/Z4YDjVW.png
-  req:0
+  req:((grenadeDamage>=10000000000000000))
   shown
   hidden when 0
 
@@ -15910,7 +15497,7 @@ Achievements
   desc:Deal <b>10 sextillion</b> damage to the wall with your grenademen.
   name:The Islamist
   icon:https://i.imgur.com/3QX7sbz.png
-  req:0
+  req:((grenadeDamage>=10000000000000000000000))
   shown
   hidden when 0
 
@@ -15920,7 +15507,7 @@ Achievements
   desc:Deal <b>10 nonillion</b> damage to the wall with your grenademen.
   name:Naded it
   icon:https://i.imgur.com/pUkQa2G.png
-  req:0
+  req:((grenadeDamage>=10000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15930,7 +15517,7 @@ Achievements
   desc:Deal <b>10 undecillion</b> damage to the wall with your grenademen.
   name:Send Nud- Bombs
   icon:https://i.imgur.com/J7oP3HO.png
-  req:0
+  req:((grenadeDamage>=10000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15940,7 +15527,7 @@ Achievements
   desc:Deal <b>10 tredecillion</b> damage to the wall with your grenademen.</><i>Gunpowder is so last millennia.</i>
   name:Grenpowder
   icon:https://i.imgur.com/VcNgtva.png
-  req:0
+  req:((grenadeDamage>=10000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -15949,7 +15536,7 @@ Achievements
   desc:Hire <b>1</b> wrecking ball.
   name:I'm Gonna Wreck It
   icon:https://i.imgur.com/yM8TEHL.png
-  req:0
+  req:((wreckingBall>=1))
   shown
   hidden when 0
 
@@ -15958,7 +15545,7 @@ Achievements
   desc:Hire <b>10</b> wrecking balls.
   name:Ball Busters
   icon:https://i.imgur.com/mAr2vCg.png
-  req:0
+  req:((wreckingBall>=10))
   shown
   hidden when 0
 
@@ -15967,7 +15554,7 @@ Achievements
   desc:Hire <b>50</b> wrecking balls.
   name:Deconstruction Team
   icon:https://i.imgur.com/G48Ecxn.png
-  req:0
+  req:((wreckingBall>=50))
   shown
   hidden when 0
 
@@ -15976,7 +15563,7 @@ Achievements
   desc:Hire <b>100</b> wrecking balls.
   name:Deconstruction Army
   icon:https://i.imgur.com/RiUfzHo.png
-  req:0
+  req:((wreckingBall>=100))
   shown
   hidden when 0
 
@@ -15985,7 +15572,7 @@ Achievements
   desc:Hire <b>150</b> wrecking balls.
   name:The Wreck Republic
   icon:https://i.imgur.com/0sEdsxd.png
-  req:0
+  req:((wreckingBall>=150))
   shown
   hidden when 0
 
@@ -15994,7 +15581,7 @@ Achievements
   desc:Hire <b>200</b> wrecking balls.
   name:Wrecktacular
   icon:https://i.imgur.com/sgAPNQT.png
-  req:0
+  req:((wreckingBall>=200))
   shown
   hidden when 0
 
@@ -16003,7 +15590,7 @@ Achievements
   desc:Hire <b>300</b> wrecking balls.
   name:The Wreckoning
   icon:https://i.imgur.com/tWgYnpW.png
-  req:0
+  req:((wreckingBall>=300))
   shown
   hidden when 0
 
@@ -16012,7 +15599,7 @@ Achievements
   desc:Hire <b>400</b> wrecking balls.
   name:Wreck is Love, Wreck is Life
   icon:https://i.imgur.com/8CXUpDK.png
-  req:0
+  req:((wreckingBall>=400))
   shown
   hidden when 0
 
@@ -16021,7 +15608,7 @@ Achievements
   desc:Hire <b>500</b> wrecking balls.
   name:Reality Wreck
   icon:https://i.imgur.com/3OYp1g4.png
-  req:0
+  req:((wreckingBall>=500))
   shown
   hidden when 0
 
@@ -16031,7 +15618,7 @@ Achievements
   desc:Hire <b>600</b> wrecking balls.
   name:Transprimordial Wreck
   icon:https://i.imgur.com/2yFjtIa.png
-  req:0
+  req:((wreckingBall>=600))
   shown
   hidden when 0
 
@@ -16041,7 +15628,7 @@ Achievements
   desc:Hire <b>700</b> wrecking balls.</><i>"I think you ran out of fitting ones." ~Agent Carter</>"Round this wreck of the woods, we don't question my puns." ~Chief of Puns</i>
   name:Round This Wreck of The Woods
   icon:https://i.imgur.com/LmISELN.png
-  req:0
+  req:((wreckingBall>=700))
   shown
   hidden when 0
 
@@ -16051,7 +15638,7 @@ Achievements
   desc:Hire <b>800</b> wrecking balls.
   name:Miley Cyrus
   icon:https://i.imgur.com/uQo213H.png
-  req:0
+  req:((wreckingBall>=800))
   shown
   hidden when 0
 
@@ -16061,7 +15648,7 @@ Achievements
   desc:Hire <b>800</b> wrecking balls.
   name:Smashlight
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((wreckingBall>=900))
   shown
   hidden when 0
 
@@ -16071,7 +15658,7 @@ Achievements
   desc:Deal <b>100,000,000,000,000</b> damage to the wall with your wrecking balls.
   name:Get Wrecked
   icon:https://i.imgur.com/yM8TEHL.png
-  req:0
+  req:((wreckingBallDamage>=100000000000000))
   shown
   hidden when 0
 
@@ -16081,7 +15668,7 @@ Achievements
   desc:Deal <b>100,000,000,000,000,000</b> damage to the wall with your wrecking balls.</><i>Which balls? ~Agent Johnson</i>
   name:The Balls
   icon:https://i.imgur.com/0b76QvZ.png
-  req:0
+  req:((wreckingBallDamage>=100000000000000000))
   shown
   hidden when 0
 
@@ -16091,7 +15678,7 @@ Achievements
   desc:Deal <b>100 sextillion</b> damage to the wall with your wrecking balls.
   name:Agent Johnson's Big Balls
   icon:https://i.imgur.com/WgKfsDM.png
-  req:0
+  req:((wreckingBallDamage>=100000000000000000000000))
   shown
   hidden when 0
 
@@ -16101,7 +15688,7 @@ Achievements
   desc:Deal <b>100 nonillion</b> damage to the wall with your wrecking balls.
   name:Diswrecked
   icon:https://i.imgur.com/WgKfsDM.png
-  req:0
+  req:((wreckingBallDamage>=100000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16111,7 +15698,7 @@ Achievements
   desc:Deal <b>100 undecillion</b> damage to the wall with your wrecking balls.
   name:Hole In The Wall
   icon:https://i.imgur.com/2yFjtIa.png
-  req:0
+  req:((wreckingBallDamage>=100000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16121,7 +15708,7 @@ Achievements
   desc:Deal <b>100 tredecillion</b> damage to the wall with your wrecking balls.
   name:Beehive
   icon:https://i.imgur.com/uQo213H.png
-  req:0
+  req:((wreckingBallDamage>=100000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16130,7 +15717,7 @@ Achievements
   desc:Hire <b>1</b> bulldozer.
   name:The Doze Knows
   icon:https://i.imgur.com/q1QrnCW.png
-  req:0
+  req:((bulldozer>=1))
   shown
   hidden when 0
 
@@ -16139,7 +15726,7 @@ Achievements
   desc:Hire <b>10</b> bulldozers.
   name:Those Who Arose to Doze
   icon:https://i.imgur.com/EiU5wtP.png
-  req:0
+  req:((bulldozer>=10))
   shown
   hidden when 0
 
@@ -16148,7 +15735,7 @@ Achievements
   desc:Hire <b>50</b> bulldozers.
   name:The Doze Division
   icon:https://i.imgur.com/HH6K4Vq.png
-  req:0
+  req:((bulldozer>=50))
   shown
   hidden when 0
 
@@ -16157,7 +15744,7 @@ Achievements
   desc:Hire <b>100</b> bulldozers.
   name:Stop And Smell The Dozes
   icon:https://i.imgur.com/BXEfdVE.png
-  req:0
+  req:((bulldozer>=100))
   shown
   hidden when 0
 
@@ -16166,7 +15753,7 @@ Achievements
   desc:Hire <b>150</b> bulldozers.
   name:Level The City
   icon:https://i.imgur.com/crWt6tW.png
-  req:0
+  req:((bulldozer>=150))
   shown
   hidden when 0
 
@@ -16175,7 +15762,7 @@ Achievements
   desc:Hire <b>200</b> bulldozers.</><i>Disclaimer: These achievement titles are not commands.</i>
   name:Level The Country
   icon:https://i.imgur.com/jVDRDvc.png
-  req:0
+  req:((bulldozer>=200))
   shown
   hidden when 0
 
@@ -16184,7 +15771,7 @@ Achievements
   desc:Hire <b>300</b> bulldozers.
   name:The Superbull
   icon:https://i.imgur.com/F68kWwp.png
-  req:0
+  req:((bulldozer>=300))
   shown
   hidden when 0
 
@@ -16193,7 +15780,7 @@ Achievements
   desc:Hire <b>400</b> bulldozers.
   name:Dozes Are Red, The World is Dead
   icon:https://i.imgur.com/WQZmqRv.png
-  req:0
+  req:((bulldozer>=400))
   shown
   hidden when 0
 
@@ -16202,7 +15789,7 @@ Achievements
   desc:Hire <b>500</b> bulldozers.
   name:Overdoze
   icon:https://i.imgur.com/wzJXciZ.png
-  req:0
+  req:((bulldozer>=500))
   shown
   hidden when 0
 
@@ -16211,7 +15798,7 @@ Achievements
   desc:Hire <b>600</b> bulldozers.
   name:Dozen Dozes
   icon:https://i.imgur.com/sfXVHT6.png
-  req:0
+  req:((bulldozer>=600))
   shown
   hidden when 0
 
@@ -16220,7 +15807,7 @@ Achievements
   desc:Hire <b>700</b> bulldozers.</><i>"Could it be... The only accurately named thing in the entire game?" ~Agent Connor</i>
   name:Bullshit
   icon:https://i.imgur.com/taZMkYw.png
-  req:0
+  req:((bulldozer>=700))
   shown
   hidden when 0
 
@@ -16229,7 +15816,7 @@ Achievements
   desc:Hire <b>800</b> bulldozers.
   name:Turn It Off And Doze It On
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((bulldozer>=800))
   shown
   hidden when 0
 
@@ -16239,7 +15826,7 @@ Achievements
   desc:Deal <b>200,000,000,000,000</b> damage to the wall with your bulldozers.
   name:Crack n Smash
   icon:https://i.imgur.com/q1QrnCW.png
-  req:0
+  req:((bulldozerDamage>=200000000000000))
   shown
   hidden when 0
 
@@ -16249,7 +15836,7 @@ Achievements
   desc:Deal <b>200,000,000,000,000,000</b> damage to the wall with your bulldozers.
   name:Push Into The Void
   icon:https://i.imgur.com/DPbausO.png
-  req:0
+  req:((bulldozerDamage>=200000000000000000))
   shown
   hidden when 0
 
@@ -16259,7 +15846,7 @@ Achievements
   desc:Deal <b>200 sextillion</b> damage to the wall with your bulldozers.
   name:Farm of Bulls
   icon:https://i.imgur.com/50pc780.png
-  req:0
+  req:((bulldozerDamage>=200000000000000000000000))
   shown
   hidden when 0
 
@@ -16269,7 +15856,7 @@ Achievements
   desc:Deal <b>200 nonillion</b> damage to the wall with your bulldozers.
   name:Deconstruction Site
   icon:https://i.imgur.com/lKRKuaD.png
-  req:0
+  req:((bulldozerDamage>=200000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16279,7 +15866,7 @@ Achievements
   desc:Deal <b>200 undecillion</b> damage to the wall with your bulldozers.
   name:Interstellar Level
   icon:https://i.imgur.com/sfXVHT6.png
-  req:0
+  req:((bulldozerDamage>=200000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16289,7 +15876,7 @@ Achievements
   desc:Deal <b>200 tredecillion</b> damage to the wall with your bulldozers.
   name:Intergalactic Level
   icon:https://i.imgur.com/8XhF0a9.png
-  req:0
+  req:((bulldozerDamage>=200000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16298,7 +15885,7 @@ Achievements
   desc:Hire <b>1</b> airstrike caller.
   name:Calling the Shots
   icon:https://i.imgur.com/ziKked6.png
-  req:0
+  req:((airstrike>=1))
   shown
   hidden when 0
 
@@ -16307,7 +15894,7 @@ Achievements
   desc:Hire <b>10</b> airstrike callers.
   name:The Strikes
   icon:https://i.imgur.com/pGXsYZg.png
-  req:0
+  req:((airstrike>=10))
   shown
   hidden when 0
 
@@ -16316,7 +15903,7 @@ Achievements
   desc:Hire <b>50</b> airstrike callers.
   name:Call of Nature
   icon:https://i.imgur.com/0yGfwss.png
-  req:0
+  req:((airstrike>=50))
   shown
   hidden when 0
 
@@ -16325,7 +15912,7 @@ Achievements
   desc:Hire <b>100</b> airstrike callers.
   name:The Strikedown
   icon:https://i.imgur.com/Mh3dfeG.png
-  req:0
+  req:((airstrike>=100))
   shown
   hidden when 0
 
@@ -16334,7 +15921,7 @@ Achievements
   desc:Hire <b>150</b> airstrike callers.
   name:Crush the World
   icon:https://i.imgur.com/nkSdY4M.png
-  req:0
+  req:((airstrike>=150))
   shown
   hidden when 0
 
@@ -16343,7 +15930,7 @@ Achievements
   desc:Hire <b>200</b> airstrike callers.
   name:Calamity Calling
   icon:https://i.imgur.com/kggtIiP.png
-  req:0
+  req:((airstrike>=200))
   shown
   hidden when 0
 
@@ -16352,7 +15939,7 @@ Achievements
   desc:Hire <b>300</b> airstrike callers.
   name:Take A Strike
   icon:https://i.imgur.com/gXHS6sy.png
-  req:0
+  req:((airstrike>=300))
   shown
   hidden when 0
 
@@ -16361,7 +15948,7 @@ Achievements
   desc:Hire <b>400</b> airstrike callers.
   name:It's Call Over Now
   icon:https://i.imgur.com/DcaMUp9.png
-  req:0
+  req:((airstrike>=400))
   shown
   hidden when 0
 
@@ -16370,7 +15957,7 @@ Achievements
   desc:Hire <b>500</b> airstrike callers.</><i>He wants his walls back.</i>
   name:God's On The Other Line
   icon:https://i.imgur.com/KqdTHwt.png
-  req:0
+  req:((airstrike>=500))
   shown
   hidden when 0
 
@@ -16379,7 +15966,7 @@ Achievements
   desc:Hire <b>600</b> airstrike callers.
   name:Grenademan Achievement #73
   icon:https://i.imgur.com/YqEx6Xx.png
-  req:0
+  req:((airstrike>=600))
   shown
   hidden when 0
 
@@ -16388,7 +15975,7 @@ Achievements
   desc:Hire <b>700</b> airstrike callers.</><i>His walls obviously...</i>
   name:Nuke The Trump
   icon:https://i.imgur.com/pyvvTSj.png
-  req:0
+  req:((airstrike>=700))
   shown
   hidden when 0
 
@@ -16397,7 +15984,7 @@ Achievements
   desc:Hire <b>800</b> airstrike callers.
   name:Call Of Duty
   icon:https://i.imgur.com/XSae4F0.png
-  req:0
+  req:((airstrike>=800))
   shown
   hidden when 0
 
@@ -16407,7 +15994,7 @@ Achievements
   desc:Deal <b>2,000,000,000,000,000</b> damage to the wall with your airstrike callers.
   name:Death Called
   icon:https://i.imgur.com/ziKked6.png
-  req:0
+  req:((airstrikeDamage>=2000000000000000))
   shown
   hidden when 0
 
@@ -16417,7 +16004,7 @@ Achievements
   desc:Deal <b>2 sextillion</b> damage to the wall with your airstrike callers.
   name:Death Responded
   icon:https://i.imgur.com/xxfcJIo.png
-  req:0
+  req:((airstrikeDamage>=2000000000000000000))
   shown
   hidden when 0
 
@@ -16427,7 +16014,7 @@ Achievements
   desc:Deal <b>2 octillion</b> damage to the wall with your airstrike callers.
   name:Allahu Akbar
   icon:https://i.imgur.com/rEOQtOS.png
-  req:0
+  req:((airstrikeDamage>=2000000000000000000000000))
   shown
   hidden when 0
 
@@ -16437,7 +16024,7 @@ Achievements
   desc:Deal <b>2 decillion</b> damage to the wall with your airstrike callers.
   name:The Epic Airstrike
   icon:https://i.imgur.com/2ySbj27.png
-  req:0
+  req:((airstrikeDamage>=2000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16447,7 +16034,7 @@ Achievements
   desc:Deal <b>2 duodecillion</b> damage to the wall with your airstrike callers.
   name:Vast
   icon:https://i.imgur.com/YqEx6Xx.png
-  req:0
+  req:((airstrikeDamage>=2000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16457,7 +16044,7 @@ Achievements
   desc:Deal <b>2 quattuordecillion</b> damage to the wall with your airstrike callers.</><i>"Chief of puns was here"</i>
   name:aVast
   icon:https://i.imgur.com/XSae4F0.png
-  req:0
+  req:((airstrikeDamage>=2000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16466,7 +16053,7 @@ Achievements
   desc:Hire <b>1</b> necromancer.</><i>"The biggest possible." ~Head of Wizard Relations</i>
   name:Bring In The Hats
   icon:https://i.imgur.com/v1AK3rT.png
-  req:0
+  req:((necromancer>=1))
   shown
   hidden when 0
 
@@ -16475,7 +16062,7 @@ Achievements
   desc:Hire <b>10</b> necromancers.
   name:Men In Black
   icon:https://i.imgur.com/TFn4qy8.png
-  req:0
+  req:((necromancer>=10))
   shown
   hidden when 0
 
@@ -16484,7 +16071,7 @@ Achievements
   desc:Hire <b>50</b> necromancers.
   name:The Cult
   icon:https://i.imgur.com/Rcq67yT.png
-  req:0
+  req:((necromancer>=50))
   shown
   hidden when 0
 
@@ -16493,7 +16080,7 @@ Achievements
   desc:Hire <b>100</b> necromancers.
   name:Dead Rising
   icon:https://i.imgur.com/9zBRNek.png
-  req:0
+  req:((necromancer>=100))
   shown
   hidden when 0
 
@@ -16502,7 +16089,7 @@ Achievements
   desc:Hire <b>150</b> necromancers.
   name:Zombieland
   icon:https://i.imgur.com/qXqoMU6.png
-  req:0
+  req:((necromancer>=150))
   shown
   hidden when 0
 
@@ -16511,7 +16098,7 @@ Achievements
   desc:Hire <b>200</b> necromancers.
   name:Army of Darkness
   icon:https://i.imgur.com/RnCc5dn.png
-  req:0
+  req:((necromancer>=200))
   shown
   hidden when 0
 
@@ -16520,7 +16107,7 @@ Achievements
   desc:Hire <b>300</b> necromancers.</><i>*thats it. im getting the dead.</i>
   name:That's It. I'm Getting The Dead.
   icon:https://i.imgur.com/OZnAMmh.png
-  req:0
+  req:((necromancer>=300))
   shown
   hidden when 0
 
@@ -16529,7 +16116,7 @@ Achievements
   desc:Hire <b>400</b> necromancers.
   name:Only Zombies Now
   icon:https://i.imgur.com/Q42Qlh5.png
-  req:0
+  req:((necromancer>=400))
   shown
   hidden when 0
 
@@ -16538,7 +16125,7 @@ Achievements
   desc:Hire <b>500</b> necromancers.</><i>Not actually though.</i>
   name:The Grateful Dead
   icon:https://i.imgur.com/2nlwuwZ.png
-  req:0
+  req:((necromancer>=500))
   shown
   hidden when 0
 
@@ -16547,7 +16134,7 @@ Achievements
   desc:Hire <b>600</b> necromancers.
   name:Undead These Days...
   icon:https://i.imgur.com/noYm2fV.png
-  req:0
+  req:((necromancer>=600))
   shown
   hidden when 0
 
@@ -16557,7 +16144,7 @@ Achievements
   desc:Deal <b>100,000,000,000,000,000</b> damage to the wall with your necromancers.
   name:Zombie Madness
   icon:https://i.imgur.com/v1AK3rT.png
-  req:0
+  req:((necromancerDamage>=100000000000000000))
   shown
   hidden when 0
 
@@ -16567,7 +16154,7 @@ Achievements
   desc:Deal <b>100 sextillion</b> damage to the wall with your necromancers.
   name:Purifier of Zombies
   icon:https://i.imgur.com/G04qYcp.png
-  req:0
+  req:((necromancerDamage>=100000000000000000000000))
   shown
   hidden when 0
 
@@ -16577,7 +16164,7 @@ Achievements
   desc:Deal <b>100 septillion</b> damage to the wall with your necromancers.
   name:Great Corpse Remover
   icon:https://i.imgur.com/MQYHYJX.png
-  req:0
+  req:((necromancerDamage>=100000000000000000000000000))
   shown
   hidden when 0
 
@@ -16587,7 +16174,7 @@ Achievements
   desc:Deal <b>100 decillion</b> damage to the wall with your necromancers.
   name:No Grave Left
   icon:https://i.imgur.com/vr82R1d.png
-  req:0
+  req:((necromancerDamage>=100000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16597,7 +16184,7 @@ Achievements
   desc:Deal <b>100 duodecillion</b> damage to the wall with your necromancers.
   name:202 Billion Feet
   icon:https://i.imgur.com/VIgd45X.png
-  req:0
+  req:((necromancerDamage>=100000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16606,7 +16193,7 @@ Achievements
   desc:Hire <b>1</b> titan.
   name:It's Back
   icon:https://i.imgur.com/YYCAyYr.png
-  req:0
+  req:((giant>=1))
   shown
   hidden when 0
 
@@ -16615,7 +16202,7 @@ Achievements
   desc:Hire <b>10</b> titans.
   name:They're Coming
   icon:https://i.imgur.com/NJiXXeV.png
-  req:0
+  req:((giant>=10))
   shown
   hidden when 0
 
@@ -16624,7 +16211,7 @@ Achievements
   desc:Hire <b>50</b> titans.
   name:Massive Attack
   icon:https://i.imgur.com/qRTZ0PT.png
-  req:0
+  req:((giant>=50))
   shown
   hidden when 0
 
@@ -16633,7 +16220,7 @@ Achievements
   desc:Hire <b>100</b> titans.
   name:Titanic Takeover
   icon:https://i.imgur.com/C8MyH4G.png
-  req:0
+  req:((giant>=100))
   shown
   hidden when 0
 
@@ -16642,7 +16229,7 @@ Achievements
   desc:Hire <b>150</b> titans.
   name:Ancient Army
   icon:https://i.imgur.com/nqgG46f.png
-  req:0
+  req:((giant>=150))
   shown
   hidden when 0
 
@@ -16651,7 +16238,7 @@ Achievements
   desc:Hire <b>200</b> titans.</><i>Lord Reaefsek, God of The Unfinished, was one of the most famous titans. He was insane, and very skilled with Old World magic.</i>
   name:Lord Reaefsek's Castle
   icon:https://i.imgur.com/Uozfrtb.png
-  req:0
+  req:((giant>=200))
   shown
   hidden when 0
 
@@ -16660,7 +16247,7 @@ Achievements
   desc:Hire <b>300</b> titans.</><i>Lord Reaefsek and King Hyzem were rivals; as the records in Bextic - Hyzem's castle - state, Reaefsek decided that he was the god of everything and attacked Hyzem's kingdom. This was the golden age of magical artifacts.</i>
   name:Hyzem's Kingdom
   icon:https://i.imgur.com/uw0puJR.png
-  req:0
+  req:((giant>=300))
   shown
   hidden when 0
 
@@ -16669,7 +16256,7 @@ Achievements
   desc:Hire <b>400</b> titans.</><i>The giant warriors of the Old World, joining together for the single purpose of smashing a brick wall to the ground... Beautiful.</i>
   name:A Beautiful Sight
   icon:https://i.imgur.com/1VqgNdS.png
-  req:0
+  req:((giant>=400))
   shown
   hidden when 0
 
@@ -16678,7 +16265,7 @@ Achievements
   desc:Hire <b>500</b> titans.
   name:The Old World
   icon:https://i.imgur.com/enLETzJ.png
-  req:0
+  req:((giant>=500))
   shown
   hidden when 0
 
@@ -16687,7 +16274,7 @@ Achievements
   desc:Hire <b>600</b> titans.
   name:All-Seeing Eye
   icon:https://i.imgur.com/hAPByUt.png
-  req:0
+  req:((giant>=600))
   shown
   hidden when 0
 
@@ -16696,7 +16283,7 @@ Achievements
   desc:Deal <b>300,000,000,000,000,000</b> damage to the wall with your titans.
   name:Only 30 Meters High
   icon:https://i.imgur.com/YYCAyYr.png
-  req:0
+  req:((giantDamage>=300000000000000000))
   shown
   hidden when 0
 
@@ -16705,7 +16292,7 @@ Achievements
   desc:Deal <b>300 sextillion</b> damage to the wall with your titans.
   name:Are You Dead Yet?
   icon:https://i.imgur.com/sEMkprd.png
-  req:0
+  req:((giantDamage>=300000000000000000000000))
   shown
   hidden when 0
 
@@ -16714,7 +16301,7 @@ Achievements
   desc:Deal <b>300 septillion</b> damage to the wall with your titans.
   name:Really Big
   icon:https://i.imgur.com/MtDGLlY.png
-  req:0
+  req:((giantDamage>=300000000000000000000000000))
   shown
   hidden when 0
 
@@ -16723,7 +16310,7 @@ Achievements
   desc:Deal <b>300 decillion</b> damage to the wall with your titans.
   name:Blue Lion
   icon:https://i.imgur.com/PuX8Z11.png
-  req:0
+  req:((giantDamage>=300000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16732,7 +16319,7 @@ Achievements
   desc:Deal <b>300 duodecillion</b> damage to the wall with your titans.
   name:Reverse Repair
   icon:https://i.imgur.com/MK8RnHM.png
-  req:0
+  req:((giantDamage>=300000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16741,7 +16328,7 @@ Achievements
   desc:Build <b>1</b> brick factory.
   name:They'll Never Find Out
   icon:https://i.imgur.com/aCU88Ro.png
-  req:0
+  req:((brickFactory>=1))
   shown
   hidden when 0
 
@@ -16750,7 +16337,7 @@ Achievements
   desc:Build <b>10</b> brick factories.
   name:Secret Production
   icon:https://i.imgur.com/tpCfx3P.png
-  req:0
+  req:((brickFactory>=10))
   shown
   hidden when 0
 
@@ -16759,7 +16346,7 @@ Achievements
   desc:Build <b>50</b> brick factories.
   name:Area 51
   icon:https://i.imgur.com/DzNqcUh.png
-  req:0
+  req:((brickFactory>=50))
   shown
   hidden when 0
 
@@ -16768,7 +16355,7 @@ Achievements
   desc:Build <b>100</b> brick factories.
   name:Blissful Secrecy
   icon:https://i.imgur.com/e6dtWjK.png
-  req:0
+  req:((brickFactory>=100))
   shown
   hidden when 0
 
@@ -16777,7 +16364,7 @@ Achievements
   desc:Build <b>150</b> brick factories.</><i>Not enough.</i>
   name:How Many Bricks Does It Take
   icon:https://i.imgur.com/WAMfl5a.png
-  req:0
+  req:((brickFactory>=150))
   shown
   hidden when 0
 
@@ -16786,7 +16373,7 @@ Achievements
   desc:Build <b>200</b> brick factories.
   name:Artificial City
   icon:https://i.imgur.com/aJfezqc.png
-  req:0
+  req:((brickFactory>=200))
   shown
   hidden when 0
 
@@ -16795,7 +16382,7 @@ Achievements
   desc:Build <b>300</b> brick factories.</><i>He comes down your chimney, but instead of giving you presents he dismantles the chimney and takes all the bricks.</i>
   name:St. Brick
   icon:https://i.imgur.com/kEcAqB6.png
-  req:0
+  req:((brickFactory>=300))
   shown
   hidden when 0
 
@@ -16804,7 +16391,7 @@ Achievements
   desc:Build <b>400</b> brick factories.</><i>"I regret writing that last description. Now the demons dress up as St. Brick every Christmas and act the part." ~Agent Connor</i>
   name:Brickrolled
   icon:https://i.imgur.com/v1FFhA9.png
-  req:0
+  req:((brickFactory>=400))
   shown
   hidden when 0
 
@@ -16813,7 +16400,7 @@ Achievements
   desc:Build <b>500</b> brick fatories.</><i>"Did we run out of fitting ones?" ~Agent Carter</>"If you had a brick of sense in you, you wouldn't question my puns." ~Chief of Puns</i>
   name:A Brick of Sense
   icon:https://i.imgur.com/CVVcmHj.png
-  req:0
+  req:((brickFactory>=500))
   shown
   hidden when 0
 
@@ -16823,7 +16410,7 @@ Achievements
   desc:Build <b>600</b> brick fatories.
   name:Factories In Mexico
   icon:https://i.imgur.com/ufqnZaV.png
-  req:0
+  req:((brickFactory>=600))
   shown
   hidden when 0
 
@@ -16832,7 +16419,7 @@ Achievements
   desc:Hire <b>1</b> demon.
   name:Raising Hell
   icon:https://i.imgur.com/klcGmts.png
-  req:0
+  req:((demon>=1))
   shown
   hidden when 0
 
@@ -16841,7 +16428,7 @@ Achievements
   desc:Hire <b>10</b> demons.
   name:Satan's Little Helpers
   icon:https://i.imgur.com/SxcztPw.png
-  req:0
+  req:((demon>=10))
   shown
   hidden when 0
 
@@ -16850,7 +16437,7 @@ Achievements
   desc:Hire <b>50</b> demons.</><i>"The only actual fire here is the fire coming from MY ANGER." ~Head of Tech</>"There's also the bonfire they built over some box they buried in my yard. They said it was part of a treasure hunt." ~RC Project Leader</>"THOSE ARE ALL MY OLD FLOPPY DISKS." ~Head of Tech</i>
   name:Fire & Brimstone
   icon:https://i.imgur.com/8r38suM.png
-  req:0
+  req:((demon>=50))
   shown
   hidden when 0
 
@@ -16859,7 +16446,7 @@ Achievements
   desc:Hire <b>100</b> demons.</><i>"You've got THAT right." ~Everyone except Agent Johnson</i>
   name:Hell On Earth
   icon:https://i.imgur.com/zpaA3Yo.png
-  req:0
+  req:((demon>=100))
   shown
   hidden when 0
 
@@ -16868,7 +16455,7 @@ Achievements
   desc:Hire <b>150</b> demons.</><i>"Dominance over NOT BEING ANNOYED ALL THE TIME." ~Head of Demon Relations</i>
   name:Demonic Dominance
   icon:https://i.imgur.com/f9zhDkC.png
-  req:0
+  req:((demon>=150))
   shown
   hidden when 0
 
@@ -16877,7 +16464,7 @@ Achievements
   desc:Hire <b>200</b> demons.</><i>"The only quarter they give is the quarter they used to jam the coffee maker in the lobby. We ended up inventing a coffee maker that requires a password so they would stop screwing with it." ~Head of R&D</i>
   name:No Quarter
   icon:https://i.imgur.com/MKqt6OB.png
-  req:0
+  req:((demon>=200))
   shown
   hidden when 0
 
@@ -16886,7 +16473,7 @@ Achievements
   desc:Hire <b>300</b> demons.
   name:Judgement Day
   icon:https://i.imgur.com/92rYyAC.png
-  req:0
+  req:((demon>=300))
   shown
   hidden when 0
 
@@ -16895,7 +16482,7 @@ Achievements
   desc:Hire <b>400</b> demons.</><i>"From all the demons being awful and trolling everyone maybe??" ~Agent Connor</i>
   name:How Could You Hell
   icon:https://i.imgur.com/FmFQPoJ.png
-  req:0
+  req:((demon>=400))
   shown
   hidden when 0
 
@@ -16904,7 +16491,7 @@ Achievements
   desc:Hire <b>500</b> demons.</><i>"Say, isn't that an oxymoron?" ~Agent Carter</>"</i>You're<i> an oxymoron." ~Agent Johnson</i>
   name:Holy Hell
   icon:https://i.imgur.com/msrmpyh.png
-  req:0
+  req:((demon>=500))
   shown
   hidden when 0
 
@@ -16913,7 +16500,7 @@ Achievements
   desc:Hire <b>600</b> demons.</><i>Disclaimer: The narrator is not jesus.</i>
   name:Jesus
   icon:https://i.imgur.com/lqdvoH6.png
-  req:0
+  req:((demon>=600))
   shown
   hidden when 0
 
@@ -16923,7 +16510,7 @@ Achievements
   desc:Hire <b>666</b> demons.</><i>What a plot twist!</i>
   name:Lucifer
   icon:https://i.imgur.com/L44ETEi.png
-  req:0
+  req:((demon>=666))
   shown
   hidden when 0
 
@@ -16932,7 +16519,7 @@ Achievements
   desc:Deal <b>600,000,000,000,000,000</b> damage to the wall with your demons.
   name:Bubbly Lava Soup
   icon:https://i.imgur.com/klcGmts.png
-  req:0
+  req:((demonDamage>=600000000000000000))
   shown
   hidden when 0
 
@@ -16941,7 +16528,7 @@ Achievements
   desc:Deal <b>600 sextillion</b> damage to the wall with your demons.
   name:Antichrist
   icon:https://i.imgur.com/DGV4nLW.png
-  req:0
+  req:((demonDamage>=600000000000000000000000))
   shown
   hidden when 0
 
@@ -16950,7 +16537,7 @@ Achievements
   desc:Deal <b>600 septillion</b> damage to the wall with your demons.
   name:The Dark Lord Is Here
   icon:https://i.imgur.com/mCEnWGa.png
-  req:0
+  req:((demonDamage>=600000000000000000000000000))
   shown
   hidden when 0
 
@@ -16959,7 +16546,7 @@ Achievements
   desc:Deal <b>600 decillion</b> damage to the wall with your demons.
   name:I Suck At Doing Titles, Enjoy This Agent Johnson
   icon:https://i.imgur.com/oCJsVZq.png
-  req:0
+  req:((demonDamage>=600000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16968,7 +16555,7 @@ Achievements
   desc:Deal <b>600 duodecillion</b> damage to the wall with your demons.
   name:Antibirth
   icon:https://i.imgur.com/lqdvoH6.png
-  req:0
+  req:((demonDamage>=600000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -16977,7 +16564,7 @@ Achievements
   desc:Build <b>1</b> reality compromiser.
   name:Think Outside The Box
   icon:https://i.imgur.com/gRgl3DR.png
-  req:0
+  req:((compromiser>=1))
   shown
   hidden when 0
 
@@ -16986,7 +16573,7 @@ Achievements
   desc:Build <b>10</b> reality compromisers.</><i>"You know the night divides the day, the day DESTROYS THE WALLS" ~Agent Johnson, before getting kicked out of karoke night</i>
   name:Break on Through to The Other Side
   icon:https://i.imgur.com/Au6TbeN.png
-  req:0
+  req:((compromiser>=10))
   shown
   hidden when 0
 
@@ -16995,7 +16582,7 @@ Achievements
   desc:Build <b>50</b> reality compromisers.</><i>"It's bullshit all the way down." ~Agent Connor</i>
   name:I Can See Forever
   icon:https://i.imgur.com/s0e1Pk1.png
-  req:0
+  req:((compromiser>=50))
   shown
   hidden when 0
 
@@ -17004,7 +16591,7 @@ Achievements
   desc:Build <b>100</b> reality compromisers.
   name:Reality Fatality
   icon:https://i.imgur.com/mpvRvBz.png
-  req:0
+  req:((compromiser>=100))
   shown
   hidden when 0
 
@@ -17013,7 +16600,7 @@ Achievements
   desc:Build <b>150</b> reality compromisers.
   name:Beyond The Infinite
   icon:https://i.imgur.com/3QMurit.png
-  req:0
+  req:((compromiser>=150))
   shown
   hidden when 0
 
@@ -17022,7 +16609,7 @@ Achievements
   desc:Build <b>200</b> reality compromisers.
   name:The Grand Compromise
   icon:https://i.imgur.com/qxa1Na2.png
-  req:0
+  req:((compromiser>=200))
   shown
   hidden when 0
 
@@ -17031,7 +16618,7 @@ Achievements
   desc:Build <b>300</b> reality compromisers.</><i>What levee, you ask? The levee of REALITY.</i>
   name:The Levee
   icon:https://i.imgur.com/NFNQ3zk.png
-  req:0
+  req:((compromiser>=300))
   shown
   hidden when 0
 
@@ -17040,7 +16627,7 @@ Achievements
   desc:Build <b>400</b> reality compromisers.</><i>"Pretty late for using that analogy." ~Agent Connor</i>
   name:Pandora's Box
   icon:https://i.imgur.com/DJUqiov.png
-  req:0
+  req:((compromiser>=400))
   shown
   hidden when 0
 
@@ -17049,7 +16636,7 @@ Achievements
   desc:Build <b>500</b> reality compromisers.</><i>"And we didn't </i>buy<i> no stairway, unlike that cheapass lady. We built it, with our own blood, sweat, and tears!" ~RUC CEO</i>
   name:Stairway To Heaven
   icon:https://i.imgur.com/KkLNQv0.png
-  req:0
+  req:((compromiser>=500))
   shown
   hidden when 0
 
@@ -17058,7 +16645,7 @@ Achievements
   desc:Build <b>600</b> reality compromisers.
   name:Penrose
   icon:https://i.imgur.com/VeoBNKx.png
-  req:0
+  req:((compromiser>=600))
   shown
   hidden when 0
 
@@ -17068,7 +16655,7 @@ Achievements
   desc:Deal <b>1 quintillion</b> damage to the wall with your reality compromisers.
   name:Fourth Deletion
   icon:https://i.imgur.com/gRgl3DR.png
-  req:0
+  req:((compromiserDamage>=1000000000000000000))
   shown
   hidden when 0
 
@@ -17078,7 +16665,7 @@ Achievements
   desc:Deal <b>1 septillion</b> damage to the wall with your reality compromisers.
   name:Team Force Update
   icon:https://i.imgur.com/3aOpWd3.png
-  req:0
+  req:((compromiserDamage>=1000000000000000000000000))
   shown
   hidden when 0
 
@@ -17088,7 +16675,7 @@ Achievements
   desc:Deal <b>1 octillion</b> damage to the wall with your reality compromisers.
   name:The Universe Said 4
   icon:https://i.imgur.com/lBojsEA.png
-  req:0
+  req:((compromiserDamage>=1000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17098,7 +16685,7 @@ Achievements
   desc:Deal <b>1 undecillion</b> damage to the wall with your reality compromisers.</><i>I will eat all your tofu and gas ~ThatDude</i>
   name:Tofu_Saturn
   icon:https://i.imgur.com/eEN1R6D.png
-  req:0
+  req:((compromiserDamage>=1000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17108,7 +16695,7 @@ Achievements
   desc:Deal <b>1 tredecillion</b> damage to the wall with your reality compromisers.</><i>Perhaps this is how tesseract damage came to life.</i>
   name:That Fourth Wall Thingy, Yes That One Over There, Now Don't Touch That, What Have You Done!?
   icon:https://i.imgur.com/VeoBNKx.png
-  req:0
+  req:((compromiserDamage>=1000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17117,7 +16704,7 @@ Achievements
   desc:Build <b>1</b> black obliterator.
   name:The Reaper
   icon:https://i.imgur.com/PqwDNQa.png
-  req:0
+  req:((lastBuilding>=1))
   shown
   hidden when 0
 
@@ -17126,7 +16713,7 @@ Achievements
   desc:Build <b>10</b> black obliterators.
   name:Back In Black
   icon:https://i.imgur.com/zjWBTj1.png
-  req:0
+  req:((lastBuilding>=10))
   shown
   hidden when 0
 
@@ -17135,7 +16722,7 @@ Achievements
   desc:Build <b>50</b> black obliterators.
   name:The Black Plague
   icon:https://i.imgur.com/2lFDykJ.png
-  req:0
+  req:((lastBuilding>=50))
   shown
   hidden when 0
 
@@ -17144,7 +16731,7 @@ Achievements
   desc:Build <b>100</b> black obliterators.
   name:Paint It Black
   icon:https://i.imgur.com/Sb9XPog.png
-  req:0
+  req:((lastBuilding>=100))
   shown
   hidden when 0
 
@@ -17153,7 +16740,7 @@ Achievements
   desc:Build <b>150</b> black obliterators.
   name:Blackbird
   icon:https://i.imgur.com/A056Mob.png
-  req:0
+  req:((lastBuilding>=150))
   shown
   hidden when 0
 
@@ -17162,7 +16749,7 @@ Achievements
   desc:Build <b>200</b> black obliterators.
   name:Blackout
   icon:https://i.imgur.com/zQpS4F8.png
-  req:0
+  req:((lastBuilding>=200))
   shown
   hidden when 0
 
@@ -17171,7 +16758,7 @@ Achievements
   desc:Build <b>300</b> black obliterators.
   name:Oblivion
   icon:https://i.imgur.com/jFpYzHt.png
-  req:0
+  req:((lastBuilding>=300))
   shown
   hidden when 0
 
@@ -17180,7 +16767,7 @@ Achievements
   desc:Build <b>400</b> Black obliterators.</><i>"400 is not equal to infinity." ~Agent Lawrence</>"Wrong." ~Agent Johnson</i>
   name:Infinity
   icon:https://i.imgur.com/9ICkBB1.png
-  req:0
+  req:((lastBuilding>=400))
   shown
   hidden when 0
 
@@ -17189,7 +16776,7 @@ Achievements
   desc:Build <b>500</b> Black obliterators.
   name:Black
   icon:https://i.imgur.com/lLjnBdc.png
-  req:0
+  req:((lastBuilding>=500))
   shown
   hidden when 0
 
@@ -17199,7 +16786,7 @@ Achievements
   desc:Build <b>500</b> Black obliterators.
   name:Black Hole
   icon:https://i.imgur.com/pEpISIJ.png
-  req:0
+  req:((lastBuilding>=600))
   shown
   hidden when 0
 
@@ -17208,7 +16795,7 @@ Achievements
   desc:Deal <b>1 septillion</b> damage to the wall with your obliterators.
   name:Consume
   icon:https://i.imgur.com/PqwDNQa.png
-  req:0
+  req:((lastDamage>=1000000000000000000000000))
   shown
   hidden when 0
 
@@ -17217,7 +16804,7 @@ Achievements
   desc:Deal <b>1 octillion</b> damage to the wall with your obliterators.
   name:Everything
   icon:https://i.imgur.com/UDpQHgY.png
-  req:0
+  req:((lastDamage>=1000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17226,7 +16813,7 @@ Achievements
   desc:Deal <b>1 decillion</b> damage to the wall with your obliterators.
   name:Quantum Obliteration
   icon:https://i.imgur.com/5vGNs1i.png
-  req:0
+  req:((lastDamage>=1000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17235,7 +16822,7 @@ Achievements
   desc:Deal <b>1 tredecillion</b> damage to the wall with your obliterators.
   name:No Physics And Screams Apply Here
   icon:https://i.imgur.com/jvDmXhB.png
-  req:0
+  req:((lastDamage>=1000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17244,7 +16831,7 @@ Achievements
   desc:Deal <b>100 tredecillion</b> damage to the wall with your obliterators.</><i>The only math you need.</i>
   name:+ + + = -; - + - = +.
   icon:https://i.imgur.com/pEpISIJ.png
-  req:0
+  req:((lastDamage>=100000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17254,7 +16841,7 @@ Achievements
   desc:Build <b>1</b> Singularity.
   name:Helix
   icon:https://i.imgur.com/c6wbTjb.png
-  req:0
+  req:((singularityBuilding>=1))
   shown
   hidden when 0
 
@@ -17264,7 +16851,7 @@ Achievements
   desc:Build <b>10</b> Singularities.
   name:Flume
   icon:https://i.imgur.com/mf6J2LT.png
-  req:0
+  req:((singularityBuilding>=10))
   shown
   hidden when 0
 
@@ -17274,7 +16861,7 @@ Achievements
   desc:Build <b>50</b> Singularities.
   name:Wavestepping
   icon:https://i.imgur.com/6MiAbrF.png
-  req:0
+  req:((singularityBuilding>=50))
   shown
   hidden when 0
 
@@ -17284,7 +16871,7 @@ Achievements
   desc:Build <b>100</b> Singularities.
   name:Bliss
   icon:https://i.imgur.com/0eO1KAQ.png
-  req:0
+  req:((singularityBuilding>=100))
   shown
   hidden when 0
 
@@ -17294,7 +16881,7 @@ Achievements
   desc:Build <b>150</b> Singularities.
   name:Year 2814
   icon:https://i.imgur.com/hVTEcOK.png
-  req:0
+  req:((singularityBuilding>=150))
   shown
   hidden when 0
 
@@ -17304,7 +16891,7 @@ Achievements
   desc:Build <b>200</b> Singularities.
   name:True Singularity
   icon:https://i.imgur.com/04ZQmQN.png
-  req:0
+  req:((singularityBuilding>=200))
   shown
   hidden when 0
 
@@ -17314,7 +16901,7 @@ Achievements
   desc:Build <b>300</b> Singularities.
   name:Infinitesimal, But Dense
   icon:https://i.imgur.com/U6HJjoT.png
-  req:0
+  req:((singularityBuilding>=300))
   shown
   hidden when 0
 
@@ -17324,7 +16911,7 @@ Achievements
   desc:Build <b>400</b> Singularities.</><i>Because regular water is for the average wall destroyers.</i>
   name:I Only Drink Fiji
   icon:https://i.imgur.com/NAaPDX3.png
-  req:0
+  req:((singularityBuilding>=400))
   shown
   hidden when 0
 
@@ -17334,7 +16921,7 @@ Achievements
   desc:Build <b>500</b> Singularities.</><i>Fundamentally, this shouldn't make sense. And, yet, we're here.</i>
   name:Fundamentall l lli li lity
   icon:https://i.imgur.com/UutBnId.png
-  req:0
+  req:((singularityBuilding>=500))
   shown
   hidden when 0
 
@@ -17344,7 +16931,7 @@ Achievements
   desc:Build <b>600</b> Singularities.
   name:The IQ of Exact Pi Without Dot
   icon:https://i.imgur.com/JPZAMlk.png
-  req:0
+  req:((singularityBuilding>=600))
   shown
   hidden when 0
 
@@ -17353,7 +16940,7 @@ Achievements
   desc:Deal <b>100 octillion</b> damage to the wall with your Singularities.
   name:Nothingness, Null Void
   icon:https://i.imgur.com/c6wbTjb.png
-  req:0
+  req:((singularityDamage>=100000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17362,7 +16949,7 @@ Achievements
   desc:Deal <b>100 nonillion</b> damage to the wall with your Singularities.
   name:Crash The Multiverse Web
   icon:https://i.imgur.com/VIJqgVJ.png
-  req:0
+  req:((singularityDamage>=10000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17371,7 +16958,7 @@ Achievements
   desc:Deal <b>100 decillion</b> damage to the wall with your Singularities.
   name:Quantum Suicide Debunked
   icon:https://i.imgur.com/ezUitR5.png
-  req:0
+  req:((singularityDamage>=100000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17380,7 +16967,7 @@ Achievements
   desc:Deal <b>100 tredecillion</b> damage to the wall with your Singularities.
   name:Pure Flatlands of Alpha
   icon:https://i.imgur.com/mXRDfR5.png
-  req:0
+  req:((singularityDamage>=100000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17389,7 +16976,7 @@ Achievements
   desc:Hire <b>1</b> Edge Being.
   name:Saint Pepsi
   icon:https://i.imgur.com/vigT0yI.png
-  req:0
+  req:((edgeBeing>=1))
   shown
   hidden when 0
 
@@ -17398,7 +16985,7 @@ Achievements
   desc:Hire <b>10</b> Edge Beings.
   name:The Edge of The Reality
   icon:https://i.imgur.com/XKK3FKS.png
-  req:0
+  req:((edgeBeing>=10))
   shown
   hidden when 0
 
@@ -17407,7 +16994,7 @@ Achievements
   desc:Hire <b>50</b> Edge Beings.
   name:Master of The Greek Alphabet
   icon:https://i.imgur.com/Ew206fE.png
-  req:0
+  req:((edgeBeing>=50))
   shown
   hidden when 0
 
@@ -17416,7 +17003,7 @@ Achievements
   desc:Hire <b>100</b> Edge Beings.</><i>And so am I. ~ usavictor</i>
   name:Weirdoverse Is Awful At Making Up Names
   icon:https://i.imgur.com/UiYgx6i.png
-  req:0
+  req:((edgeBeing>=100))
   shown
   hidden when 0
 
@@ -17425,7 +17012,7 @@ Achievements
   desc:Hire <b>150</b> Edge Beings</><i>There is no end. There are only false presumptions.</i>
   name:Finality Being
   icon:https://i.imgur.com/odk7zpu.png
-  req:0
+  req:((edgeBeing>=150))
   shown
   hidden when 0
 
@@ -17434,7 +17021,7 @@ Achievements
   desc:Hire <b>200</b> Edge Beings
   name:Mesh Being
   icon:https://i.imgur.com/b2shzj6.png
-  req:0
+  req:((edgeBeing>=200))
   shown
   hidden when 0
 
@@ -17443,7 +17030,7 @@ Achievements
   desc:Hire <b>300</b> Edge Beings
   name:More Edges Than It Has On Itself
   icon:https://i.imgur.com/qfscrvY.png
-  req:0
+  req:((edgeBeing>=300))
   shown
   hidden when 0
 
@@ -17452,7 +17039,7 @@ Achievements
   desc:Hire <b>400</b> Edge Beings
   name:Edge Cell
   icon:https://i.imgur.com/R60jUAD.png
-  req:0
+  req:((edgeBeing>=400))
   shown
   hidden when 0
 
@@ -17461,7 +17048,7 @@ Achievements
   desc:Hire <b>500</b> Edge Beings
   name:Quincentennial
   icon:https://i.imgur.com/S1uaASg.png
-  req:0
+  req:((edgeBeing>=500))
   shown
   hidden when 0
 
@@ -17471,7 +17058,7 @@ Achievements
   desc:Deal <b>500 nonillion</b> damage to the wall with your Edge Beings.
   name:Nihilist
   icon:https://i.imgur.com/vigT0yI.png
-  req:0
+  req:((edgeBeingDamage>=500000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17481,7 +17068,7 @@ Achievements
   desc:Deal <b>500 decillion</b> damage to the wall with your Edge Beings.
   name:Obsessed
   icon:https://i.imgur.com/5fqSkOk.png
-  req:0
+  req:((edgeBeingDamage>=500000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17491,7 +17078,7 @@ Achievements
   desc:Deal <b>500 duodecillion</b> damage to the wall with your Edge Beings.
   name:X1276uW
   icon:https://i.imgur.com/30AnX00.png
-  req:0
+  req:((edgeBeingDamage>=500000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17501,7 +17088,7 @@ Achievements
   desc:Deal <b>500 tredecillion</b> damage to the wall with your Edge Beings.
   name:ziKtmX1 - f617iwl (//Tredetennial)
   icon:https://i.imgur.com/g3jFU02.png
-  req:0
+  req:((edgeBeingDamage>=500000000000000000000000000000000000000000000))
   shown
   hidden when 0
 
@@ -17510,7 +17097,7 @@ Achievements
   desc:Hire <b>1</b> glitch. ... wait, hold up, that sounds wrong. How'd <i>you</i> hire a glitch!? Where'd it come from?
   name:The Illogical
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((strangeGlitch>=1))
   shown
   hidden when 0
 
@@ -17519,7 +17106,7 @@ Achievements
   desc:Hire <b>10</b> glitches.</><i>Curse the developer for this.</i>
   name:Kind of Defective
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((strangeGlitch>=10))
   shown
   hidden when 0
 
@@ -17528,7 +17115,7 @@ Achievements
   desc:Hire <b>25</b> glitches.
   name:________________
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((strangeGlitch>=25))
   shown
   hidden when 0
 
@@ -17537,7 +17124,7 @@ Achievements
   desc:Hire <b>50</b> glitches.
   name:You Take Reality and Crush It
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((strangeGlitch>=50))
   shown
   hidden when 0
 
@@ -17555,7 +17142,7 @@ Achievements
   desc:Have <b>100</b> buildings.
   name:The Menagerie
   icon:https://i.imgur.com/93tCmIj.png
-  req:0
+  req:((building>=100))
   shown
   hidden when 0
 
@@ -17564,7 +17151,7 @@ Achievements
   desc:Have <b>500</b> buildings.
   name:The Aggregation
   icon:https://i.imgur.com/F4FwhJe.png
-  req:0
+  req:((building>=500))
   shown
   hidden when 0
 
@@ -17573,7 +17160,7 @@ Achievements
   desc:Have <b>1,000</b> buildings.
   name:The Armada
   icon:https://i.imgur.com/tHUohS4.png
-  req:0
+  req:((building>=1000))
   shown
   hidden when 0
 
@@ -17582,7 +17169,7 @@ Achievements
   desc:Have <b>2,000</b> buildings.
   name:Ruler of The World
   icon:https://i.imgur.com/CSzNF0J.png
-  req:0
+  req:((building>=2000))
   shown
   hidden when 0
 
@@ -17591,7 +17178,7 @@ Achievements
   desc:Have <b>3,000</b> buildings.
   name:King of The Cosmos
   icon:https://i.imgur.com/piFqUdL.png
-  req:0
+  req:((building>=3000))
   shown
   hidden when 0
 
@@ -17600,7 +17187,7 @@ Achievements
   desc:Have <b>5,000</b> buildings.
   name:Master of Reality
   icon:https://i.imgur.com/fGDPekC.png
-  req:0
+  req:((building>=5000))
   shown
   hidden when 0
 
@@ -17609,7 +17196,7 @@ Achievements
   desc:Have <b>7,500</b> buildings.
   name:God
   icon:https://i.imgur.com/gszdkb6.png
-  req:0
+  req:((building>=7500))
   shown
   hidden when 0
 
@@ -17618,7 +17205,7 @@ Achievements
   desc:Have <b>10,000</b> buildings.
   name:The Prince
   icon:https://i.imgur.com/lyIXkLq.png
-  req:0
+  req:((building>=10000))
   shown
   hidden when 0
 
@@ -17627,7 +17214,7 @@ Achievements
   desc:Have <b>12,500</b> buildings.
   name:The King
   icon:https://i.imgur.com/xvVrdJg.png
-  req:0
+  req:((building>=12500))
   shown
   hidden when 0
 
@@ -17636,7 +17223,7 @@ Achievements
   desc:Have <b>15,000</b> buildings.
   name:End Of The Beginning
   icon:https://i.imgur.com/AXc3JzP.png
-  req:0
+  req:((building>=15000))
   shown
   hidden when 0
 
@@ -17646,7 +17233,7 @@ Achievements
   desc:Sacrifice <b>10,000</b> buildings.
   name:Rebirth
   icon:https://i.imgur.com/U84N3WY.png
-  req:0
+  req:((buildings>=10000))
   shown
   hidden when 0
 
@@ -17656,7 +17243,7 @@ Achievements
   desc:Sacrifice <b>20,000</b> buildings.
   name:Afterlife
   icon:https://i.imgur.com/CyLRNfy.png
-  req:0
+  req:((buildings>=20000))
   shown
   hidden when 0
 
@@ -17666,7 +17253,7 @@ Achievements
   desc:Sacrifice <b>30,000</b> buildings.
   name:High Life
   icon:https://i.imgur.com/zig46Wt.png
-  req:0
+  req:((buildings>=30000))
   shown
   hidden when 0
 
@@ -17676,7 +17263,7 @@ Achievements
   desc:Sacrifice <b>50,000</b> buildings.</><i>EDIT: Stop inserting Geometry Dash titles</i>
   name:Low Death
   icon:https://i.imgur.com/Zj1g3i5.png
-  req:0
+  req:((buildings>=50000))
   shown
   hidden when 0
 
@@ -17686,7 +17273,7 @@ Achievements
   desc:Sacrifice <b>75,000</b> buildings.</><i>"Stop it Johnson, I'm not an unit of buildings sacrificed!" ~Agent Lawrence</i>
   name:Agent Lawrence Sucks
   icon:https://i.imgur.com/06YXjwd.png
-  req:0
+  req:((buildings>=75000))
   shown
   hidden when 0
 
@@ -17696,7 +17283,7 @@ Achievements
   desc:Sacrifice <b>100,000</b> buildings.
   name:Real Sacrificing
   icon:https://i.imgur.com/U1jDV3O.png
-  req:0
+  req:((buildings>=100000))
   shown
   hidden when 0
 
@@ -17706,7 +17293,7 @@ Achievements
   desc:Sacrifice <b>150,000</b> buildings.
   name:Ascension
   icon:https://i.imgur.com/GGm1lhe.png
-  req:0
+  req:((buildings>=150000))
   shown
   hidden when 0
 
@@ -17716,7 +17303,7 @@ Achievements
   desc:Sacrifice <b>200,000</b> buildings.
   name:A lot.
   icon:https://i.imgur.com/t0XSjtB.png
-  req:0
+  req:((buildings>=200000))
   shown
   hidden when 0
 
@@ -17725,7 +17312,7 @@ Achievements
   desc:Destroy <b>100</b> Total walls from previous sessions.
   name:Hundrendth Destruction
   icon:https://i.imgur.com/aCU88Ro.png
-  req:0
+  req:((totalWalls>=100))
   shown
   hidden when 0
 
@@ -17734,7 +17321,7 @@ Achievements
   desc:Destroy <b>250</b> Total walls from previous sessions.</><i>supposed to be "Wall Master" but it was taken, i suppose.</i>
   name:Wall Sparky
   icon:https://i.imgur.com/6H6iLIw.png
-  req:0
+  req:((totalWalls>=250))
   shown
   hidden when 0
 
@@ -17743,7 +17330,7 @@ Achievements
   desc:Destroy <b>500</b> Total walls from previous sessions.</><i>That is just a nono.</i>
   name:No
   icon:https://i.imgur.com/1jcIQoo.png
-  req:0
+  req:((totalWalls>=500))
   shown
   hidden when 0
 
@@ -17752,7 +17339,7 @@ Achievements
   desc:Destroy <b>750</b> Total walls from previous sessions.</><i>"Total time throwback!" ~Chief of Puns.</i>
   name:Windows 95
   icon:https://i.imgur.com/3N925TB.png
-  req:0
+  req:((totalWalls>=750))
   shown
   hidden when 0
 
@@ -17761,7 +17348,7 @@ Achievements
   desc:Destroy <b>1,000</b> Total walls from previous sessions.</><i>"Time to end this." ~Chief of Puns</i></><i>"Yes." ~Agent Johnson</i>
   name:Vinyl Destroyer
   icon:https://i.imgur.com/TBBeOGf.png
-  req:0
+  req:((totalWalls>=1000))
   shown
   hidden when 0
 
@@ -17770,7 +17357,7 @@ Achievements
   desc:Destroy <b>2,000</b> Total walls from previous sessions.</><i>"Fite me Tehlurrium" ~1337 n0sc0p3r #69"</i>
   name:Final Level, Final Combat, Final Tears
   icon:https://i.imgur.com/ICOMz5t.png
-  req:0
+  req:((totalWalls>=2000))
   shown
   hidden when 0
 
@@ -17779,7 +17366,7 @@ Achievements
   desc:Destroy <b>3,000</b> Total walls from previous sessions.
   name:There Is Always n+1
   icon:https://i.imgur.com/6HcIknB.png
-  req:0
+  req:((totalWalls>=3000))
   shown
   hidden when 0
 
@@ -17788,7 +17375,7 @@ Achievements
   desc:Destroy <b>4,000</b> Total walls from previous sessions.</><i>Our new model!</i>
   name:Wall Destroyer 4000
   icon:https://i.imgur.com/5aqM5G5.png
-  req:0
+  req:((totalWalls>=4000))
   shown
   hidden when 0
 
@@ -17797,7 +17384,7 @@ Achievements
   desc:Destroy <b>5,000</b> Total walls from previous sessions.
   name:Chaos
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((totalWalls>=5000))
   shown
   hidden when 0
 
@@ -17806,7 +17393,7 @@ Achievements
   desc:Destroy <b>7,500</b> Total walls from previous sessions.
   name:Get a Life
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((totalWalls>=7500))
   shown
   hidden when 0
 
@@ -17815,7 +17402,7 @@ Achievements
   desc:Destroy <b>10,000</b> Total walls from previous sessions.
   name:Please Pass The Life Please
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((totalWalls>=10000))
   shown
   hidden when 0
 
@@ -17824,7 +17411,7 @@ Achievements
   desc:Destroy <b>12,500</b> Total walls from previous sessions. </><i>I'm sure this is already outrageous.</i>
   name:Addiction Level = Infinity
   icon:https://i.imgur.com/Gtg8P7F.png
-  req:0
+  req:((totalWalls>=12500))
   shown
   hidden when 0
 
