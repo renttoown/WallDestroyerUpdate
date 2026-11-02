@@ -100,6 +100,13 @@ html, body { margin:0; min-height:100%; background:#a2cec6; }
   #game #box-resourcesBox { min-height:340px; }
 }
 
+
+/* Stretch panels past the default theme's fixed box widths. */
+#game #content > .box { width:100% !important; max-width:none !important; justify-self:stretch; float:none; }
+#game #box-main { width:100% !important; min-width:0 !important; max-width:none !important; }
+#game #box-resourcesBox { width:auto !important; min-width:0 !important; max-width:none !important; justify-self:stretch; }
+#game #box-stats { width:100% !important; max-width:none !important; }
+
 Layout
 *leftSidebar
  contains:wallBox, buildingsBox
@@ -131,6 +138,9 @@ Layout
 *logBox
  contains:Log
 
+
+Includes
+*include wdOneDecimal %v : [?([%v]<0)|-|][?(max([%v],0-([%v]))<pow(1000,1))|[floor(round(max([%v],0-([%v]))*10)/10)].[round(max([%v],0-([%v]))*10)%10]|][?(max([%v],0-([%v]))>=pow(1000,1) and max([%v],0-([%v]))<pow(1000,2))|[floor(round((max([%v],0-([%v]))/pow(1000,1))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,1))*10)%10]k|][?(max([%v],0-([%v]))>=pow(1000,2) and max([%v],0-([%v]))<pow(1000,3))|[floor(round((max([%v],0-([%v]))/pow(1000,2))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,2))*10)%10]M|][?(max([%v],0-([%v]))>=pow(1000,3) and max([%v],0-([%v]))<pow(1000,4))|[floor(round((max([%v],0-([%v]))/pow(1000,3))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,3))*10)%10]B|][?(max([%v],0-([%v]))>=pow(1000,4) and max([%v],0-([%v]))<pow(1000,5))|[floor(round((max([%v],0-([%v]))/pow(1000,4))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,4))*10)%10]T|][?(max([%v],0-([%v]))>=pow(1000,5) and max([%v],0-([%v]))<pow(1000,6))|[floor(round((max([%v],0-([%v]))/pow(1000,5))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,5))*10)%10]Qa|][?(max([%v],0-([%v]))>=pow(1000,6) and max([%v],0-([%v]))<pow(1000,7))|[floor(round((max([%v],0-([%v]))/pow(1000,6))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,6))*10)%10]Qi|][?(max([%v],0-([%v]))>=pow(1000,7) and max([%v],0-([%v]))<pow(1000,8))|[floor(round((max([%v],0-([%v]))/pow(1000,7))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,7))*10)%10]Sx|][?(max([%v],0-([%v]))>=pow(1000,8) and max([%v],0-([%v]))<pow(1000,9))|[floor(round((max([%v],0-([%v]))/pow(1000,8))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,8))*10)%10]Sp|][?(max([%v],0-([%v]))>=pow(1000,9) and max([%v],0-([%v]))<pow(1000,10))|[floor(round((max([%v],0-([%v]))/pow(1000,9))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,9))*10)%10]Oc|][?(max([%v],0-([%v]))>=pow(1000,10) and max([%v],0-([%v]))<pow(1000,11))|[floor(round((max([%v],0-([%v]))/pow(1000,10))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,10))*10)%10]No|][?(max([%v],0-([%v]))>=pow(1000,11) and max([%v],0-([%v]))<pow(1000,12))|[floor(round((max([%v],0-([%v]))/pow(1000,11))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,11))*10)%10]Dc|][?(max([%v],0-([%v]))>=pow(1000,12) and max([%v],0-([%v]))<pow(1000,13))|[floor(round((max([%v],0-([%v]))/pow(1000,12))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,12))*10)%10]UnD|][?(max([%v],0-([%v]))>=pow(1000,13) and max([%v],0-([%v]))<pow(1000,14))|[floor(round((max([%v],0-([%v]))/pow(1000,13))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,13))*10)%10]DoD|][?(max([%v],0-([%v]))>=pow(1000,14) and max([%v],0-([%v]))<pow(1000,15))|[floor(round((max([%v],0-([%v]))/pow(1000,14))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,14))*10)%10]TrD|][?(max([%v],0-([%v]))>=pow(1000,15) and max([%v],0-([%v]))<pow(1000,16))|[floor(round((max([%v],0-([%v]))/pow(1000,15))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,15))*10)%10]QaD|][?(max([%v],0-([%v]))>=pow(1000,16) and max([%v],0-([%v]))<pow(1000,17))|[floor(round((max([%v],0-([%v]))/pow(1000,16))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,16))*10)%10]QiD|][?(max([%v],0-([%v]))>=pow(1000,17) and max([%v],0-([%v]))<pow(1000,18))|[floor(round((max([%v],0-([%v]))/pow(1000,17))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,17))*10)%10]SxD|][?(max([%v],0-([%v]))>=pow(1000,18) and max([%v],0-([%v]))<pow(1000,19))|[floor(round((max([%v],0-([%v]))/pow(1000,18))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,18))*10)%10]SpD|][?(max([%v],0-([%v]))>=pow(1000,19) and max([%v],0-([%v]))<pow(1000,20))|[floor(round((max([%v],0-([%v]))/pow(1000,19))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,19))*10)%10]OcD|][?(max([%v],0-([%v]))>=pow(1000,20) and max([%v],0-([%v]))<pow(1000,21))|[floor(round((max([%v],0-([%v]))/pow(1000,20))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,20))*10)%10]NoD|][?(max([%v],0-([%v]))>=pow(1000,21) and max([%v],0-([%v]))<pow(1000,22))|[floor(round((max([%v],0-([%v]))/pow(1000,21))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,21))*10)%10]V|][?(max([%v],0-([%v]))>=pow(1000,22) and max([%v],0-([%v]))<pow(1000,23))|[floor(round((max([%v],0-([%v]))/pow(1000,22))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,22))*10)%10]UnV|][?(max([%v],0-([%v]))>=pow(1000,23) and max([%v],0-([%v]))<pow(1000,24))|[floor(round((max([%v],0-([%v]))/pow(1000,23))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,23))*10)%10]DoV|][?(max([%v],0-([%v]))>=pow(1000,24) and max([%v],0-([%v]))<pow(1000,25))|[floor(round((max([%v],0-([%v]))/pow(1000,24))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,24))*10)%10]TrV|][?(max([%v],0-([%v]))>=pow(1000,25) and max([%v],0-([%v]))<pow(1000,26))|[floor(round((max([%v],0-([%v]))/pow(1000,25))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,25))*10)%10]QaV|][?(max([%v],0-([%v]))>=pow(1000,26) and max([%v],0-([%v]))<pow(1000,27))|[floor(round((max([%v],0-([%v]))/pow(1000,26))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,26))*10)%10]QiV|][?(max([%v],0-([%v]))>=pow(1000,27) and max([%v],0-([%v]))<pow(1000,28))|[floor(round((max([%v],0-([%v]))/pow(1000,27))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,27))*10)%10]SxV|][?(max([%v],0-([%v]))>=pow(1000,28) and max([%v],0-([%v]))<pow(1000,29))|[floor(round((max([%v],0-([%v]))/pow(1000,28))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,28))*10)%10]SpV|][?(max([%v],0-([%v]))>=pow(1000,29) and max([%v],0-([%v]))<pow(1000,30))|[floor(round((max([%v],0-([%v]))/pow(1000,29))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,29))*10)%10]OcV|][?(max([%v],0-([%v]))>=pow(1000,30) and max([%v],0-([%v]))<pow(1000,31))|[floor(round((max([%v],0-([%v]))/pow(1000,30))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,30))*10)%10]NoV|][?(max([%v],0-([%v]))>=pow(1000,31) and max([%v],0-([%v]))<pow(1000,32))|[floor(round((max([%v],0-([%v]))/pow(1000,31))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,31))*10)%10]T|][?(max([%v],0-([%v]))>=pow(1000,32) and max([%v],0-([%v]))<pow(1000,33))|[floor(round((max([%v],0-([%v]))/pow(1000,32))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,32))*10)%10]UnT|][?(max([%v],0-([%v]))>=pow(1000,33) and max([%v],0-([%v]))<pow(1000,34))|[floor(round((max([%v],0-([%v]))/pow(1000,33))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,33))*10)%10]DoT|][?(max([%v],0-([%v]))>=pow(1000,34) and max([%v],0-([%v]))<pow(1000,35))|[floor(round((max([%v],0-([%v]))/pow(1000,34))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,34))*10)%10]TrT|][?(max([%v],0-([%v]))>=pow(1000,35) and max([%v],0-([%v]))<pow(1000,36))|[floor(round((max([%v],0-([%v]))/pow(1000,35))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,35))*10)%10]QaT|][?(max([%v],0-([%v]))>=pow(1000,36) and max([%v],0-([%v]))<pow(1000,37))|[floor(round((max([%v],0-([%v]))/pow(1000,36))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,36))*10)%10]QiT|][?(max([%v],0-([%v]))>=pow(1000,37) and max([%v],0-([%v]))<pow(1000,38))|[floor(round((max([%v],0-([%v]))/pow(1000,37))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,37))*10)%10]SxT|][?(max([%v],0-([%v]))>=pow(1000,38) and max([%v],0-([%v]))<pow(1000,39))|[floor(round((max([%v],0-([%v]))/pow(1000,38))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,38))*10)%10]SpT|][?(max([%v],0-([%v]))>=pow(1000,39) and max([%v],0-([%v]))<pow(1000,40))|[floor(round((max([%v],0-([%v]))/pow(1000,39))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,39))*10)%10]OcT|][?(max([%v],0-([%v]))>=pow(1000,40) and max([%v],0-([%v]))<pow(1000,41))|[floor(round((max([%v],0-([%v]))/pow(1000,40))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,40))*10)%10]NoT|][?(max([%v],0-([%v]))>=pow(1000,41) and max([%v],0-([%v]))<pow(1000,42))|[floor(round((max([%v],0-([%v]))/pow(1000,41))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,41))*10)%10]Qa|][?(max([%v],0-([%v]))>=pow(1000,42) and max([%v],0-([%v]))<pow(1000,43))|[floor(round((max([%v],0-([%v]))/pow(1000,42))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,42))*10)%10]UnQa|][?(max([%v],0-([%v]))>=pow(1000,43) and max([%v],0-([%v]))<pow(1000,44))|[floor(round((max([%v],0-([%v]))/pow(1000,43))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,43))*10)%10]DoQa|][?(max([%v],0-([%v]))>=pow(1000,44) and max([%v],0-([%v]))<pow(1000,45))|[floor(round((max([%v],0-([%v]))/pow(1000,44))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,44))*10)%10]TrQa|][?(max([%v],0-([%v]))>=pow(1000,45) and max([%v],0-([%v]))<pow(1000,46))|[floor(round((max([%v],0-([%v]))/pow(1000,45))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,45))*10)%10]QaQa|][?(max([%v],0-([%v]))>=pow(1000,46) and max([%v],0-([%v]))<pow(1000,47))|[floor(round((max([%v],0-([%v]))/pow(1000,46))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,46))*10)%10]QiQa|][?(max([%v],0-([%v]))>=pow(1000,47) and max([%v],0-([%v]))<pow(1000,48))|[floor(round((max([%v],0-([%v]))/pow(1000,47))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,47))*10)%10]SxQa|][?(max([%v],0-([%v]))>=pow(1000,48) and max([%v],0-([%v]))<pow(1000,49))|[floor(round((max([%v],0-([%v]))/pow(1000,48))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,48))*10)%10]SpQa|][?(max([%v],0-([%v]))>=pow(1000,49) and max([%v],0-([%v]))<pow(1000,50))|[floor(round((max([%v],0-([%v]))/pow(1000,49))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,49))*10)%10]OcQa|][?(max([%v],0-([%v]))>=pow(1000,50) and max([%v],0-([%v]))<pow(1000,51))|[floor(round((max([%v],0-([%v]))/pow(1000,50))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,50))*10)%10]NoQa|][?(max([%v],0-([%v]))>=pow(1000,51) and max([%v],0-([%v]))<pow(1000,52))|[floor(round((max([%v],0-([%v]))/pow(1000,51))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,51))*10)%10]Qi|][?(max([%v],0-([%v]))>=pow(1000,52) and max([%v],0-([%v]))<pow(1000,53))|[floor(round((max([%v],0-([%v]))/pow(1000,52))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,52))*10)%10]UnQi|][?(max([%v],0-([%v]))>=pow(1000,53) and max([%v],0-([%v]))<pow(1000,54))|[floor(round((max([%v],0-([%v]))/pow(1000,53))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,53))*10)%10]DoQi|][?(max([%v],0-([%v]))>=pow(1000,54) and max([%v],0-([%v]))<pow(1000,55))|[floor(round((max([%v],0-([%v]))/pow(1000,54))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,54))*10)%10]TrQi|][?(max([%v],0-([%v]))>=pow(1000,55) and max([%v],0-([%v]))<pow(1000,56))|[floor(round((max([%v],0-([%v]))/pow(1000,55))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,55))*10)%10]QaQi|][?(max([%v],0-([%v]))>=pow(1000,56) and max([%v],0-([%v]))<pow(1000,57))|[floor(round((max([%v],0-([%v]))/pow(1000,56))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,56))*10)%10]QiQi|][?(max([%v],0-([%v]))>=pow(1000,57) and max([%v],0-([%v]))<pow(1000,58))|[floor(round((max([%v],0-([%v]))/pow(1000,57))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,57))*10)%10]SxQi|][?(max([%v],0-([%v]))>=pow(1000,58) and max([%v],0-([%v]))<pow(1000,59))|[floor(round((max([%v],0-([%v]))/pow(1000,58))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,58))*10)%10]SpQi|][?(max([%v],0-([%v]))>=pow(1000,59) and max([%v],0-([%v]))<pow(1000,60))|[floor(round((max([%v],0-([%v]))/pow(1000,59))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,59))*10)%10]OcQi|][?(max([%v],0-([%v]))>=pow(1000,60) and max([%v],0-([%v]))<pow(1000,61))|[floor(round((max([%v],0-([%v]))/pow(1000,60))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,60))*10)%10]NoQi|][?(max([%v],0-([%v]))>=pow(1000,61) and max([%v],0-([%v]))<pow(1000,62))|[floor(round((max([%v],0-([%v]))/pow(1000,61))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,61))*10)%10]Sx|][?(max([%v],0-([%v]))>=pow(1000,62) and max([%v],0-([%v]))<pow(1000,63))|[floor(round((max([%v],0-([%v]))/pow(1000,62))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,62))*10)%10]UnSx|][?(max([%v],0-([%v]))>=pow(1000,63) and max([%v],0-([%v]))<pow(1000,64))|[floor(round((max([%v],0-([%v]))/pow(1000,63))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,63))*10)%10]DoSx|][?(max([%v],0-([%v]))>=pow(1000,64) and max([%v],0-([%v]))<pow(1000,65))|[floor(round((max([%v],0-([%v]))/pow(1000,64))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,64))*10)%10]TrSx|][?(max([%v],0-([%v]))>=pow(1000,65) and max([%v],0-([%v]))<pow(1000,66))|[floor(round((max([%v],0-([%v]))/pow(1000,65))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,65))*10)%10]QaSx|][?(max([%v],0-([%v]))>=pow(1000,66) and max([%v],0-([%v]))<pow(1000,67))|[floor(round((max([%v],0-([%v]))/pow(1000,66))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,66))*10)%10]QiSx|][?(max([%v],0-([%v]))>=pow(1000,67) and max([%v],0-([%v]))<pow(1000,68))|[floor(round((max([%v],0-([%v]))/pow(1000,67))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,67))*10)%10]SxSx|][?(max([%v],0-([%v]))>=pow(1000,68) and max([%v],0-([%v]))<pow(1000,69))|[floor(round((max([%v],0-([%v]))/pow(1000,68))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,68))*10)%10]SpSx|][?(max([%v],0-([%v]))>=pow(1000,69) and max([%v],0-([%v]))<pow(1000,70))|[floor(round((max([%v],0-([%v]))/pow(1000,69))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,69))*10)%10]OcSx|][?(max([%v],0-([%v]))>=pow(1000,70) and max([%v],0-([%v]))<pow(1000,71))|[floor(round((max([%v],0-([%v]))/pow(1000,70))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,70))*10)%10]NoSx|][?(max([%v],0-([%v]))>=pow(1000,71) and max([%v],0-([%v]))<pow(1000,72))|[floor(round((max([%v],0-([%v]))/pow(1000,71))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,71))*10)%10]Sp|][?(max([%v],0-([%v]))>=pow(1000,72) and max([%v],0-([%v]))<pow(1000,73))|[floor(round((max([%v],0-([%v]))/pow(1000,72))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,72))*10)%10]UnSp|][?(max([%v],0-([%v]))>=pow(1000,73) and max([%v],0-([%v]))<pow(1000,74))|[floor(round((max([%v],0-([%v]))/pow(1000,73))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,73))*10)%10]DoSp|][?(max([%v],0-([%v]))>=pow(1000,74) and max([%v],0-([%v]))<pow(1000,75))|[floor(round((max([%v],0-([%v]))/pow(1000,74))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,74))*10)%10]TrSp|][?(max([%v],0-([%v]))>=pow(1000,75) and max([%v],0-([%v]))<pow(1000,76))|[floor(round((max([%v],0-([%v]))/pow(1000,75))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,75))*10)%10]QaSp|][?(max([%v],0-([%v]))>=pow(1000,76) and max([%v],0-([%v]))<pow(1000,77))|[floor(round((max([%v],0-([%v]))/pow(1000,76))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,76))*10)%10]QiSp|][?(max([%v],0-([%v]))>=pow(1000,77) and max([%v],0-([%v]))<pow(1000,78))|[floor(round((max([%v],0-([%v]))/pow(1000,77))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,77))*10)%10]SxSp|][?(max([%v],0-([%v]))>=pow(1000,78) and max([%v],0-([%v]))<pow(1000,79))|[floor(round((max([%v],0-([%v]))/pow(1000,78))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,78))*10)%10]SpSp|][?(max([%v],0-([%v]))>=pow(1000,79) and max([%v],0-([%v]))<pow(1000,80))|[floor(round((max([%v],0-([%v]))/pow(1000,79))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,79))*10)%10]OcSp|][?(max([%v],0-([%v]))>=pow(1000,80) and max([%v],0-([%v]))<pow(1000,81))|[floor(round((max([%v],0-([%v]))/pow(1000,80))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,80))*10)%10]NoSp|][?(max([%v],0-([%v]))>=pow(1000,81) and max([%v],0-([%v]))<pow(1000,82))|[floor(round((max([%v],0-([%v]))/pow(1000,81))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,81))*10)%10]O|][?(max([%v],0-([%v]))>=pow(1000,82) and max([%v],0-([%v]))<pow(1000,83))|[floor(round((max([%v],0-([%v]))/pow(1000,82))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,82))*10)%10]UnO|][?(max([%v],0-([%v]))>=pow(1000,83) and max([%v],0-([%v]))<pow(1000,84))|[floor(round((max([%v],0-([%v]))/pow(1000,83))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,83))*10)%10]DoO|][?(max([%v],0-([%v]))>=pow(1000,84) and max([%v],0-([%v]))<pow(1000,85))|[floor(round((max([%v],0-([%v]))/pow(1000,84))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,84))*10)%10]TrO|][?(max([%v],0-([%v]))>=pow(1000,85) and max([%v],0-([%v]))<pow(1000,86))|[floor(round((max([%v],0-([%v]))/pow(1000,85))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,85))*10)%10]QaO|][?(max([%v],0-([%v]))>=pow(1000,86) and max([%v],0-([%v]))<pow(1000,87))|[floor(round((max([%v],0-([%v]))/pow(1000,86))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,86))*10)%10]QiO|][?(max([%v],0-([%v]))>=pow(1000,87) and max([%v],0-([%v]))<pow(1000,88))|[floor(round((max([%v],0-([%v]))/pow(1000,87))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,87))*10)%10]SxO|][?(max([%v],0-([%v]))>=pow(1000,88) and max([%v],0-([%v]))<pow(1000,89))|[floor(round((max([%v],0-([%v]))/pow(1000,88))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,88))*10)%10]SpO|][?(max([%v],0-([%v]))>=pow(1000,89) and max([%v],0-([%v]))<pow(1000,90))|[floor(round((max([%v],0-([%v]))/pow(1000,89))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,89))*10)%10]OcO|][?(max([%v],0-([%v]))>=pow(1000,90) and max([%v],0-([%v]))<pow(1000,91))|[floor(round((max([%v],0-([%v]))/pow(1000,90))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,90))*10)%10]NoO|][?(max([%v],0-([%v]))>=pow(1000,91) and max([%v],0-([%v]))<pow(1000,92))|[floor(round((max([%v],0-([%v]))/pow(1000,91))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,91))*10)%10]N|][?(max([%v],0-([%v]))>=pow(1000,92) and max([%v],0-([%v]))<pow(1000,93))|[floor(round((max([%v],0-([%v]))/pow(1000,92))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,92))*10)%10]UnN|][?(max([%v],0-([%v]))>=pow(1000,93) and max([%v],0-([%v]))<pow(1000,94))|[floor(round((max([%v],0-([%v]))/pow(1000,93))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,93))*10)%10]DoN|][?(max([%v],0-([%v]))>=pow(1000,94) and max([%v],0-([%v]))<pow(1000,95))|[floor(round((max([%v],0-([%v]))/pow(1000,94))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,94))*10)%10]TrN|][?(max([%v],0-([%v]))>=pow(1000,95) and max([%v],0-([%v]))<pow(1000,96))|[floor(round((max([%v],0-([%v]))/pow(1000,95))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,95))*10)%10]QaN|][?(max([%v],0-([%v]))>=pow(1000,96) and max([%v],0-([%v]))<pow(1000,97))|[floor(round((max([%v],0-([%v]))/pow(1000,96))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,96))*10)%10]QiN|][?(max([%v],0-([%v]))>=pow(1000,97) and max([%v],0-([%v]))<pow(1000,98))|[floor(round((max([%v],0-([%v]))/pow(1000,97))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,97))*10)%10]SxN|][?(max([%v],0-([%v]))>=pow(1000,98) and max([%v],0-([%v]))<pow(1000,99))|[floor(round((max([%v],0-([%v]))/pow(1000,98))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,98))*10)%10]SpN|][?(max([%v],0-([%v]))>=pow(1000,99) and max([%v],0-([%v]))<pow(1000,100))|[floor(round((max([%v],0-([%v]))/pow(1000,99))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,99))*10)%10]OcN|][?(max([%v],0-([%v]))>=pow(1000,100) and max([%v],0-([%v]))<pow(1000,101))|[floor(round((max([%v],0-([%v]))/pow(1000,100))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,100))*10)%10]NoN|][?(max([%v],0-([%v]))>=pow(1000,101) and 1)|[floor(round((max([%v],0-([%v]))/pow(1000,101))*10)/10)].[round((max([%v],0-([%v]))/pow(1000,101))*10)%10]e303|]
 
 Resources
 
@@ -495,7 +505,7 @@ Resources
   name:cash
   shown
 
-  text:[this] [p:this] ([money:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="money:ps"]/s)
   tags:mainResource
 *totalMoney
   hidden
@@ -503,100 +513,100 @@ Resources
   shown
   class:veryimportantresource
 
-  text:[this] [p:this] ([totalMoney:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="totalMoney:ps"]/s)
   tags:mainResource
 *tesseractDamage
   hidden
   name:fourth dimension damage
   class:veryimportantresource
 
-  text:[this] [p:this] ([tesseractDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="tesseractDamage:ps"]/s)
 *bricks
   hidden
   name:brick|bricks
   shown
   class:veryimportantresource
 
-  text:[this] [p:this] ([bricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="bricks:ps"]/s)
   tags:mainResource
 *fourthWallMatter
   hidden
   name:fourth wall bricks
   class:veryimportantresource
 
-  text:[this] [p:this] ([fourthWallMatter:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="fourthWallMatter:ps"]/s)
 *artSpaceBricks
   hidden
   name:artificial space bricks
   class:veryimportantresource
 
-  text:[this] [p:this] ([artSpaceBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="artSpaceBricks:ps"]/s)
 *artTimeBricks
   hidden
   name:artificial time bricks
   class:veryimportantresource
 
-  text:[this] [p:this] ([artTimeBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="artTimeBricks:ps"]/s)
 *spaceBricks
   hidden
   name:Space Bricks
   class:importantresource
 
-  text:[this] [p:this] ([spaceBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="spaceBricks:ps"]/s)
 *timeBricks
   hidden
   name:Time Bricks
   class:importantresource
 
-  text:[this] [p:this] ([timeBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="timeBricks:ps"]/s)
 *endBricks
   hidden
   name:End Bricks
   class:importantresource
 
-  text:[this] [p:this] ([endBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="endBricks:ps"]/s)
 *finalityBricks
   hidden
   name:Finality Bricks
   class:importantresource
 
-  text:[this] [p:this] ([finalityBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="finalityBricks:ps"]/s)
 *winSpendable
   hidden
   name:Pure Bricks
   class:importantresource
 
-  text:[this] [p:this] ([winSpendable:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="winSpendable:ps"]/s)
 *meshSpendable
   hidden
   name:Mesh Bricks
   class:importantresource
 
-  text:[this] [p:this] ([meshSpendable:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="meshSpendable:ps"]/s)
 *fifthBricks
   hidden
   name:Fifth Dimension Bricks
   class:importantresource
 
-  text:[this] [p:this] ([fifthBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="fifthBricks:ps"]/s)
 *alphaBricks
   hidden
   name:Alpha Bricks
   class:importantresource
 
-  text:[this] [p:this] ([alphaBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="alphaBricks:ps"]/s)
 *dreamycoins
   hidden
   name:Dreamy Coins
   class:importantresource
 
-  text:[this] [p:this] ([dreamycoins:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="dreamycoins:ps"]/s)
 *omniverseBrick
   hidden
   name:Omniverse Bricks
   class:veryimportantresource
 
-  text:[this] [p:this] ([omniverseBrick:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="omniverseBrick:ps"]/s)
 *menuItem2
   hidden
   text:─────────────Stats─────────────
@@ -608,22 +618,22 @@ Resources
   hidden
   name:hand damage
 
-  text:[this] [p:this] ([handDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="handDamage:ps"]/s)
 *totalBricks
   hidden
   name:total bricks
 
-  text:[this] [p:this] ([totalBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="totalBricks:ps"]/s)
 *handBricks
   hidden
   name:hand made bricks
 
-  text:[this] [p:this] ([handBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="handBricks:ps"]/s)
 *total4thWallMatter
   hidden
   name:total fourth wall bricks
 
-  text:[this] [p:this] ([total4thWallMatter:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="total4thWallMatter:ps"]/s)
 *damageDivider1
   hidden
   text:────────────────────
@@ -634,87 +644,87 @@ Resources
   hidden
   name:Puncher damage
 
-  text:[this] [p:this] ([puncherDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="puncherDamage:ps"]/s)
 *clubberDamage
   hidden
   name:Clubber damage
 
-  text:[this] [p:this] ([clubberDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="clubberDamage:ps"]/s)
 *swordsmanDamage
   hidden
   name:Swordsman damage
 
-  text:[this] [p:this] ([swordsmanDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="swordsmanDamage:ps"]/s)
 *gunnerDamage
   hidden
   name:Gunshooter damage
 
-  text:[this] [p:this] ([gunnerDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="gunnerDamage:ps"]/s)
 *grenadeDamage
   hidden
   name:Grenademan damage
 
-  text:[this] [p:this] ([grenadeDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="grenadeDamage:ps"]/s)
 *wreckingBallDamage
   hidden
   name:Wrecking ball damage
 
-  text:[this] [p:this] ([wreckingBallDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wreckingBallDamage:ps"]/s)
 *bulldozerDamage
   hidden
   name:Bulldozer damage
 
-  text:[this] [p:this] ([bulldozerDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="bulldozerDamage:ps"]/s)
 *airstrikeDamage
   hidden
   name:Airstrike caller damage
 
-  text:[this] [p:this] ([airstrikeDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="airstrikeDamage:ps"]/s)
 *necromancerDamage
   hidden
   name:Necromancer damage
 
-  text:[this] [p:this] ([necromancerDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="necromancerDamage:ps"]/s)
 *giantDamage
   hidden
   name:Titan damage
 
-  text:[this] [p:this] ([giantDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="giantDamage:ps"]/s)
 *demonDamage
   hidden
   name:Demon damage
 
-  text:[this] [p:this] ([demonDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="demonDamage:ps"]/s)
 *compromiserDamage
   hidden
   name:Reality compromiser damage
 
-  text:[this] [p:this] ([compromiserDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="compromiserDamage:ps"]/s)
 *lastDamage
   hidden
   name:Black obliterator damage
 
-  text:[this] [p:this] ([lastDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="lastDamage:ps"]/s)
 *singularityDamage
   hidden
   name:Singularity damage
 
-  text:[this] [p:this] ([singularityDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="singularityDamage:ps"]/s)
 *edgeBeingDamage
   hidden
   name:Edge being damage
 
-  text:[this] [p:this] ([edgeBeingDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="edgeBeingDamage:ps"]/s)
 *glitchDamage
   hidden
   name:Glitch damage
 
-  text:[this] [p:this] ([glitchDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="glitchDamage:ps"]/s)
 *dreamMachineDamage
   hidden
   name:Dream Machine damage
 
-  text:[this] [p:this] ([dreamMachineDamage:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="dreamMachineDamage:ps"]/s)
 *damageDivider2
   hidden
   text:────────────────────
@@ -726,49 +736,49 @@ Resources
   hidden
   name:random bonus punching point|random bonus punching points
 
-  text:[this] [p:this] ([wd1:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wd1:ps"]/s)
 *wd2
   // Original key: timeUpgradeResource14
   hidden
   name:random bonus melee point|random bonus melee points
 
-  text:[this] [p:this] ([wd2:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wd2:ps"]/s)
 *wd3
   // Original key: timeUpgradeResource15
   hidden
   name:random bonus ranged point|random bonus ranged points
 
-  text:[this] [p:this] ([wd3:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wd3:ps"]/s)
 *wd4
   // Original key: timeUpgradeResource16
   hidden
   name:random bonus heavy point|random bonus heavy points
 
-  text:[this] [p:this] ([wd4:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wd4:ps"]/s)
 *wd5
   // Original key: timeUpgradeResource17
   hidden
   name:random bonus magic point|random bonus magic points
 
-  text:[this] [p:this] ([wd5:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wd5:ps"]/s)
 *wd6
   // Original key: timeUpgradeResource18
   hidden
   name:random bonus brick point|random bonus brick points
 
-  text:[this] [p:this] ([wd6:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wd6:ps"]/s)
 *wd7
   // Original key: timeUpgradeResource21
   hidden
   name:random bonus dream point|random bonus dream points
 
-  text:[this] [p:this] ([wd7:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wd7:ps"]/s)
 *wd8
   // Original key: timeUpgradeResource22
   hidden
   name:random bonus purifier point|random bonus purifier points
 
-  text:[this] [p:this] ([wd8:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wd8:ps"]/s)
 *divider3
   hidden
   text:────────────────────
@@ -779,32 +789,32 @@ Resources
   hidden
   name:wall destroyed|walls destroyed
 
-  text:[this] [p:this] ([wallsDestroyed:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="wallsDestroyed:ps"]/s)
 *totalWalls
   hidden
   name:total walls destroyed
 
-  text:[this] [p:this] ([totalWalls:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="totalWalls:ps"]/s)
 *building
   hidden
-  text:Buildings: [this]
+  text:Buildings: [i:wdOneDecimal %v="this"]
   shown
   name:building
 
 *buildings
   hidden
-  text:Buildings sacrificed: [this]
+  text:Buildings sacrificed: [i:wdOneDecimal %v="this"]
   shown
   name:buildings
 
 *timeSinceReset
   hidden
-  text:Last reset: [this] minutes ago
+  text:Last reset: [i:wdOneDecimal %v="this"] minutes ago
   name:timeSinceReset
 
 *timePlayed
   hidden
-  text:Total minutes played: [this]
+  text:Total minutes played: [i:wdOneDecimal %v="this"]
   shown
   name:timePlayed
 
@@ -819,12 +829,12 @@ Resources
   hidden
   name:cosmic knowledge
 
-  text:[this] [p:this] ([prePrestige:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="prePrestige:ps"]/s)
 *goldBricks
   hidden
   name:boss brick|boss bricks
 
-  text:[this] [p:this] ([goldBricks:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="goldBricks:ps"]/s)
 *divider4
   hidden
   text:────────────────────
@@ -835,12 +845,12 @@ Resources
   hidden
   name:future knowledge capsules
 
-  text:[this] [p:this] ([prestige:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="prestige:ps"]/s)
 *timesWon
   hidden
   name:boss point|boss points
 
-  text:[this] [p:this] ([timesWon:ps]/s)
+  text:[i:wdOneDecimal %v="this"] [p:this] ([i:wdOneDecimal %v="timesWon:ps"]/s)
 *timesActuallyWon
   hidden
   tags:wdinternal
@@ -850,7 +860,7 @@ Resources
 *resetTimes
   hidden
   name:times reset
-  text:Times reset: [this]
+  text:Times reset: [i:wdOneDecimal %v="this"]
 
 *menuItem4
   hidden
