@@ -2,12 +2,12 @@ Let's make a game!
 name:Wall Destroyer
 author:Tellurium
 created:21/04/2014
-updated:11/02/2026
+updated:23/07/2023
 version:2.5
 
 // Converted from the legacy Idle Game Maker format.
 // Original legacy stylesheet: https://pastebin.com/raw/jMGmv0J5
-// Uses the current basic theme plus compatible CSS below.
+// Classic teal layout based on the supplied reference screenshot.
 // Original author, descriptions, amounts and progression are retained.
 Settings
 building cost increase:110%
@@ -15,30 +15,122 @@ building cost refund:75%
 stylesheet:stuff/basic.css
 
 CSS
-@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
-#game { color:black; font-family:Kavoon,Georgia,serif; background:#eee; }
-#content { display:flex; flex-wrap:wrap; align-items:flex-start; gap:12px; }
-#box-main { flex:1 1 280px; }
-#box-store { flex:2 1 400px; }
-#box-stats { flex:1 1 280px; }
-.tag-wdinternal { display:none !important; }
-.importantresource { font-weight:bold; }
-.veryimportantresource { font-weight:bold; font-size:1.15em; }
+html, body { margin:0; min-height:100%; background:#a2cec6; }
+#game { background:#a2cec6; color:#3e5956; font:14px Arial,Helvetica,sans-serif; }
+#game * { box-sizing:border-box; }
+#game #content {
+  position:relative; inset:auto; width:100%; min-height:100vh; padding:4px;
+  display:grid; grid-template-columns:310px minmax(530px,1fr) 266px;
+  grid-template-rows:minmax(510px,50vh) minmax(330px,1fr) 28px;
+  grid-template-areas:"left main upgrades" "left stats upgrades" "log stats upgrades";
+  gap:5px; align-items:stretch;
+}
+#game .box { margin:0; padding:0; min-width:0; }
+#game #box-leftSidebar, #game #box-main, #game #box-stats,
+#game #box-upgradesBox, #game #box-logBox {
+  border:4px double #385d58; box-shadow:inset 0 0 0 1px #d9ebe6; background:#a2cec6;
+}
+#game #box-leftSidebar { grid-area:left; overflow:auto; }
+#game #box-main { grid-area:main; display:grid; grid-template-columns:266px minmax(0,1fr); }
+#game #box-stats { grid-area:stats; padding:4px; align-content:start; }
+#game #box-upgradesBox { grid-area:upgrades; padding:4px; overflow:auto; }
+#game #box-logBox { grid-area:log; overflow:auto; font-size:10px; }
+#game #box-heroBox { background:linear-gradient(#45a99a,#60c4b4); border-right:4px double #385d58; }
+#game #box-heroBox > .box-header {
+  padding:4px; margin:0; min-height:50px; border:3px double #d5e8e2;
+  background:linear-gradient(#295e55,#4e9f92); color:white;
+  font-size:22px; line-height:21px; font-weight:bold; text-shadow:1px 1px #385650;
+}
+#game #box-resourcesBox { padding:4px; }
+#game .box-header { padding:0; margin:0 0 2px; font-size:14px; font-weight:bold; }
+#game .thing { margin:0; border:0; box-shadow:none; border-radius:0; background:none; color:inherit; }
+#game .thing.hidden, #game .tag-wdinternal { display:none !important; }
+#game .thing-icon { width:48px; height:48px; background-repeat:no-repeat; background-position:center; background-size:contain; }
+#game .thing-text { line-height:1.05; }
+#game .thing-costs { font-size:12px; line-height:13px; }
+#game .thing-costs .lacking { color:#b12824; }
+#game .thing:hover { filter:brightness(1.07); }
+#game #box-buildingsBox .thing {
+  position:relative; display:block; min-height:64px; padding:4px 4px 4px 68px;
+  border-bottom:2px groove #d3e5df; cursor:pointer;
+}
+#game #box-buildingsBox .thing-icon { position:absolute; left:3px; top:5px; width:60px; height:54px; }
+#game #box-buildingsBox .thing-text { font-size:18px; font-weight:bold; }
+#game #box-buildingsBox .thing-text b:last-child { float:right; padding-left:5px; }
+#game #box-buildingsBox .thing-text b:first-child { float:none; padding:0; }
+#game #box-buildingsBox .thing-costs { margin-top:2px; }
+#game #box-buildingsBox .thing-text::after { content:""; display:block; clear:both; }
+#game #box-wallBox .thing { display:flex; flex-direction:column; align-items:flex-start; min-height:108px; margin:2px; padding:3px; border:4px double #4e736c; cursor:pointer; }
+#game #box-wallBox .thing-text { order:0; font-size:22px; font-weight:bold; }
+#game #box-wallBox .thing-costs { order:1; color:#a52b27; }
+#game #box-wallBox .thing-icon { order:2; align-self:center; width:90px; height:64px; background-position:center !important; }
+#game #box-heroBox .tag-punchWall { display:block; margin:68px 10px 8px; padding:0; border:0; cursor:pointer; }
+#game #box-heroBox .tag-punchWall .thing-icon { width:230px; height:200px; }
+#game #box-heroBox .tag-punchWall .thing-text { display:none; }
+#game #box-otherButtons .thing { display:block; margin:8px; padding:5px; border:3px double #4e736c; cursor:pointer; }
+#game #box-otherButtons .thing-icon { float:left; margin-right:6px; }
+#game #box-resourcesBox .res { display:block; padding:0; min-height:0; margin:0; }
+#game #box-resourcesBox .res .thing-text { font-size:14px; font-weight:normal; }
+#game #box-resourcesBox .tag-mainResource .thing-text { font-size:20px; }
+#game .importantresource, #game .veryimportantresource { font-weight:normal; font-size:inherit; }
+#game #box-upgradesBox .thing, #game #box-stats .thing {
+  display:inline-flex; vertical-align:top; width:53px; height:53px; padding:1px;
+  margin:0 2px 3px 0; border:4px double #7fb3a8; outline:1px solid #233e3a;
+  background:#142d2a; box-shadow:1px 1px 2px #577e75; cursor:pointer;
+}
+#game #box-upgradesBox .thing-icon, #game #box-stats .thing-icon { width:45px; height:45px; flex:0 0 45px; }
+#game #box-upgradesBox .thing-text, #game #box-upgradesBox .thing-costs,
+#game #box-stats .thing-text, #game #box-stats .thing-costs { display:none; }
+#game #box-upgradesBox .owned { display:none; }
+#game #box-stats .notOwned { display:none; }
+#game #bulkDisplay { padding:3px; font-size:11px; border-bottom:1px solid #668f86; }
+#game #log { max-height:48px; overflow:auto; }
+#game #meta-buttons { position:fixed; right:10px; bottom:5px; z-index:5; }
+#game .mainResource { font-size:20px; }
+@media (max-width:1100px) {
+  #game #content { grid-template-columns:260px minmax(420px,1fr) 220px; }
+  #game #box-main { grid-template-columns:230px minmax(0,1fr); }
+  #game #box-heroBox .tag-punchWall .thing-icon { width:200px; height:180px; }
+}
+@media (max-width:800px) {
+  #game #content { grid-template-columns:220px minmax(300px,1fr); grid-template-rows:auto auto auto auto; grid-template-areas:"left main" "left stats" "upgrades upgrades" "log log"; }
+  #game #box-main { grid-template-columns:1fr; }
+  #game #box-heroBox { border-right:0; border-bottom:4px double #385d58; }
+  #game #box-heroBox .tag-punchWall { margin:14px auto; width:200px; }
+  #game #box-resourcesBox { min-height:340px; }
+}
 
 Layout
-*main
- contains:Resources, Buttons, Log
-*store
- contains:upgradesBox, buildingsBox
-*upgradesBox
- contains:Upgrades
- header:Upgrades
+*leftSidebar
+ contains:wallBox, buildingsBox
+*wallBox
+ contains:tag:wallAction
 *buildingsBox
  contains:BulkDisplay, Buildings
- header:Buildings
+*main
+ contains:heroBox, resourcesBox
+*heroBox
+ contains:tag:punchWall, otherButtons
+ header:Wall Destroyer by</>Tellurium
+*otherButtons
+ contains:Buttons
+*resourcesBox
+ contains:Resources
+ header:Resources
 *stats
  contains:Achievements
  header:Achievements
+ names:hide
+ costs:hide
+*upgradesBox
+ contains:Upgrades
+ header:Upgrades
+ names:hide
+ costs:hide
+ tooltip origin:left
+*logBox
+ contains:Log
+
 
 Resources
 
@@ -403,88 +495,108 @@ Resources
   name:cash
   shown
 
+  text:[this] [p:this] ([money:ps]/s)
+  tags:mainResource
 *totalMoney
   hidden
   name:damage
   shown
   class:veryimportantresource
 
+  text:[this] [p:this] ([totalMoney:ps]/s)
+  tags:mainResource
 *tesseractDamage
   hidden
   name:fourth dimension damage
   class:veryimportantresource
 
+  text:[this] [p:this] ([tesseractDamage:ps]/s)
 *bricks
   hidden
   name:brick|bricks
   shown
   class:veryimportantresource
 
+  text:[this] [p:this] ([bricks:ps]/s)
+  tags:mainResource
 *fourthWallMatter
   hidden
   name:fourth wall bricks
   class:veryimportantresource
 
+  text:[this] [p:this] ([fourthWallMatter:ps]/s)
 *artSpaceBricks
   hidden
   name:artificial space bricks
   class:veryimportantresource
 
+  text:[this] [p:this] ([artSpaceBricks:ps]/s)
 *artTimeBricks
   hidden
   name:artificial time bricks
   class:veryimportantresource
 
+  text:[this] [p:this] ([artTimeBricks:ps]/s)
 *spaceBricks
   hidden
   name:Space Bricks
   class:importantresource
 
+  text:[this] [p:this] ([spaceBricks:ps]/s)
 *timeBricks
   hidden
   name:Time Bricks
   class:importantresource
 
+  text:[this] [p:this] ([timeBricks:ps]/s)
 *endBricks
   hidden
   name:End Bricks
   class:importantresource
 
+  text:[this] [p:this] ([endBricks:ps]/s)
 *finalityBricks
   hidden
   name:Finality Bricks
   class:importantresource
 
+  text:[this] [p:this] ([finalityBricks:ps]/s)
 *winSpendable
   hidden
   name:Pure Bricks
   class:importantresource
 
+  text:[this] [p:this] ([winSpendable:ps]/s)
 *meshSpendable
   hidden
   name:Mesh Bricks
   class:importantresource
 
+  text:[this] [p:this] ([meshSpendable:ps]/s)
 *fifthBricks
   hidden
   name:Fifth Dimension Bricks
   class:importantresource
 
+  text:[this] [p:this] ([fifthBricks:ps]/s)
 *alphaBricks
   hidden
   name:Alpha Bricks
   class:importantresource
 
+  text:[this] [p:this] ([alphaBricks:ps]/s)
 *dreamycoins
   hidden
   name:Dreamy Coins
   class:importantresource
 
+  text:[this] [p:this] ([dreamycoins:ps]/s)
 *omniverseBrick
   hidden
   name:Omniverse Bricks
   class:veryimportantresource
 
+  text:[this] [p:this] ([omniverseBrick:ps]/s)
 *menuItem2
   hidden
   text:─────────────Stats─────────────
@@ -496,18 +608,22 @@ Resources
   hidden
   name:hand damage
 
+  text:[this] [p:this] ([handDamage:ps]/s)
 *totalBricks
   hidden
   name:total bricks
 
+  text:[this] [p:this] ([totalBricks:ps]/s)
 *handBricks
   hidden
   name:hand made bricks
 
+  text:[this] [p:this] ([handBricks:ps]/s)
 *total4thWallMatter
   hidden
   name:total fourth wall bricks
 
+  text:[this] [p:this] ([total4thWallMatter:ps]/s)
 *damageDivider1
   hidden
   text:────────────────────
@@ -518,70 +634,87 @@ Resources
   hidden
   name:Puncher damage
 
+  text:[this] [p:this] ([puncherDamage:ps]/s)
 *clubberDamage
   hidden
   name:Clubber damage
 
+  text:[this] [p:this] ([clubberDamage:ps]/s)
 *swordsmanDamage
   hidden
   name:Swordsman damage
 
+  text:[this] [p:this] ([swordsmanDamage:ps]/s)
 *gunnerDamage
   hidden
   name:Gunshooter damage
 
+  text:[this] [p:this] ([gunnerDamage:ps]/s)
 *grenadeDamage
   hidden
   name:Grenademan damage
 
+  text:[this] [p:this] ([grenadeDamage:ps]/s)
 *wreckingBallDamage
   hidden
   name:Wrecking ball damage
 
+  text:[this] [p:this] ([wreckingBallDamage:ps]/s)
 *bulldozerDamage
   hidden
   name:Bulldozer damage
 
+  text:[this] [p:this] ([bulldozerDamage:ps]/s)
 *airstrikeDamage
   hidden
   name:Airstrike caller damage
 
+  text:[this] [p:this] ([airstrikeDamage:ps]/s)
 *necromancerDamage
   hidden
   name:Necromancer damage
 
+  text:[this] [p:this] ([necromancerDamage:ps]/s)
 *giantDamage
   hidden
   name:Titan damage
 
+  text:[this] [p:this] ([giantDamage:ps]/s)
 *demonDamage
   hidden
   name:Demon damage
 
+  text:[this] [p:this] ([demonDamage:ps]/s)
 *compromiserDamage
   hidden
   name:Reality compromiser damage
 
+  text:[this] [p:this] ([compromiserDamage:ps]/s)
 *lastDamage
   hidden
   name:Black obliterator damage
 
+  text:[this] [p:this] ([lastDamage:ps]/s)
 *singularityDamage
   hidden
   name:Singularity damage
 
+  text:[this] [p:this] ([singularityDamage:ps]/s)
 *edgeBeingDamage
   hidden
   name:Edge being damage
 
+  text:[this] [p:this] ([edgeBeingDamage:ps]/s)
 *glitchDamage
   hidden
   name:Glitch damage
 
+  text:[this] [p:this] ([glitchDamage:ps]/s)
 *dreamMachineDamage
   hidden
   name:Dream Machine damage
 
+  text:[this] [p:this] ([dreamMachineDamage:ps]/s)
 *damageDivider2
   hidden
   text:────────────────────
@@ -593,41 +726,49 @@ Resources
   hidden
   name:random bonus punching point|random bonus punching points
 
+  text:[this] [p:this] ([wd1:ps]/s)
 *wd2
   // Original key: timeUpgradeResource14
   hidden
   name:random bonus melee point|random bonus melee points
 
+  text:[this] [p:this] ([wd2:ps]/s)
 *wd3
   // Original key: timeUpgradeResource15
   hidden
   name:random bonus ranged point|random bonus ranged points
 
+  text:[this] [p:this] ([wd3:ps]/s)
 *wd4
   // Original key: timeUpgradeResource16
   hidden
   name:random bonus heavy point|random bonus heavy points
 
+  text:[this] [p:this] ([wd4:ps]/s)
 *wd5
   // Original key: timeUpgradeResource17
   hidden
   name:random bonus magic point|random bonus magic points
 
+  text:[this] [p:this] ([wd5:ps]/s)
 *wd6
   // Original key: timeUpgradeResource18
   hidden
   name:random bonus brick point|random bonus brick points
 
+  text:[this] [p:this] ([wd6:ps]/s)
 *wd7
   // Original key: timeUpgradeResource21
   hidden
   name:random bonus dream point|random bonus dream points
 
+  text:[this] [p:this] ([wd7:ps]/s)
 *wd8
   // Original key: timeUpgradeResource22
   hidden
   name:random bonus purifier point|random bonus purifier points
 
+  text:[this] [p:this] ([wd8:ps]/s)
 *divider3
   hidden
   text:────────────────────
@@ -638,10 +779,12 @@ Resources
   hidden
   name:wall destroyed|walls destroyed
 
+  text:[this] [p:this] ([wallsDestroyed:ps]/s)
 *totalWalls
   hidden
   name:total walls destroyed
 
+  text:[this] [p:this] ([totalWalls:ps]/s)
 *building
   hidden
   text:Buildings: [this]
@@ -676,10 +819,12 @@ Resources
   hidden
   name:cosmic knowledge
 
+  text:[this] [p:this] ([prePrestige:ps]/s)
 *goldBricks
   hidden
   name:boss brick|boss bricks
 
+  text:[this] [p:this] ([goldBricks:ps]/s)
 *divider4
   hidden
   text:────────────────────
@@ -690,10 +835,12 @@ Resources
   hidden
   name:future knowledge capsules
 
+  text:[this] [p:this] ([prestige:ps]/s)
 *timesWon
   hidden
   name:boss point|boss points
 
+  text:[this] [p:this] ([timesWon:ps]/s)
 *timesActuallyWon
   hidden
   tags:wdinternal
@@ -905,6 +1052,7 @@ Buttons
     yield 1 handDamage
   end
 
+  tags:punchWall
 *makeBricks
   hidden
   name:Create Bricks
@@ -2397,6 +2545,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBigWall
   hidden
   desc:Destroy the big 2nd wall and move on to a bigger one.</>Gives <b>100</b> bricks.</>Awards <b>25,000,000,000,000</b> cash.</>Worth <b>1</b> cosmic knowledge.
@@ -2423,6 +2573,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyHugeWall
   hidden
   desc:Destroy the huge 3rd wall and move on to a bigger one.</>Gives <b>10,000</b> bricks.</>Awards <b>2,500,000,000,000,000</b> cash.</>Worth <b>1</b> cosmic knowledge.
@@ -2448,6 +2600,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyMassiveWall
   hidden
   desc:Destroy the massive 4th wall and move on to the final one.</>Gives <b>250,000</b> bricks.</>Awards <b>250,000,000,000,000,000</b> cash.</>Worth <b>2</b> cosmic knowledge.
@@ -2475,6 +2629,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFinalWall
   hidden
   desc:Destroy the 5th and final wall.</>Gives <b>10,000,000</b> bricks.</>Awards <b>25,000,000,000,000,000,000</b> cash; <b>1</b> boss brick.</>Worth <b>5</b> cosmic knowledge.
@@ -2501,6 +2657,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall
   hidden
   desc:<i>You win, but you can keep going anyway.</i></> </>Destroy bonus wall #9 and move on to the next.</>Gives <b>100,000,000</b> bricks and <b>100 quintillion</b> cash.</>Worth <b>5</b> cosmic knowledge.
@@ -2525,6 +2683,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall2
   hidden
   desc:Destroy bonus wall #8 and move on to the next.</>Gives <b>250,000,000</b> bricks and <b>200 quintillion</b> cash.</>Worth <b>5</b> cosmic knowledge.
@@ -2549,6 +2709,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall3
   hidden
   desc:Destroy bonus wall #7 and move on to the next.</>Gives <b>500,000,000</b> bricks and <b>400 quintillion</b> cash.</>Worth <b>6</b> cosmic knowledge.
@@ -2573,6 +2735,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall4
   hidden
   desc:Destroy bonus wall #6 and move on to the next.</>Gives <b>1,000,000,000</b> bricks and <b>800 quintillion</b> cash.</>Worth <b>7</b> cosmic knowledge.
@@ -2597,6 +2761,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall5
   hidden
   desc:Destroy bonus wall #5 and move on to the next.</>Gives <b>2,000,000,000</b> bricks and <b>1.6 sextillion</b> cash.</>Worth <b>8</b> cosmic knowledge.
@@ -2623,6 +2789,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall6
   hidden
   desc:Destroy bonus wall #4 and move on to the next.</>Gives <b>4,000,000,000</b> bricks and <b>3.2 sextillion</b> cash.</>Worth <b>9</b> cosmic knowledge.
@@ -2647,6 +2815,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall7
   hidden
   desc:Destroy bonus wall #3 and move on to the next.</>Gives <b>8,000,000,000</b> bricks and <b>6.4 sextillion</b> cash.</>Worth <b>10</b> cosmic knowledge.
@@ -2671,6 +2841,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall8
   hidden
   desc:Destroy bonus wall #2 and move on to the next.</>Gives <b>16,000,000,000</b> bricks and <b>12.8 sextillion</b> cash.</>Worth <b>10</b> cosmic knowledge.
@@ -2695,6 +2867,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall9
   hidden
   desc:Destroy bonus wall #1 and move on to the boss.</>Gives <b>32,000,000,000</b> bricks and <b>25.6 sextillion</b> cash.</>Worth <b>10</b> cosmic knowledge.
@@ -2719,6 +2893,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall10
   hidden
   desc:Destroy the boss bonus wall.</>Gives <b>100 billion</b> bricks and <b>75 sextillion</b> cash; <b>1</b> boss brick.</>Worth <b>20</b> cosmic knowledge.
@@ -2747,6 +2923,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall11
   hidden
   desc:<i>Turns out the bonus walls weren't the last thing we have to face, for the Ten Walls of Space lie beyond them.</i></> </>Destroy space wall #9 and move on to the next one.</>Gives <b>200 billion</b> bricks and <b>100 sextillion</b> cash.</>Gives <b>10</b> space bricks and unlocks <b>space research</b>.</> </>Note: Space bricks cannot be kept through resets.</>Worth <b>25</b> cosmic knowledge.
@@ -2773,6 +2951,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall12
   hidden
   desc:Destroy space wall #8 and move on to the next one.</>Gives <b>400 billion</b> bricks and <b>200 sextillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>25</b> cosmic knowledge.
@@ -2798,6 +2978,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall13
   hidden
   desc:Destroy space wall #7 and move on to the next one.</>Gives <b>800 billion</b> bricks and <b>400 sextillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>50</b> cosmic knowledge.
@@ -2823,6 +3005,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall14
   hidden
   desc:Destroy space wall #6 and move on to the next one.</>Gives <b>1.6 trillion</b> bricks and <b>800 sextillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>50</b> cosmic knowledge.
@@ -2848,6 +3032,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall15
   hidden
   desc:Destroy space wall #5 and move on to the next one.</>Gives <b>3.2 trillion</b> bricks and <b>1.6 septillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>75</b> cosmic knowledge.
@@ -2874,6 +3060,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall16
   hidden
   desc:Destroy space wall #4 and move on to the next one.</>Gives <b>6.4 trillion</b> bricks and <b>3.2 septillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>75</b> cosmic knowledge.
@@ -2899,6 +3087,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall17
   hidden
   desc:Destroy space wall #3 and move on to the next one.</>Gives <b>12.8 trillion</b> bricks and <b>6.4 septillion</b> cash.</>Gives <b>15</b> space bricks.</>Worth <b>100</b> cosmic knowledge.
@@ -2924,6 +3114,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall18
   hidden
   desc:Destroy space wall #2 and move on to the next one.</>Gives <b>25 trillion</b> bricks and <b>12.8 septillion</b> cash.</>Gives <b>15</b> space bricks.</>Worth <b>100</b> cosmic knowledge.
@@ -2949,6 +3141,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall19
   hidden
   desc:Destroy space wall #1 and move on to the boss.</>Gives <b>50 trillion</b> bricks and <b>25 septillion</b> cash.</>Gives <b>20</b> space bricks.</>Worth <b>150</b> cosmic knowledge.
@@ -2974,6 +3168,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall20
   hidden
   desc:Destroy the boss space wall.</>Gives <b>150 trillion</b> bricks and <b>75 septillion</b> cash.</>Gives <b>40</b> space bricks; <b>1</b> boss brick.</>Worth <b>250</b> cosmic knowledge.
@@ -3004,6 +3200,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall21
   hidden
   desc:<i>"What lunatic built all these walls, anyway?!" ~Agent Carter</>We now face the Ten Walls of Time.</>These better be the last ones.</i></> </>Destroy time wall #9 and move on to the next.</>Gives <b>400 trillion</b> bricks and <b>200 septillion</b> cash.</>Gives <b>5</b> time bricks and unlocks the <b>time upgrades</b>.</>Worth <b>250</b> cosmic knowledge.</> </>Note: Time bricks also cannot be kept through resets.
@@ -3031,6 +3229,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall22
   hidden
   desc:Destroy time wall #8 and move on to the next.</>Gives <b>800 trillion</b> bricks and <b>400 septillion</b> cash.</>Gives <b>5</b> time bricks.</>Worth <b>250</b> cosmic knowledge.
@@ -3056,6 +3256,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall23
   hidden
   desc:Destroy time wall #7 and move on to the next.</>Gives <b>1.6 quadrillion</b> bricks and <b>800 septillion</b> cash.</>Gives <b>5</b> time bricks.</>Worth <b>500</b> cosmic knowledge.
@@ -3081,6 +3283,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall24
   hidden
   desc:Destroy time wall #6 and move on to the next.</>Gives <b>3.2 quadrillion</b> bricks and <b>1.6 octillion</b> cash.</>Gives <b>5</b> time bricks.</>Worth <b>500</b> cosmic knowledge.
@@ -3106,6 +3310,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall25
   hidden
   desc:Destroy time wall #5 and move on to the next.</>Gives <b>6.4 quadrillion</b> bricks and <b>3.2 octillion</b> cash.</>Gives <b>6</b> time bricks.</>Worth <b>750</b> cosmic knowledge.
@@ -3132,6 +3338,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall26
   hidden
   desc:Destroy time wall #4 and move on to the next.</>Gives <b>12.8 quadrillion</b> bricks and <b>6.4 octillion</b> cash.</>Gives <b>7</b> time bricks.</>Worth <b>750</b> cosmic knowledge.
@@ -3157,6 +3365,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall27
   hidden
   desc:Destroy time wall #3 and move on to the next.</>Gives <b>25 quadrillion</b> bricks and <b>12.8 octillion</b> cash.</>Gives <b>8</b> time bricks.</>Worth <b>1,000</b> cosmic knowledge.
@@ -3182,6 +3392,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall28
   hidden
   desc:Destroy time wall #2 and move on to the next.</>Gives <b>50 quadrillion</b> bricks and <b>25.6 octillion</b> cash.</>Gives <b>9</b> time bricks.</>Worth <b>1,000</b> cosmic knowledge.
@@ -3207,6 +3419,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall29
   hidden
   desc:Destroy time wall #1 and move on to the boss.</>Gives <b>102 quadrillion</b> bricks and <b>51.2 octillion</b> cash.</>Gives <b>10</b> time bricks.</>Worth <b>1,500</b> cosmic knowledge.
@@ -3232,6 +3446,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall30
   hidden
   desc:Destroy the boss time wall.</>Gives <b>250 quadrillion</b> bricks and <b>150 octillion</b> cash.</>Gives <b>15</b> time bricks and <b>1</b> boss brick.</>Worth <b>2,500</b> cosmic knowledge.
@@ -3262,6 +3478,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall31
   hidden
   desc:<i>Nope. The Ten Walls of The End rise up over the rubble of time. At least these are clearly the last ones.</i></> </>Destroy End Wall #9 and move on to the next one.</>Gives <b>800 quadrillion</b> bricks and <b>400 octillion</b> cash.</>Gives <b>2</b> End bricks and <b>100</b> space bricks; unlocks the <b>Deep Space Upgrades</b> and <b>The End Scrolls</b>.</>Worth <b>2,500</b> cosmic knowledge.</> </>Note: End bricks cannot be kept through resets either.
@@ -3290,6 +3508,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall32
   hidden
   desc:<i>We tried scanning the scrolls for age, and got "73 hours" from the scanner. The temple gave the same result. Probably had a broken scanner, especially since there are records of the temple dating back to 8,000 years ago.</i></> </>Destroy End Wall #8 and move on to the next one.</>Gives <b>1.6 quintillion</b> bricks and <b>800 octillion</b> cash.</>Gives <b>2</b> End bricks and <b>100</b> space bricks.</>Worth <b>2,500</b> cosmic knowledge.
@@ -3316,6 +3536,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall33
   hidden
   desc:<i>Scanning shows that the scrolls are made of regular fabric, making it strange that they are perfectly preserved.</i></> </>Destroy End Wall #7 and move on to the next one.</>Gives <b>3.2 quintillion</b> bricks and <b>1.6 nonillion</b> cash.</>Gives <b>2</b> End bricks and <b>100</b> space bricks.</>Worth <b>5,000</b> cosmic knowledge.
@@ -3342,6 +3564,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall34
   hidden
   desc:<i>There's text on the outside of the temple that says "MIRRORAGE". Research suggests that it isn't even a real word.</i></> </>Destroy End Wall #6 and move on to the next one.</>Gives <b>6.4 quintillion</b> bricks and <b>3.2 nonillion</b> cash.</>Gives <b>2</b> End bricks and <b>100</b> space bricks.</>Worth <b>5,000</b> cosmic knowledge.
@@ -3368,6 +3592,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall35
   hidden
   desc:<i>Along with the scrolls, there were also sheets of paper with quotes written on them. We can list some of those here.</i></> </>Destroy End Wall #5 and move on to the next one.</>Gives <b>12.8 quintillion</b> bricks and <b>6.4 nonillion</b> cash.</>Gives <b>2</b> End bricks and <b>150</b> space bricks.</>Worth <b>7,500</b> cosmic knowledge.
@@ -3395,6 +3621,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall36
   hidden
   desc:<i>"Where's logic in this equation?" ~#8</i></> </>Destroy End Wall #4 and move on to the next one.</>Gives <b>25 quintillion</b> bricks and <b>12.8 nonillion</b> cash.</>Gives <b>2</b> End bricks and <b>150</b> space bricks.</>Worth <b>10,000</b> cosmic knowledge.
@@ -3421,6 +3649,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall37
   hidden
   desc:<i>"If you think about it, everything is unfinished. Nothing is truly left without questions." ~Lord Reaefsek</i></> </>Destroy End Wall #3 and move on to the next one.</>Gives <b>51 quintillion</b> bricks and <b>25 nonillion</b> cash.</>Gives <b>3</b> End bricks and <b>200</b> space bricks.</>Worth <b>10,000</b> cosmic knowledge.
@@ -3447,6 +3677,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall38
   hidden
   desc:<i>"It's pretty clear The King is insane, but what are we gonna do, fight him?" ~#14</i></> </>Destroy End Wall #2 and move on to the next one.</>Gives <b>102 quintillion</b> bricks and <b>51 nonillion</b> cash.</>Gives <b>3</b> End bricks and <b>200</b> space bricks.</>Worth <b>10,000</b> cosmic knowledge.
@@ -3473,6 +3705,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall39
   hidden
   desc:<i>"What, his face broke? I can fix that." ~#10</i></> </>Destroy End Wall #1 and move on to the boss.</>Gives <b>204 quintillion</b> bricks and <b>102 nonillion</b> cash.</>Gives <b>4</b> End bricks and <b>250</b> space bricks.</>Worth <b>12,500</b> cosmic knowledge.
@@ -3499,6 +3733,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall40
   hidden
   desc:<i>"There goes a rapture." ~#17</i></> </>Destroy the Boss End Wall.</>Gives <b>500 quintillion</b> bricks and <b>250 nonillion</b> cash.</>Gives <b>5</b> End bricks, <b>500</b> space bricks and <b>1</b> boss brick.</>Worth <b>25,000</b> cosmic knowledge.
@@ -3529,6 +3765,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall41
   hidden
   desc:<i>Should've seen this coming.</i></> </>Destroy Finality Wall Delta and move on to the next.</>Gives <b>2 sextillion</b> bricks and <b>1 decillion</b> cash.</>Gives <b>1</b> Finality Brick and <b>50</b> time bricks; unlocks the <b>deep time upgrades</b> (which unlock randomly over time, again) and <b>The Finality Scrolls</b>.</>Worth <b>25,000</b> cosmic knowledge.</> </>Note: You guessed it, Finality Bricks cannot be kept through resets.
@@ -3557,6 +3795,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall42
   hidden
   desc:Destroy Finality Wall Gamma and move on to the next.</>Gives <b>8 sextillion</b> bricks and <b>4 decillion</b> cash.</>Gives <b>1</b> Finality Brick and <b>75</b> time bricks.</>Worth <b>30,000</b> cosmic knowledge.
@@ -3583,6 +3823,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall43
   hidden
   desc:Destroy Finality Wall Beta and move on to the next.</>Gives <b>32 sextillion</b> bricks and <b>16 decillion</b> cash.</>Gives <b>1</b> Finality Brick and <b>125</b> time bricks.</>Worth <b>40,000</b> cosmic knowledge.
@@ -3609,6 +3851,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall44
   hidden
   desc:Destroy Finality Wall Alpha and move on to the next.</>Gives <b>128 sextillion</b> bricks and <b>64 decillion</b> cash.</>Gives <b>2</b> Finality Bricks and <b>175</b> time bricks.</>Worth <b>50,000</b> cosmic knowledge.
@@ -3635,6 +3879,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall45
   hidden
   desc:Destroy the Boss Finality Wall, and... move on to the next?</>Gives <b>2 septillion</b> bricks and <b>1 undecillion</b> cash.</>Gives <b>1</b> boss brick, <b>4</b> Finality Bricks, <b>40</b> End bricks, <b>500</b> time bricks, and <b>5,000</b> space bricks.</>Worth <b>50,000</b> cosmic knowledge.</>Unlocks any time upgrades that were not already unlocked.
@@ -3689,6 +3935,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall46
   hidden
   desc:Destroy the King Finality Wall.</>Gives <b>10 septillion</b> bricks and <b>10 undecillion</b> cash.</>Gives <b>1</b> boss bricks, <b>8</b> Finality Bricks, <b>80</b> End bricks, <b>1,000</b> time bricks, and <b>10,000</b> space bricks.</>Worth <b>60,000</b> cosmic knowledge.
@@ -3719,6 +3967,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall47
   hidden
   desc:Destroy the End Finality Wall.</><i>Is there truly a meaning to an end?!</i></>Gives <b>50 septillion</b> bricks and <b>60 undecillion</b> cash.</>Gives <b>1</b> boss bricks, <b>24</b> Finality Bricks, <b>100</b> End bricks, <b>1,500</b> time bricks, and <b>17,500</b> space bricks.</>Worth <b>70,000</b> cosmic knowledge.
@@ -3749,6 +3999,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyBonusWall48
   hidden
   desc:Destroy the Mesh Finality Wall, and face the rest of what lies ahead.</>Gives <b>1 octillion</b> bricks and <b>1 duodecillion</b> cash.</>Gives <b>1</b> boss bricks, <b>128</b> Finality Bricks, <b>800</b> End bricks, <b>6,500</b> time bricks, and <b>97,500</b> space bricks.</>Worth <b>80,000</b> cosmic knowledge.
@@ -3782,6 +4034,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall01
   hidden
   desc:<i>Now we can't tell what's different from reality and fantasy anymore. The lines have blurred... and only the <b>Tesseracted</b> can touch it.</i></>Destroy a wall of a fantasy world and move to the next one.</>Gives <b>1</b> Alpha brick and <b>1</b> Fifth Dimension brick.</>Worth <b>200,000</b> cosmic knowledge.</>Note: ...Ok, ok, maybe in fact you can keep your Alpha and Fifth Dimension bricks. Time reversal technology has improved quite vastly since we've first seen the Time Walls, so this shouldn't be a problem anymore.
@@ -3804,6 +4058,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall02
   hidden
   desc:<i>"When the first Fantasy Wall was destroyed, even stranger bricks came out of it. We call them the 5th Dimension Bricks because they don't even look like bricks... when separated." ~#21</i></>Destroy another wall of a fantasy world and move to the next one.</>Gives <b>2</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>200,000</b> cosmic knowledge.
@@ -3826,6 +4082,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall03
   hidden
   desc:<i>"Let's get something straight here. There are more after the end?! No matter how much reality has broken, I will see to it that every single wall must be demolished!" ~ RUC CEO</i></>Destroy yet another wall of a fantasy world and move to the next one.</>Gives <b>3</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>250,000</b> cosmic knowledge.
@@ -3848,6 +4106,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall04
   hidden
   desc:<i>"We have angered the Kingdom. It's best we get this thing over with."</i></>Destroy an insignificant wall of a fantasy world and challenge the Kingdom.</>Gives <b>4</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>250,000</b> cosmic knowledge.
@@ -3870,6 +4130,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall05
   hidden
   desc:<i>"The </i></>Destroy The Pawn and move to the next.</>Gives <b>5</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>300,000</b> cosmic knowledge.
@@ -3892,6 +4154,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall06
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The Knight and move to the next.</>Gives <b>6</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>300,000</b> cosmic knowledge.
@@ -3914,6 +4178,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall07
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The Bishop and move to the next.</>Gives <b>7</b> Alpha bricks and <b>1</b> Fifth Dimension brick</>Worth <b>400,000</b> cosmic knowledge.
@@ -3936,6 +4202,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall08
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The Rook and move to the next.</>Gives <b>8</b> Alpha bricks and <b>1</b> Fifth Dimension brick</>Worth <b>400,000</b> cosmic knowledge.
@@ -3958,6 +4226,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall09
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The Queen and move to the next.</>Gives <b>9</b> Alpha bricks and <b>3</b> Fifth Dimension brick</>Worth <b>500,000</b> cosmic knowledge.
@@ -3980,6 +4250,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyFantasyWall10
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The King.</>Gives <b>10</b> Alpha bricks, <b>5</b> Fifth Dimension bricks and <b>1</b> gold brick.</>Worth <b>1,000,000</b> cosmic knowledge.
@@ -4003,6 +4275,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyInfWall01
   hidden
   desc:<i>Reaching beyond the heavens. Nothing makes sense.</i></>Destroy one of the walls of the infinite walls.</>Gives <b>15</b> Alpha bricks, <b>2</b> Fifth Dimension bricks and <b>1 undecillion</b> bricks.</>Worth <b>250,000</b> cosmic knowledge.
@@ -4026,6 +4300,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyInfWall02
   hidden
   desc:please excuse me for the lack of a description while I try to rebalance this era. ok thanks</>Gives <b>25</b> Alpha bricks, <b>4</b> Fifth Dimension bricks, <b>16,000</b> artifical space bricks and <b>8 undecillion</b> bricks.</>Worth <b>350,000</b> cosmic knowledge.
@@ -4050,6 +4326,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyInfWall03
   hidden
   desc:please excuse me for the lack of a description while I try to rebalance this era. ok thanks</>Gives <b>40</b> Alpha bricks, <b>7</b> Fifth Dimension bricks, <b>64,000</b> artifical space bricks, <b>25,400</b> artifical time bricks and <b>32 undecillion</b> bricks.</>Worth <b>450,000</b> cosmic knowledge.
@@ -4075,6 +4353,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyInfWall04
   hidden
   desc:please excuse me for the lack of a description while I try to rebalance this era. ok thanks</>Gives <b>60</b> Alpha bricks, <b>12</b> Fifth Dimension bricks, <b>128,000</b> artifical space bricks, <b>35,000</b> artifical time bricks and <b>400 undecillion</b> bricks.</>Worth <b>550,000</b> cosmic knowledge.
@@ -4100,6 +4380,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyInfWall05
   hidden
   desc:please excuse me for the lack of a description while I try to rebalance this era. ok thanks</>Gives <b>80</b> Alpha bricks, <b>16</b> Fifth Dimension bricks, <b>320,000</b> artifical space bricks, <b>80,000</b> artifical time bricks and <b>10 duodecillion</b> bricks.</>Worth <b>650,000</b> cosmic knowledge.
@@ -4125,6 +4407,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyInfWall06
   hidden
   desc:please excuse me for the lack of a description while I try to rebalance this era. ok thanks</>Gives <b>125</b> Alpha bricks, <b>25</b> Fifth Dimension bricks, <b>640,000</b> artifical space bricks, <b>100,000</b> artifical time bricks and <b>60 duodecillion</b> bricks.</>Worth <b>750,000</b> cosmic knowledge.
@@ -4150,6 +4434,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *destroyInfWall07
   hidden
   desc:please excuse me for the lack of a description while I try to rebalance this era. ok thanks</>Gives <b>150</b> Alpha bricks, <b>35</b> Fifth Dimension bricks, <b>750,000</b> artifical space bricks, <b>80,000</b> artifical time bricks and <b>450 duodecillion</b> bricks.</>Worth <b>1,000,000</b> cosmic knowledge.
@@ -4174,6 +4460,8 @@ Buildings
     do wdsync
   end
 
+  tags:wallAction
+  text:[n:this]
 *omWall
   hidden
   desc:The wall holding the omniverse together. How come it is indestructible?</>When broken, leads you to the <b>true ending</b>, and gives <b>1 omniverse brick</b>.
@@ -4194,11 +4482,14 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *brokenWall
   hidden
   desc:There is nothing left. It's time to go home.
   name:Broken Wall
 
+  tags:wallAction
+  text:[n:this]
 *timeUpgradeProducer
   hidden
   tags:wdinternal
@@ -4274,6 +4565,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *clubber
   hidden
   desc:Melee building</>Does <b>0.5</b> base damage.</><i>Not to be confused with the other kind of clubbing.</i>
@@ -4296,6 +4588,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *swordsman
   hidden
   desc:Melee building</>Does <b>2.5</b> base damage.</><i>Some question the use of swords on a brick wall. Those guys are lame.</i>
@@ -4318,6 +4611,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *gunner
   hidden
   desc:Ranged building</>Does <b>30</b> base damage.</><i>Shoots his gun.</i>
@@ -4340,6 +4634,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *grenade
   hidden
   desc:Ranged building</>Does <b>500</b> base damage.</><i>A man with grenades. I am a master of descriptions.</i>
@@ -4362,6 +4657,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *wreckingBall
   hidden
   desc:Heavy duty building</>Does <b>7,000</b> base damage.</><i>Something actually meant for destroying walls.</i>
@@ -4384,6 +4680,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *bulldozer
   hidden
   desc:Heavy duty building</>Does <b>80,000</b> base damage.</><i>Rams the wall. So good.</i>
@@ -4406,6 +4703,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *airstrike
   hidden
   desc:Heavy duty building</>Does <b>2,500,000</b> base damage.</><i>You know, the guy that calls airstrikes.</i>
@@ -4428,6 +4726,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *necromancer
   hidden
   desc:Magic building</>Does <b>33,333,333</b> base damage.</><i>Raises dead wizards to destroy the wall with their dark magic. Requires bricks.</i>
@@ -4449,6 +4748,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *giant
   hidden
   desc:Magic building</>Does <b>250,000,000</b> base damage.</><i>The prime inhabitants of the Old World, back from the dead. They smash the wall with their giant fists.</i>
@@ -4470,6 +4770,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *demon
   hidden
   desc:Magic building</>Does <b>3,666,666,666</b> base damage.</><i>Defiles the wall with the darkest magic of all.</i>
@@ -4491,6 +4792,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *compromiser
   hidden
   desc:Dream building</>Does <b>40,000,000,000</b> base damage.</>Gives <b>0.1</b> fourth wall bricks.</><i>Enters reality code and removes the wall from existence.</i>
@@ -4514,6 +4816,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *lastBuilding
   hidden
   desc:Dream building</>Does <b>1,000,000,000,000,000</b> base damage.</><i>Robots covered in The Black. They're really cool, so no one questions mixing the most dangerous & evil thing ever with cold, unfeeling robots.</i>
@@ -4535,6 +4838,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *singularityBuilding
   hidden
   desc:Purifier building</>Does <b>11 quintillion</b> base damage.</>Gives <b>1</b> base Space Bricks/<b>20</b> days.</><i>Nothing will be left after this one. Nothing.</i>
@@ -4557,6 +4861,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *edgeBeing
   hidden
   desc:Purifier building</>Does <b>1.2 sextillion</b> base damage.</><i>Gives <b>1</b> base Time Bricks/<b>50</b> days.</>Sentient beings of the energy of all realities, living on the edge of the reality.</i>
@@ -4579,6 +4884,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *strangeGlitch
   hidden
   desc:Strange building</>Deals <b>50 septillion</b> base damage.</><i>For some reason, you find the manipulative property of an oversight to be well worth exploiting. Let's hope this doesn't bite us.</i>
@@ -4600,6 +4906,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *dreammachine
   hidden
   desc:Fanatical building</>Deals <b>6.75 nonillion</b> base damage.</>Mines 0.001 base dreamy coins.</><i>Manipulates minds in dreams to mine Dreamy Coins. Oh, and unleashes the wrath of the unrealistic fantasy.</i>
@@ -4621,6 +4928,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 *brickFactory
   hidden
   desc:Special building</>Creates <b>0.05</b> base bricks.</><i>Creates artificial bricks with dark magic. The wizards will never know.</i>
@@ -4641,6 +4949,7 @@ Buildings
     do wdsync
   end
 
+  text:<b>[n:this]</b><b>[this]</b>
 Upgrades
 
 *win
