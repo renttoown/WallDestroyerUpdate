@@ -54,7 +54,7 @@ html, body { margin:0; min-height:100%; background:#a2cec6; }
   position:relative; display:block; min-height:64px; padding:4px 4px 4px 68px;
   border-bottom:2px groove #d3e5df; cursor:pointer;
 }
-#game #box-buildingsBox .thing-icon { position:absolute; left:3px; top:5px; width:60px; height:54px; }
+#game #box-buildingsBox .thing-icon { display:block !important; position:absolute; left:3px; top:5px; width:60px; height:54px; background-position:center !important; background-size:contain !important; }
 #game #box-buildingsBox .thing-text { font-size:18px; font-weight:bold; }
 #game #box-buildingsBox .thing-text b:last-child { float:right; padding-left:5px; }
 #game #box-buildingsBox .thing-text b:first-child { float:none; padding:0; }
@@ -81,7 +81,14 @@ html, body { margin:0; min-height:100%; background:#a2cec6; }
 #game #box-upgradesBox .thing-icon, #game #box-stats .thing-icon { width:45px; height:45px; flex:0 0 45px; }
 #game #box-upgradesBox .thing-text, #game #box-upgradesBox .thing-costs,
 #game #box-stats .thing-text, #game #box-stats .thing-costs { display:none; }
-#game #box-upgradesBox .owned { display:none; }
+#game #box-upgradesBox .owned {
+  display:inline-flex; border-color:#d4d89b; outline-color:#697543;
+  position:relative; opacity:0.8;
+}
+#game #box-upgradesBox .owned::after {
+  content:"\2713"; position:absolute; right:0; bottom:0; padding:0 2px;
+  color:#fff3aa; background:#29443b; font-size:14px; font-weight:bold; line-height:16px;
+}
 #game #box-stats .notOwned { display:none; }
 #game #bulkDisplay { padding:3px; font-size:11px; border-bottom:1px solid #668f86; }
 #game #log { max-height:48px; overflow:auto; }
@@ -114,6 +121,7 @@ Layout
  contains:tag:wallAction
 *buildingsBox
  contains:BulkDisplay, Buildings
+ icons:show
 *main
  contains:heroBox, resourcesBox
 *heroBox
@@ -131,6 +139,7 @@ Layout
  costs:hide
 *upgradesBox
  contains:Upgrades
+ icons:show
  header:Upgrades
  names:hide
  costs:hide
@@ -2132,6 +2141,8 @@ Buildings
   end
 
 *destroyWall
+  // Building image: https://i.imgur.com/KfG2xNP.png
+  icon:https://i.imgur.com/KfG2xNP.png
   hidden
   desc:Destroy the wall and move on to a bigger one.</>Gives <b>25</b> bricks.</>Awards <b>250,000,000,000</b> cash.</>Worth <b>1</b> cosmic knowledge.
   name:Destroy wall
@@ -2161,6 +2172,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBigWall
+  // Building image: https://i.imgur.com/KfG2xNP.png
+  icon:https://i.imgur.com/KfG2xNP.png
   hidden
   desc:Destroy the big 2nd wall and move on to a bigger one.</>Gives <b>100</b> bricks.</>Awards <b>25,000,000,000,000</b> cash.</>Worth <b>1</b> cosmic knowledge.
   name:Destroy 2nd wall
@@ -2189,6 +2202,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyHugeWall
+  // Building image: https://i.imgur.com/KfG2xNP.png
+  icon:https://i.imgur.com/KfG2xNP.png
   hidden
   desc:Destroy the huge 3rd wall and move on to a bigger one.</>Gives <b>10,000</b> bricks.</>Awards <b>2,500,000,000,000,000</b> cash.</>Worth <b>1</b> cosmic knowledge.
   name:Destroy 3rd wall
@@ -2216,6 +2231,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyMassiveWall
+  // Building image: https://i.imgur.com/M88cRwn.png
+  icon:https://i.imgur.com/M88cRwn.png
   hidden
   desc:Destroy the massive 4th wall and move on to the final one.</>Gives <b>250,000</b> bricks.</>Awards <b>250,000,000,000,000,000</b> cash.</>Worth <b>2</b> cosmic knowledge.
   name:Destroy 4th wall
@@ -2245,6 +2262,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFinalWall
+  // Building image: https://i.imgur.com/Ht0bANN.png
+  icon:https://i.imgur.com/Ht0bANN.png
   hidden
   desc:Destroy the 5th and final wall.</>Gives <b>10,000,000</b> bricks.</>Awards <b>25,000,000,000,000,000,000</b> cash; <b>1</b> boss brick.</>Worth <b>5</b> cosmic knowledge.
   name:Destroy final wall
@@ -2273,6 +2292,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall
+  // Building image: https://i.imgur.com/VDKRDeM.png
+  icon:https://i.imgur.com/VDKRDeM.png
   hidden
   desc:<i>You win, but you can keep going anyway.</i></> </>Destroy bonus wall #9 and move on to the next.</>Gives <b>100,000,000</b> bricks and <b>100 quintillion</b> cash.</>Worth <b>5</b> cosmic knowledge.
   class:bonuswall
@@ -2299,6 +2320,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall2
+  // Building image: https://i.imgur.com/VDKRDeM.png
+  icon:https://i.imgur.com/VDKRDeM.png
   hidden
   desc:Destroy bonus wall #8 and move on to the next.</>Gives <b>250,000,000</b> bricks and <b>200 quintillion</b> cash.</>Worth <b>5</b> cosmic knowledge.
   class:bonuswall
@@ -2325,6 +2348,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall3
+  // Building image: https://i.imgur.com/VDKRDeM.png
+  icon:https://i.imgur.com/VDKRDeM.png
   hidden
   desc:Destroy bonus wall #7 and move on to the next.</>Gives <b>500,000,000</b> bricks and <b>400 quintillion</b> cash.</>Worth <b>6</b> cosmic knowledge.
   class:bonuswall
@@ -2351,6 +2376,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall4
+  // Building image: https://i.imgur.com/VDKRDeM.png
+  icon:https://i.imgur.com/VDKRDeM.png
   hidden
   desc:Destroy bonus wall #6 and move on to the next.</>Gives <b>1,000,000,000</b> bricks and <b>800 quintillion</b> cash.</>Worth <b>7</b> cosmic knowledge.
   class:bonuswall
@@ -2377,6 +2404,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall5
+  // Building image: https://i.imgur.com/VDKRDeM.png
+  icon:https://i.imgur.com/VDKRDeM.png
   hidden
   desc:Destroy bonus wall #5 and move on to the next.</>Gives <b>2,000,000,000</b> bricks and <b>1.6 sextillion</b> cash.</>Worth <b>8</b> cosmic knowledge.
   class:bonuswall
@@ -2405,6 +2434,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall6
+  // Building image: https://i.imgur.com/GduWup8.png
+  icon:https://i.imgur.com/GduWup8.png
   hidden
   desc:Destroy bonus wall #4 and move on to the next.</>Gives <b>4,000,000,000</b> bricks and <b>3.2 sextillion</b> cash.</>Worth <b>9</b> cosmic knowledge.
   class:bonuswall
@@ -2431,6 +2462,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall7
+  // Building image: https://i.imgur.com/GduWup8.png
+  icon:https://i.imgur.com/GduWup8.png
   hidden
   desc:Destroy bonus wall #3 and move on to the next.</>Gives <b>8,000,000,000</b> bricks and <b>6.4 sextillion</b> cash.</>Worth <b>10</b> cosmic knowledge.
   class:bonuswall
@@ -2457,6 +2490,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall8
+  // Building image: https://i.imgur.com/GduWup8.png
+  icon:https://i.imgur.com/GduWup8.png
   hidden
   desc:Destroy bonus wall #2 and move on to the next.</>Gives <b>16,000,000,000</b> bricks and <b>12.8 sextillion</b> cash.</>Worth <b>10</b> cosmic knowledge.
   class:bonuswall
@@ -2483,6 +2518,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall9
+  // Building image: https://i.imgur.com/GduWup8.png
+  icon:https://i.imgur.com/GduWup8.png
   hidden
   desc:Destroy bonus wall #1 and move on to the boss.</>Gives <b>32,000,000,000</b> bricks and <b>25.6 sextillion</b> cash.</>Worth <b>10</b> cosmic knowledge.
   class:bonuswall
@@ -2509,6 +2546,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall10
+  // Building image: https://i.imgur.com/7m6rr3R.png
+  icon:https://i.imgur.com/7m6rr3R.png
   hidden
   desc:Destroy the boss bonus wall.</>Gives <b>100 billion</b> bricks and <b>75 sextillion</b> cash; <b>1</b> boss brick.</>Worth <b>20</b> cosmic knowledge.
   class:bonuswallboss
@@ -2539,6 +2578,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall11
+  // Building image: https://i.imgur.com/7Jrkcqa.png
+  icon:https://i.imgur.com/7Jrkcqa.png
   hidden
   desc:<i>Turns out the bonus walls weren't the last thing we have to face, for the Ten Walls of Space lie beyond them.</i></> </>Destroy space wall #9 and move on to the next one.</>Gives <b>200 billion</b> bricks and <b>100 sextillion</b> cash.</>Gives <b>10</b> space bricks and unlocks <b>space research</b>.</> </>Note: Space bricks cannot be kept through resets.</>Worth <b>25</b> cosmic knowledge.
   class:bonuswall
@@ -2567,6 +2608,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall12
+  // Building image: https://i.imgur.com/7Jrkcqa.png
+  icon:https://i.imgur.com/7Jrkcqa.png
   hidden
   desc:Destroy space wall #8 and move on to the next one.</>Gives <b>400 billion</b> bricks and <b>200 sextillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>25</b> cosmic knowledge.
   class:bonuswall
@@ -2594,6 +2637,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall13
+  // Building image: https://i.imgur.com/7Jrkcqa.png
+  icon:https://i.imgur.com/7Jrkcqa.png
   hidden
   desc:Destroy space wall #7 and move on to the next one.</>Gives <b>800 billion</b> bricks and <b>400 sextillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>50</b> cosmic knowledge.
   class:bonuswall
@@ -2621,6 +2666,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall14
+  // Building image: https://i.imgur.com/7Jrkcqa.png
+  icon:https://i.imgur.com/7Jrkcqa.png
   hidden
   desc:Destroy space wall #6 and move on to the next one.</>Gives <b>1.6 trillion</b> bricks and <b>800 sextillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>50</b> cosmic knowledge.
   class:bonuswall
@@ -2648,6 +2695,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall15
+  // Building image: https://i.imgur.com/7Jrkcqa.png
+  icon:https://i.imgur.com/7Jrkcqa.png
   hidden
   desc:Destroy space wall #5 and move on to the next one.</>Gives <b>3.2 trillion</b> bricks and <b>1.6 septillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>75</b> cosmic knowledge.
   class:bonuswall
@@ -2676,6 +2725,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall16
+  // Building image: https://i.imgur.com/GvATKrf.png
+  icon:https://i.imgur.com/GvATKrf.png
   hidden
   desc:Destroy space wall #4 and move on to the next one.</>Gives <b>6.4 trillion</b> bricks and <b>3.2 septillion</b> cash.</>Gives <b>10</b> space bricks.</>Worth <b>75</b> cosmic knowledge.
   class:bonuswall
@@ -2703,6 +2754,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall17
+  // Building image: https://i.imgur.com/GvATKrf.png
+  icon:https://i.imgur.com/GvATKrf.png
   hidden
   desc:Destroy space wall #3 and move on to the next one.</>Gives <b>12.8 trillion</b> bricks and <b>6.4 septillion</b> cash.</>Gives <b>15</b> space bricks.</>Worth <b>100</b> cosmic knowledge.
   class:bonuswall
@@ -2730,6 +2783,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall18
+  // Building image: https://i.imgur.com/GvATKrf.png
+  icon:https://i.imgur.com/GvATKrf.png
   hidden
   desc:Destroy space wall #2 and move on to the next one.</>Gives <b>25 trillion</b> bricks and <b>12.8 septillion</b> cash.</>Gives <b>15</b> space bricks.</>Worth <b>100</b> cosmic knowledge.
   class:bonuswall
@@ -2757,6 +2812,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall19
+  // Building image: https://i.imgur.com/GvATKrf.png
+  icon:https://i.imgur.com/GvATKrf.png
   hidden
   desc:Destroy space wall #1 and move on to the boss.</>Gives <b>50 trillion</b> bricks and <b>25 septillion</b> cash.</>Gives <b>20</b> space bricks.</>Worth <b>150</b> cosmic knowledge.
   class:bonuswall
@@ -2784,6 +2841,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall20
+  // Building image: https://i.imgur.com/PVs7sjl.png
+  icon:https://i.imgur.com/PVs7sjl.png
   hidden
   desc:Destroy the boss space wall.</>Gives <b>150 trillion</b> bricks and <b>75 septillion</b> cash.</>Gives <b>40</b> space bricks; <b>1</b> boss brick.</>Worth <b>250</b> cosmic knowledge.
   class:bonuswallboss
@@ -2816,6 +2875,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall21
+  // Building image: https://i.imgur.com/eIvRDP3.png
+  icon:https://i.imgur.com/eIvRDP3.png
   hidden
   desc:<i>"What lunatic built all these walls, anyway?!" ~Agent Carter</>We now face the Ten Walls of Time.</>These better be the last ones.</i></> </>Destroy time wall #9 and move on to the next.</>Gives <b>400 trillion</b> bricks and <b>200 septillion</b> cash.</>Gives <b>5</b> time bricks and unlocks the <b>time upgrades</b>.</>Worth <b>250</b> cosmic knowledge.</> </>Note: Time bricks also cannot be kept through resets.
   class:bonuswall
@@ -2845,6 +2906,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall22
+  // Building image: https://i.imgur.com/eIvRDP3.png
+  icon:https://i.imgur.com/eIvRDP3.png
   hidden
   desc:Destroy time wall #8 and move on to the next.</>Gives <b>800 trillion</b> bricks and <b>400 septillion</b> cash.</>Gives <b>5</b> time bricks.</>Worth <b>250</b> cosmic knowledge.
   class:bonuswall
@@ -2872,6 +2935,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall23
+  // Building image: https://i.imgur.com/eIvRDP3.png
+  icon:https://i.imgur.com/eIvRDP3.png
   hidden
   desc:Destroy time wall #7 and move on to the next.</>Gives <b>1.6 quadrillion</b> bricks and <b>800 septillion</b> cash.</>Gives <b>5</b> time bricks.</>Worth <b>500</b> cosmic knowledge.
   class:bonuswall
@@ -2899,6 +2964,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall24
+  // Building image: https://i.imgur.com/eIvRDP3.png
+  icon:https://i.imgur.com/eIvRDP3.png
   hidden
   desc:Destroy time wall #6 and move on to the next.</>Gives <b>3.2 quadrillion</b> bricks and <b>1.6 octillion</b> cash.</>Gives <b>5</b> time bricks.</>Worth <b>500</b> cosmic knowledge.
   class:bonuswall
@@ -2926,6 +2993,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall25
+  // Building image: https://i.imgur.com/eIvRDP3.png
+  icon:https://i.imgur.com/eIvRDP3.png
   hidden
   desc:Destroy time wall #5 and move on to the next.</>Gives <b>6.4 quadrillion</b> bricks and <b>3.2 octillion</b> cash.</>Gives <b>6</b> time bricks.</>Worth <b>750</b> cosmic knowledge.
   class:bonuswall
@@ -2954,6 +3023,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall26
+  // Building image: https://i.imgur.com/eIvRDP3.png
+  icon:https://i.imgur.com/eIvRDP3.png
   hidden
   desc:Destroy time wall #4 and move on to the next.</>Gives <b>12.8 quadrillion</b> bricks and <b>6.4 octillion</b> cash.</>Gives <b>7</b> time bricks.</>Worth <b>750</b> cosmic knowledge.
   class:bonuswall
@@ -2981,6 +3052,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall27
+  // Building image: https://i.imgur.com/pYoTDdF.png
+  icon:https://i.imgur.com/pYoTDdF.png
   hidden
   desc:Destroy time wall #3 and move on to the next.</>Gives <b>25 quadrillion</b> bricks and <b>12.8 octillion</b> cash.</>Gives <b>8</b> time bricks.</>Worth <b>1,000</b> cosmic knowledge.
   class:bonuswall
@@ -3008,6 +3081,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall28
+  // Building image: https://i.imgur.com/pYoTDdF.png
+  icon:https://i.imgur.com/pYoTDdF.png
   hidden
   desc:Destroy time wall #2 and move on to the next.</>Gives <b>50 quadrillion</b> bricks and <b>25.6 octillion</b> cash.</>Gives <b>9</b> time bricks.</>Worth <b>1,000</b> cosmic knowledge.
   class:bonuswall
@@ -3035,6 +3110,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall29
+  // Building image: https://i.imgur.com/pYoTDdF.png
+  icon:https://i.imgur.com/pYoTDdF.png
   hidden
   desc:Destroy time wall #1 and move on to the boss.</>Gives <b>102 quadrillion</b> bricks and <b>51.2 octillion</b> cash.</>Gives <b>10</b> time bricks.</>Worth <b>1,500</b> cosmic knowledge.
   class:bonuswall
@@ -3062,6 +3139,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall30
+  // Building image: https://i.imgur.com/k3RGPw4.png
+  icon:https://i.imgur.com/k3RGPw4.png
   hidden
   desc:Destroy the boss time wall.</>Gives <b>250 quadrillion</b> bricks and <b>150 octillion</b> cash.</>Gives <b>15</b> time bricks and <b>1</b> boss brick.</>Worth <b>2,500</b> cosmic knowledge.
   class:bonuswallboss
@@ -3094,6 +3173,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall31
+  // Building image: https://i.imgur.com/4HY7NBt.png
+  icon:https://i.imgur.com/4HY7NBt.png
   hidden
   desc:<i>Nope. The Ten Walls of The End rise up over the rubble of time. At least these are clearly the last ones.</i></> </>Destroy End Wall #9 and move on to the next one.</>Gives <b>800 quadrillion</b> bricks and <b>400 octillion</b> cash.</>Gives <b>2</b> End bricks and <b>100</b> space bricks; unlocks the <b>Deep Space Upgrades</b> and <b>The End Scrolls</b>.</>Worth <b>2,500</b> cosmic knowledge.</> </>Note: End bricks cannot be kept through resets either.
   class:bonuswall
@@ -3124,6 +3205,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall32
+  // Building image: https://i.imgur.com/4HY7NBt.png
+  icon:https://i.imgur.com/4HY7NBt.png
   hidden
   desc:<i>We tried scanning the scrolls for age, and got "73 hours" from the scanner. The temple gave the same result. Probably had a broken scanner, especially since there are records of the temple dating back to 8,000 years ago.</i></> </>Destroy End Wall #8 and move on to the next one.</>Gives <b>1.6 quintillion</b> bricks and <b>800 octillion</b> cash.</>Gives <b>2</b> End bricks and <b>100</b> space bricks.</>Worth <b>2,500</b> cosmic knowledge.
   class:bonuswall
@@ -3152,6 +3235,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall33
+  // Building image: https://i.imgur.com/4HY7NBt.png
+  icon:https://i.imgur.com/4HY7NBt.png
   hidden
   desc:<i>Scanning shows that the scrolls are made of regular fabric, making it strange that they are perfectly preserved.</i></> </>Destroy End Wall #7 and move on to the next one.</>Gives <b>3.2 quintillion</b> bricks and <b>1.6 nonillion</b> cash.</>Gives <b>2</b> End bricks and <b>100</b> space bricks.</>Worth <b>5,000</b> cosmic knowledge.
   class:bonuswall
@@ -3180,6 +3265,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall34
+  // Building image: https://i.imgur.com/4HY7NBt.png
+  icon:https://i.imgur.com/4HY7NBt.png
   hidden
   desc:<i>There's text on the outside of the temple that says "MIRRORAGE". Research suggests that it isn't even a real word.</i></> </>Destroy End Wall #6 and move on to the next one.</>Gives <b>6.4 quintillion</b> bricks and <b>3.2 nonillion</b> cash.</>Gives <b>2</b> End bricks and <b>100</b> space bricks.</>Worth <b>5,000</b> cosmic knowledge.
   class:bonuswall
@@ -3208,6 +3295,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall35
+  // Building image: https://i.imgur.com/4HY7NBt.png
+  icon:https://i.imgur.com/4HY7NBt.png
   hidden
   desc:<i>Along with the scrolls, there were also sheets of paper with quotes written on them. We can list some of those here.</i></> </>Destroy End Wall #5 and move on to the next one.</>Gives <b>12.8 quintillion</b> bricks and <b>6.4 nonillion</b> cash.</>Gives <b>2</b> End bricks and <b>150</b> space bricks.</>Worth <b>7,500</b> cosmic knowledge.
   class:bonuswall
@@ -3237,6 +3326,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall36
+  // Building image: https://i.imgur.com/qfVvCqs.png
+  icon:https://i.imgur.com/qfVvCqs.png
   hidden
   desc:<i>"Where's logic in this equation?" ~#8</i></> </>Destroy End Wall #4 and move on to the next one.</>Gives <b>25 quintillion</b> bricks and <b>12.8 nonillion</b> cash.</>Gives <b>2</b> End bricks and <b>150</b> space bricks.</>Worth <b>10,000</b> cosmic knowledge.
   class:bonuswall
@@ -3265,6 +3356,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall37
+  // Building image: https://i.imgur.com/qfVvCqs.png
+  icon:https://i.imgur.com/qfVvCqs.png
   hidden
   desc:<i>"If you think about it, everything is unfinished. Nothing is truly left without questions." ~Lord Reaefsek</i></> </>Destroy End Wall #3 and move on to the next one.</>Gives <b>51 quintillion</b> bricks and <b>25 nonillion</b> cash.</>Gives <b>3</b> End bricks and <b>200</b> space bricks.</>Worth <b>10,000</b> cosmic knowledge.
   class:bonuswall
@@ -3293,6 +3386,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall38
+  // Building image: https://i.imgur.com/qfVvCqs.png
+  icon:https://i.imgur.com/qfVvCqs.png
   hidden
   desc:<i>"It's pretty clear The King is insane, but what are we gonna do, fight him?" ~#14</i></> </>Destroy End Wall #2 and move on to the next one.</>Gives <b>102 quintillion</b> bricks and <b>51 nonillion</b> cash.</>Gives <b>3</b> End bricks and <b>200</b> space bricks.</>Worth <b>10,000</b> cosmic knowledge.
   class:bonuswall
@@ -3321,6 +3416,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall39
+  // Building image: https://i.imgur.com/qfVvCqs.png
+  icon:https://i.imgur.com/qfVvCqs.png
   hidden
   desc:<i>"What, his face broke? I can fix that." ~#10</i></> </>Destroy End Wall #1 and move on to the boss.</>Gives <b>204 quintillion</b> bricks and <b>102 nonillion</b> cash.</>Gives <b>4</b> End bricks and <b>250</b> space bricks.</>Worth <b>12,500</b> cosmic knowledge.
   class:bonuswall
@@ -3349,6 +3446,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall40
+  // Building image: https://i.imgur.com/L1abRfJ.png
+  icon:https://i.imgur.com/L1abRfJ.png
   hidden
   desc:<i>"There goes a rapture." ~#17</i></> </>Destroy the Boss End Wall.</>Gives <b>500 quintillion</b> bricks and <b>250 nonillion</b> cash.</>Gives <b>5</b> End bricks, <b>500</b> space bricks and <b>1</b> boss brick.</>Worth <b>25,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3381,6 +3480,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall41
+  // Building image: https://i.imgur.com/12NN0MA.png
+  icon:https://i.imgur.com/12NN0MA.png
   hidden
   desc:<i>Should've seen this coming.</i></> </>Destroy Finality Wall Delta and move on to the next.</>Gives <b>2 sextillion</b> bricks and <b>1 decillion</b> cash.</>Gives <b>1</b> Finality Brick and <b>50</b> time bricks; unlocks the <b>deep time upgrades</b> (which unlock randomly over time, again) and <b>The Finality Scrolls</b>.</>Worth <b>25,000</b> cosmic knowledge.</> </>Note: You guessed it, Finality Bricks cannot be kept through resets.
   class:bonuswall
@@ -3411,6 +3512,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall42
+  // Building image: https://i.imgur.com/12NN0MA.png
+  icon:https://i.imgur.com/12NN0MA.png
   hidden
   desc:Destroy Finality Wall Gamma and move on to the next.</>Gives <b>8 sextillion</b> bricks and <b>4 decillion</b> cash.</>Gives <b>1</b> Finality Brick and <b>75</b> time bricks.</>Worth <b>30,000</b> cosmic knowledge.
   class:bonuswall
@@ -3439,6 +3542,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall43
+  // Building image: https://i.imgur.com/xisIxYa.png
+  icon:https://i.imgur.com/xisIxYa.png
   hidden
   desc:Destroy Finality Wall Beta and move on to the next.</>Gives <b>32 sextillion</b> bricks and <b>16 decillion</b> cash.</>Gives <b>1</b> Finality Brick and <b>125</b> time bricks.</>Worth <b>40,000</b> cosmic knowledge.
   class:bonuswall
@@ -3467,6 +3572,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall44
+  // Building image: https://i.imgur.com/6FM3czn.png
+  icon:https://i.imgur.com/6FM3czn.png
   hidden
   desc:Destroy Finality Wall Alpha and move on to the next.</>Gives <b>128 sextillion</b> bricks and <b>64 decillion</b> cash.</>Gives <b>2</b> Finality Bricks and <b>175</b> time bricks.</>Worth <b>50,000</b> cosmic knowledge.
   class:bonuswall
@@ -3495,6 +3602,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall45
+  // Building image: https://i.imgur.com/Ra5ULVg.png
+  icon:https://i.imgur.com/Ra5ULVg.png
   hidden
   desc:Destroy the Boss Finality Wall, and... move on to the next?</>Gives <b>2 septillion</b> bricks and <b>1 undecillion</b> cash.</>Gives <b>1</b> boss brick, <b>4</b> Finality Bricks, <b>40</b> End bricks, <b>500</b> time bricks, and <b>5,000</b> space bricks.</>Worth <b>50,000</b> cosmic knowledge.</>Unlocks any time upgrades that were not already unlocked.
   class:bonuswallboss
@@ -3551,6 +3660,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall46
+  // Building image: https://i.imgur.com/g48yTlT.png
+  icon:https://i.imgur.com/g48yTlT.png
   hidden
   desc:Destroy the King Finality Wall.</>Gives <b>10 septillion</b> bricks and <b>10 undecillion</b> cash.</>Gives <b>1</b> boss bricks, <b>8</b> Finality Bricks, <b>80</b> End bricks, <b>1,000</b> time bricks, and <b>10,000</b> space bricks.</>Worth <b>60,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3583,6 +3694,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall47
+  // Building image: https://i.imgur.com/4BCPysX.png
+  icon:https://i.imgur.com/4BCPysX.png
   hidden
   desc:Destroy the End Finality Wall.</><i>Is there truly a meaning to an end?!</i></>Gives <b>50 septillion</b> bricks and <b>60 undecillion</b> cash.</>Gives <b>1</b> boss bricks, <b>24</b> Finality Bricks, <b>100</b> End bricks, <b>1,500</b> time bricks, and <b>17,500</b> space bricks.</>Worth <b>70,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3615,6 +3728,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyBonusWall48
+  // Building image: https://i.imgur.com/WzG1rrU.png
+  icon:https://i.imgur.com/WzG1rrU.png
   hidden
   desc:Destroy the Mesh Finality Wall, and face the rest of what lies ahead.</>Gives <b>1 octillion</b> bricks and <b>1 duodecillion</b> cash.</>Gives <b>1</b> boss bricks, <b>128</b> Finality Bricks, <b>800</b> End bricks, <b>6,500</b> time bricks, and <b>97,500</b> space bricks.</>Worth <b>80,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3650,6 +3765,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall01
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>Now we can't tell what's different from reality and fantasy anymore. The lines have blurred... and only the <b>Tesseracted</b> can touch it.</i></>Destroy a wall of a fantasy world and move to the next one.</>Gives <b>1</b> Alpha brick and <b>1</b> Fifth Dimension brick.</>Worth <b>200,000</b> cosmic knowledge.</>Note: ...Ok, ok, maybe in fact you can keep your Alpha and Fifth Dimension bricks. Time reversal technology has improved quite vastly since we've first seen the Time Walls, so this shouldn't be a problem anymore.
   class:bonuswallboss
@@ -3674,6 +3791,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall02
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>"When the first Fantasy Wall was destroyed, even stranger bricks came out of it. We call them the 5th Dimension Bricks because they don't even look like bricks... when separated." ~#21</i></>Destroy another wall of a fantasy world and move to the next one.</>Gives <b>2</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>200,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3698,6 +3817,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall03
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>"Let's get something straight here. There are more after the end?! No matter how much reality has broken, I will see to it that every single wall must be demolished!" ~ RUC CEO</i></>Destroy yet another wall of a fantasy world and move to the next one.</>Gives <b>3</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>250,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3722,6 +3843,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall04
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>"We have angered the Kingdom. It's best we get this thing over with."</i></>Destroy an insignificant wall of a fantasy world and challenge the Kingdom.</>Gives <b>4</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>250,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3746,6 +3869,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall05
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>"The </i></>Destroy The Pawn and move to the next.</>Gives <b>5</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>300,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3770,6 +3895,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall06
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The Knight and move to the next.</>Gives <b>6</b> Alpha bricks and <b>1</b> Fifth Dimension brick.</>Worth <b>300,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3794,6 +3921,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall07
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The Bishop and move to the next.</>Gives <b>7</b> Alpha bricks and <b>1</b> Fifth Dimension brick</>Worth <b>400,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3818,6 +3947,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall08
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The Rook and move to the next.</>Gives <b>8</b> Alpha bricks and <b>1</b> Fifth Dimension brick</>Worth <b>400,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3842,6 +3973,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall09
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The Queen and move to the next.</>Gives <b>9</b> Alpha bricks and <b>3</b> Fifth Dimension brick</>Worth <b>500,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -3866,6 +3999,8 @@ Buildings
   tags:wallAction
   text:[n:this]
 *destroyFantasyWall10
+  // Building image: https://i.imgur.com/W1iILrI.png
+  icon:https://i.imgur.com/W1iILrI.png
   hidden
   desc:<i>&#91;insert lore description lol&#93;</i></>Destroy The King.</>Gives <b>10</b> Alpha bricks, <b>5</b> Fifth Dimension bricks and <b>1</b> gold brick.</>Worth <b>1,000,000</b> cosmic knowledge.
   class:bonuswallboss
@@ -4157,6 +4292,8 @@ Buildings
   end
 
 *puncher
+  // Building image: https://i.imgur.com/amBI8wT.png
+  icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAA3CAYAAABTjCeZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gkIAwUVPqgzlgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAEsklEQVRo3u1avUvkQBR/ya2V13ki24pEq8VOjpCFrYRjwUawtrHQRlubu2tstZH7Dw5ObAQ5sF1IL1tpOLuTsITt7XLF+ebevsxnNmsi58Dykk0myfvN733Mm/HyPIf/vfnw1t5AeAPhDYR/rdW0D4p6Ud5ut7X3XHy/8Kp8p9eU6BD1ohwAoLPeEf8FqwEk98mEBACIBzEAACwuLYp7z0/PvVcNQtSL8s56B7JRJhTjivNGgehv9eH66ro0ILWDQOlPR5YCkY2yQr/dvV1xjAD0t/ri3AWIVpMAyEYZpGkK+B8qTxWWNao8Hr+q6JCmKaRpKgA4/nwMYTeE3b1dIZO7BADAKPG4v9WHg6OD/FUwAQBge2d74txG4WAtKEgAgM1Pm3Dz80acN54JUS/Kt3e2IblPnPvKAHm1yRINf7b3U8mBmJubK0SKxoJAHaItEDxfUAFRJkzWxgQaDk1AyADQAYGO0dY5vnie4JoYqQDKRhmE3bDQjzpFNAsTK2phAgVAp6gOgMWlRSUjeP7QKCagL1BlhiomYBveDsUxfY6sP2eEjg1+HQDwNFjHBFR+eDuEdrsNnfVOIaM0MaJRyRICYMuEYDWAyx+XwFNr2p8Cyp+T3CUQD2Lj1LtVlzOUMYE3nvnJ+uN5NsoEILIJVyOYoAJAZ9Oc0iYGyXyCTeI0c8fIfYGrU0Rf4NI/WAusw+PMHeM0ANiYQoEJawHEg9gJgBcxBxUAskzQxRRof6wyxYMYwm4oADw4OshtgJiZOegqRrZMOPl6ArTois+h+QKfjvPptU2VqTYmmACgTEjTdEKqirGyekNt5kBZYAJABgRVgJbbbJ2iCwAzcYx83cCUIaqYgM5NZ1K20+oXBQEBQNpWYQoqIG2YYFt1rsQx4sKJbOVI5xRVjTpFXXQx5QkzD5GoOFee23AZJtAsD/vz5+AzuGnFg9i5bunMBN2oVxUVMFPkPkHFCGoqNE+wZUOrauWRCa4J0oRTex5J6l+4pCwMu+FU0aHlQnmVg6qSCddX12K+QIGwKcmVAUAZHaJelKOnxyIGV4pLChauKJnygwJLNKmyTUmu7DqEL1NeprhJ8o8ukx/g4mtnvVPoz89NVWen6KCivGnkTYAMb4fgWlXmo00V5+/QTb5c27uNjxtflleWwff8giLz7+e1nfE6ldjf93x4+PUAyyvL4v7xeCw+fOHDQoEhT09PEKwGMB6PJ97hez6kaSq+UfW85P5vOe3x96PT4ou3f7if65KRaapIOIq2Gy9MCzF89sh9EUC5rTze/uH+TObSVQGhAkS2hafsXianuYM21WXXuA/h5XHTe2Q2TyX+j3nFNJu5tEwwLZS6rCjzMGcCwjggjnVEayYUMrhnBWUjYXNdlUC5gqcC4Pz03JsWgAII9MM49eh1TlHTdSrDbgjxIHYCIlgLxC+5T5w3ZlmZg2nZu+x1k9T5GtnqchXUl4Jw9u0sN3lfm+s6OY29z0rxyphQhcK00Q2as1a8FBNsFS4DBipf9Z5la8doisOqeC1zhq6hLx7EIsmpC4AJJtiMeNXUr1NxKRNsRlyVJ7gq3yQACkywKoGVZEHddl8qOlSheNOVx/YHk4khyVHi9SEAAAAASUVORK5CYII=
   hidden
   desc:Melee building</>Does <b>0.1</b> base damage.</><i>Punches the wall for you.</i>
   name:Puncher|Punchers
@@ -4180,6 +4317,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *clubber
+  // Building image: https://i.imgur.com/HVaisVj.png
+  icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAA3CAYAAABTjCeZAAAAB3RJTUUH3ggRFCwqxZAFEAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADyUlEQVRo3uWbMUsjURDH/xMsrkkhMWByh4EQEBIQ9mztPCzkvoFVGuGaa67wM9hec2CTym9wHFzQLu25ICRVCBjQCEEsbOxy1SzzxrebbEzMvudrliQgvh//+b95M7M0mUzw3tda0o/NgyAi1GqH9K4g8OaPD3cR1ErGdz7CIB0OzYNgcny4CwDo3YwBAPVKEUGthA8fG2ienHoHIqcBVDfXjc3XK8Xo8/NtF63TEyNMvILQPAgme42taPO88aBWQr1SxPnlNcL+CM+3Xe88IScVwKt3M0a9UgQAhP2RASbsj7xTQ6SEciGPu4cnA4RcrIjezdi7sMixCjrdoQFDhoRUBC+fQBjGWC7ko+fF1eAFCAA42t/B+eW1VyAMCDIcpDfYFMFPH0BEEPYaWxjcP0YgOCxsIKRJMggvlKA3P00RWhkuqyGnv7h7eDK8QZokH5tSDUGt5Hz+YEDQISFN0nZsshL4fuEshFY7pMH9o9UYbTlEnDeE/RF+ff/qZEi8CIfq5jpsUOLyBxkWzt8iZeo8uH9EdXM92jh7hDZQ6RX8DGolfPv526mbpnGVnhWENFBplqyQo/0dp0BY6wkahAwHrQoNgmEwCBcKMWSrMbK5SX9gVcQdqXEgAGReFZRUaE3jE9ojZJKVdZ+gadVmrYp5FJF1EDRryZ1VocNDqsJVEJSm7xAXHnGKcCU0KG3zRYOwqUJ7RtZB0DwdKF2TtKmCk6ovn6uGIvjCxSB4rRIIzduGk4ZpU0VchqlBAIj6GauCQa/tRaaFweqwmeaqYNCiGrK2ELH5Rb1SxMXVwDBPTqpYHW/d6aJFdqW1KpL8QoaHVMMqQNAyWvOzhEiWQKwt44/yPx0Ho1zIG4Ua3fOMQLjmCWlyC+55siLkMSqv42F/hO1PG/hx9nepalh7C9KtdkhSFdztYhi6MAMgavBsf9rwQwk2VZQLeXS6Q+w1towMU987ODyWmWHSKmaWZHhIo5SfNQyZYS4aBq1qcCsJhK2GySCWUaShVU6v6dMjLsPU1/NFq4KyMMInfSKuqGu7fyxKFZSVOUabKmxXcjlPtShVUNaGOeeB8VpVUFYnWuNg6BNEw5hHFZT1sd55lZEGBrky26yPVF3LTCrjTYNBLg14S1VoRdhmKHQDKA4GuTjlnnQhS6pyx5knuTrqb2sVzgpDq4Jcf98hqUM2S4i02iGRLy996AmZaaqQIHLwZLXaIclY73SHUd1CTtb0bsbodIfGhC75+vqP7p3a1AEAZ3/++QthlkSr0x365Qlp/EKGkNfhkGb9B7kyqnvDmx9HAAAAAElFTkSuQmCC
   hidden
   desc:Melee building</>Does <b>0.5</b> base damage.</><i>Not to be confused with the other kind of clubbing.</i>
   name:Clubber|Clubbers
@@ -4203,6 +4342,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *swordsman
+  // Building image: https://i.imgur.com/aPQuEKp.png
+  icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAA3CAYAAABTjCeZAAAAB3RJTUUH3ggOBiQpg5judQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAADdUlEQVRo3uXaTWqzQBgH8L8vUlLIBwFBpJCdm25ayCEMge6z6C6nyAk8RffuAyFd9gAKXWdVSpCAENBCoRvf1QyjjlETozNmoFDaQnl+83xpq3x/f+MWj+M4Mfn83y0G7zhOvFwuAQCLxUJRb+3m5/M5DodD4nvqrQQ/nU4BAJvNBsvlEm9vb1gsFkqnEdLBA4DrupjP55mfVbsavGmaia8TAMMwElnQOQTHcWIS/HA45ALwjtplgK+vLwRBkCiJdBYAgNKFPYEH4LouDV7XdW4ZdGZPKAtw6qgyB882wCKAvCyQFoG9/UsBpCyHugGkQ7gGgFTlwANIj8BzAKTJBB6A67oYj8cXAwifCbwVmACYpknLgd0DyONxld+jigxgGAb6/X4GgN0AixYhaRHKAOi6DgAXAwiJkAYgDXC329VS/7wj1LMDD+BU+p9T/0JnQlWAOoIXakTyekBTAK1nAhmBaYB0/dfVAIVD4N3+8XisZQOUojHyANjbv1YDFCYTqgJcM/hWEIoAmqj/VhHKADRR/60glJ0ATdV/4wjk9gFQgLwJ0PTtN7Is8QB2ux33HUCbACczYbVaxQBg27ZSFwD7DuD5+bmV+i+9J6xWq/jh4QGapuHz87MSRBkAXdex2Wxaqf/KPSEIgqtkgAi3X6knPD090dKoAnA8HrkZIBrAyUwIwzDxl90yI5Adf6ZpYjweZ0pANIDcTLBtW4miiJZEXjaQ22cBfN/P/GlMZIBKI3I2myUg2PQ/BeC6rtAAhU+RZEoAgKZpMAwD2+0Wk8kEj4+PGQDemyGRgy+dCWEYJgIF0CmAQoR0byBlsd1uafBpAFICsgCUfnZgJ4Xv+xRiNptldgJRFqBaEWzbVtiGqGkaLQtyfn5+4Pu+dMFXmg6e5yGKIoRhmFsWsgKUQrAsKx6NRhSC9Ae2LGQGKEQgAL1eD7quw/M8Oi1YiDJrtXQIlmXFLADpBQAQRRH2+32nIDLLkmVZ8f39Pe7u7ihAGIb4/f3F+/u7wi5Sg8EAw+EwsUid+w6idQRyi57ngQAAQK/Xo/8WzwLkQZAHKdkwlNfX13gwGAAAPj4+MBqNEgC84IsgWAwZIGhPYB+b//7+SgGwW+V+v0cQBPQjvUtIkQkEYb1e56Z/0Uk3R1nKQU2vxi8vL7T7Vz2yNURuY5Q9mHPPfzJfrm9BwZifAAAAAElFTkSuQmCC
   hidden
   desc:Melee building</>Does <b>2.5</b> base damage.</><i>Some question the use of swords on a brick wall. Those guys are lame.</i>
   name:Swordsman|Swordsmen
@@ -4226,6 +4367,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *gunner
+  // Building image: https://i.imgur.com/gCp304H.png
+  icon:data:image/png;base64,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
   hidden
   desc:Ranged building</>Does <b>30</b> base damage.</><i>Shoots his gun.</i>
   name:Gunshooter|Gunshooters
@@ -4249,6 +4392,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *grenade
+  // Building image: https://i.imgur.com/qW3aKwb.png
+  icon:data:image/png;base64,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
   hidden
   desc:Ranged building</>Does <b>500</b> base damage.</><i>A man with grenades. I am a master of descriptions.</i>
   name:Grenademan|Grenademen
@@ -4272,6 +4417,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *wreckingBall
+  // Building image: https://i.imgur.com/KfckHOw.png
+  icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAA3CAYAAABTjCeZAAAAB3RJTUUH3ggQBzEQWizK8gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAE2ElEQVRo3uWaUWv6PBTGT50iVMoIFLwpUhCUed0Pso+6D+KdMFlhIOKFghAkKBRZ+968p5zGJE21ttJ/YGTWrC6/POc5ObFOlmUwm80yxhhwzgFbFEWwXC4hjmMHOt769AVjDN7f3wsDZrNZ1nUQTpZl+WRVA/4FRfTwF5wkY6zwGgDg8/NTC6lTEFQtjmNnuVx23RLUEBhjhZXf7XbGkOkUhDiOHcwQMoguh0VPFQIIIgxDCMMQqCK6CCLPDnKTJxrHsTObzbIoiiAIAvj6+upMxuiZTJFmC2qUXfOIns0g9IeuekRpiqRG2VWP0HqCyR+65hF9m0E4ObnQQhAyrHtgpGkKvV7PSlVxHDs4vjEIZZspWmcEQVC56KL3UhVxvu/D8XjMezq+DvVVgoArzxhT/rO4xUafKPsHcTJ4r9PpVArA9/3C9UfUV8kTbD0C3zP5xN/fH3x8fGS4GVNN3ARA1+MCrNdr5+3t7fkQKAzcR3DOb0DIxRdVEl35KgowtePxCJvNprIqHoKgAiGfQ1BVqKRfFwA5LKuA6D9qKjRDmHyiCQBBEMBut4MoiiqZ88NKKKs3ZLUAgBZAFRA4Ybm/RxE9qLHhB9JdpQnA6XSqDQBepz0qomyha1WCyiMogDIlVAkFnKiqVVVErUqQ6w1VM4WCKv2ZYh/bYrGAxWJxA8gE6qkQsKlUYAqFy+UC0+kU0jS1DgUEQGGoQGFYNApBJz1dVrhcLgAAsFqt4Hw+5yB0Uqcr/P39XXgfQcjjGleCbIa2pjiZTIBznoOwiXm6+hSKHDJhGGrV8LRwsFUCqsB1XTgejzkIxpi1J8hKQDBUCSaTbRSCbXpkjMFqtbLyBDkc6DUKSgf06SnSJjugElANvu/DdrsFxhgkSaJdQRkGqoACGI1G0O/3cxXqaovWleC6bsEgEQDn3Chh1S4RAazXa5jP5zkAPLTR3a9VT1CBQACTySSXsE7KMgjOOYxGI4iiCPb7Pex2u/wzTB7TqhJomnRdF1zXhSRJcgBlO0chBAghYD6fgxACgiCA/X4Py+USPM8Dz/MK+xbdfVr1hKpFVJqmNxswGg500vL5JWMMfn9/lZ7Qh4abKiR0NcRwOIQ0TWE6neb7h/P5XBirmzjNCvj3vu/DZrNpNxxMSrhcLvnPdruF4XCYTxx3kpxz8DwPkiS5kbsOgO/7pfuO3isogaZJufZAj1B5hco06XW67zAVdY1DUIEQQhTMkZqk7WGrrgrFUDB9R1G7Md5jjoPB4CZV3nvqrDLT8/kMSZJoD2FfSgmqrbRuhW0BYEi1cp5QBcR4PAYhRK4IHYiqQNBUGz1ofTQkhBAwHo+N+wfbUKHVKQAYv49oVQlUEdfrFTzPg8PhoK0yyxSCvSrbtBIOZWeNKkUIIe4CQQswuSotU0GrSlApAr0BQQwGg8L7ponLq48AbEA+zRMAALIsg/l8bvQGlSIOhwN4npcDkXtTc1234DWcc/j5+XEcx2knOziOYx0WsiLQI1QgsIKk/fV6VQKI49gIoLFwsAUhp8/r9ZoDKevlbEO/JW81HKqmzSpFl6mvAqBxCI+AsD20rQqgFQj0SZU6YNDJ/3++2OyTKnWo4lEY9Em6uw28TQgyDFsg1GTreHrtJSDgOWBbzzG+DIQ223/ZxUZHvAhuJQAAAABJRU5ErkJggg==
   hidden
   desc:Heavy duty building</>Does <b>7,000</b> base damage.</><i>Something actually meant for destroying walls.</i>
   name:Wrecking Ball|Wrecking Balls
@@ -4295,6 +4442,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *bulldozer
+  // Building image: https://i.imgur.com/U0GNz9b.png
+  icon:data:image/png;base64,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
   hidden
   desc:Heavy duty building</>Does <b>80,000</b> base damage.</><i>Rams the wall. So good.</i>
   name:Bulldozer|Bulldozers
@@ -4318,6 +4467,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *airstrike
+  // Building image: https://i.imgur.com/lnlhkQA.png
+  icon:data:image/png;base64,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
   hidden
   desc:Heavy duty building</>Does <b>2,500,000</b> base damage.</><i>You know, the guy that calls airstrikes.</i>
   name:Airstrike Caller|Airstrike Callers
@@ -4341,6 +4492,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *necromancer
+  // Building image: https://i.imgur.com/A5USN4I.png
+  icon:data:image/png;base64,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
   hidden
   desc:Magic building</>Does <b>33,333,333</b> base damage.</><i>Raises dead wizards to destroy the wall with their dark magic. Requires bricks.</i>
   name:Necromancer|Necromancers
@@ -4363,6 +4516,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *giant
+  // Building image: https://i.imgur.com/zGpqQjB.png
+  icon:data:image/png;base64,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
   hidden
   desc:Magic building</>Does <b>250,000,000</b> base damage.</><i>The prime inhabitants of the Old World, back from the dead. They smash the wall with their giant fists.</i>
   name:Titan|Titans
@@ -4385,6 +4540,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *demon
+  // Building image: https://i.imgur.com/vf31RkB.png
+  icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAA3CAYAAABTjCeZAAAABmJLR0QA0gDSANLspsXgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3ggbBQAOsvujTAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAE2ElEQVRo3u2Zv2tbSRDH5z09jI3AhfBD5soDV4rtP0AY3BgfuHPhIk1cBIMKN4aDgGs3V7hxEbhOzRVXmGtSOOHAENKlsXKu0h8SCi4MIiHk8a44j261b36tniInZy0Y2dLT7s5n5jszu446nQ489BHDbMwgzCDMIMwgzCDMIBAj+RY2cba9mVPvH15cRg8mEtDYlYU5WFmYmyqAbwbC2fZmjsa///h5qgDuXQ4og92lRQAAOP9wOwKAksnXAJTcp/7R+K2dAbTaWcHAw4vLyI+S7z4S0KDV6vyI8edt2sP+8989BNcgzXju+f9NTng3+ATnROhrAFAaD6JZ4gBQSXFSUFQIy8drOf6U7QXef/w81HcoAGuD9VUgdE86UfekE7lAyiy4tTOA3aXFghGhALBiTFUOCAJhjBsNmOBWFuaGIO4TQKmcUCYitnYGsFqdH4IIAbC7tAir1fmJlssgCBgNtUZaKje02tkICBwWAFs7g0JnWdZh91IdEMS7wafgCJKqheQ8KZ/F41C8ue5P7MC0Wp2Ho71inqCioMyQknuslUYuIbrvlwGA3vXzhBYFZUCYOkY0dloADi8uo9b2Zv78yQDgRZU5aA0mKknXwUkIAMl47RkKwOnvFTi8+HOo79b2Zg5wC8+fVODVi8WJGenvsdZIRySdWLOo5n03+fjPcgB++uNlRN0VDKPCGVYpaM7wAZgOUFJe4BZzv2MFUKgeXl4oCwA/QwDuM5H7D1mr7iUQ7mfHb2sQCmASzZsmA//zeJwGQ5NGrZFOFYDVSVxpjzkjyrTGrXamArDMTdV07Xvc3iVJx5bJQjYiRYB7LOdCllrTD3VqT663Q50YS2GTPn4U1IBwSXC/0R1JWr5XXCiUcT4w7lktIjgZx5xRN9d9yK56hcm4hTkAR3sZe+CSsjllvDUhhrb1iVTzb677/0aDMOny8VrOSeBoL4PKeh36v/0VdCchScU6Kut1qN0BcSMNbQs6QGVXPfJ9lAoHYL/RHUZTmbsI7llNqty+Sx+l3XqbXfVMZZBqTkJvsGqNFGqNFNLHj4bS0qKrsl43t9OxZix3iaKVQXchqYW1RAaCzK56I3rX5rX2OLEGgCJq6QOsyU0C4X735rovAvD3Pfb1GjWRT3+SnSAXshaQXB+B87r71hyR+JO4AHAyDcB+owtAaM0itdDhngJ943HOkKQIABBLACydIF6Nlb2BDgXBvYf7DknICTUpToRENQDUGd0SBVaPUXmqJpRGH4DWNcZaWHJJ8OeTJfNZg5OBJSdwhlbW6yPf9+fiqhO1t+jLszR39e9GAQcAO0HKm1pE+NC1sNVyiL8PaT4uImKuw5IAuM/7HpAiSyq741QUzhGhI6Gi4ODobxGAuzj+7lYSTWIWr0klexIXLYU+wZ3YCoCqyxYPW7K3m1e4HOKvhX+PcyH0X07YqMPB0yKAVjuDX09/CEpYlLfcTfsNmCV/uPNSsENyU+HsUNm4k0BJAFRz5RvuvmqSMQFo8t2nP7+0XvTlWZpTSbAAoAkAb4hXRfdU/gjVdYjcuLkl+SXBAIB4faOXLknPfvRQfxcAKGsH3ScEA6BGU/ai5kF8RpKTuF4T1OQpJczolx+X81IA/EFIZcSTggdNo2lbc7juRh2y1z0yYaI0/gGmemtQBIMObAAAAABJRU5ErkJggg==
   hidden
   desc:Magic building</>Does <b>3,666,666,666</b> base damage.</><i>Defiles the wall with the darkest magic of all.</i>
   name:Demon|Demons
@@ -4407,6 +4564,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *compromiser
+  // Building image: https://i.imgur.com/QRg0cK4.png
+  icon:data:image/png;base64,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
   hidden
   desc:Dream building</>Does <b>40,000,000,000</b> base damage.</>Gives <b>0.1</b> fourth wall bricks.</><i>Enters reality code and removes the wall from existence.</i>
   name:Reality Compromiser|Reality Compromisers
@@ -4431,6 +4590,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *lastBuilding
+  // Building image: https://i.imgur.com/mSWDezW.png
+  icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAA3CAYAAABTjCeZAAAAB3RJTUUH3ggSAAYtPQX42QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAC/klEQVRo3tWaS5IkIQhANcNTdO+s+x8pc9d1DWYxZYTjAALip43ITX1MeYL8jDnnn/AZ931/xxghMAMAYhCO1+v1Q3133/d3OGQkz0VxQlO/PQFGGhH2eZ4v6X9yzu9TYagh9MyFGgUYB2MXiKvdEY3Nj8DAPo8xQvsshVB2ecWLWxCcWa1Yz1UWobHvmRqxCwTsej7uGf0cAP5bGwCEGU/8vOCYUR+c5aCsNQE7s0Y9TAoHj/awxszCw8UepQmU++yNUdd6nbTzu+KEYzShtXVJCO4FbQgCpb4Wd2sJ0mKM4BHcXavt1wtA+Z9HgOfuHTyCrtUp+JA5lB2sF62FUGuBNBVvQRRNsGrU9oMRAKKmDoGB6AVTwxByzu9ZeQUHAFP79rfSiNIMoT34vEFoAXD1h/Zg1IJAIXAnvwcMan7NoVeHy1MgSBYuKcr25uoBlQqzDAKV4c3O/SUCLYXQwsBAzCiA9ITaAmFmyExB5AQbhZCkQkqFs7jUOtjhagezRrLkBJ55A7WjJS/oJUsesK5aMImKr4I0QxOouCRJbVsr2MxI0wKKC82Tx84vqwAJhLYUYpM3ACqU3THq3eei0Vi35j3MYEaeMeK2JaG42Dt4ClYnT17zjphtDH87Pu/VO4oVZKzvtWrAP+vZ+fRaZEHQyhttw22HIIERlP1ILZhjmi87vclRHSgPEJZ65VEQMBBeUeGvguAxtJ5hamsec10S90dljFSdwKoBLpUlTjBJ8MIBweoKXF5g1QK1Jlh3tjefdI6iIdKdl3amklV4b7NpQVCCSvqU2OHKgbh6i7MAoMJYTlWl75Hcg1Sbw6p6QekYFRAjh9nzPF9aU5rmIqkFUDsuze+lWa3kYDV7hxHVbMvnWOcKA9OrY0h3HCvfd/sWWhfZ6xFg3/c6V+08ll4oV4nuQVCbg+Xytefd5dKbaJ+Red0vabQLsgg5GghZ7itMqwtQd5etBRZtAWZ5PYFSS8khS/3XugbtfC7mIInprXH9ipFWCH8ygBBC+ANMC2avKO3vqQAAAABJRU5ErkJggg==
   hidden
   desc:Dream building</>Does <b>1,000,000,000,000,000</b> base damage.</><i>Robots covered in The Black. They're really cool, so no one questions mixing the most dangerous & evil thing ever with cold, unfeeling robots.</i>
   name:Black Obliterator|Black Obliterators
@@ -4453,6 +4614,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *singularityBuilding
+  // Building image: https://i.imgur.com/f617iwl.png
+  icon:data:image/png;base64,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
   hidden
   desc:Purifier building</>Does <b>11 quintillion</b> base damage.</>Gives <b>1</b> base Space Bricks/<b>20</b> days.</><i>Nothing will be left after this one. Nothing.</i>
   name:Singularity|Singularities
@@ -4476,6 +4639,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *edgeBeing
+  // Building image: https://i.imgur.com/ziKtmX1.png
+  icon:data:image/png;base64,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
   hidden
   desc:Purifier building</>Does <b>1.2 sextillion</b> base damage.</><i>Gives <b>1</b> base Time Bricks/<b>50</b> days.</>Sentient beings of the energy of all realities, living on the edge of the reality.</i>
   name:Edge Being|Edge Beings
@@ -4499,6 +4664,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *strangeGlitch
+  // Building image: https://i.imgur.com/Gtg8P7F.png
+  icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAB3RJTUUH3gYeFSktwBKg9gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABB0lEQVRYw2NMmtbPMPgACwMDg7iq4qBy08vb91ngrEHiJkgYscD5T69dH3A3SWtpIiIRDs5s2zOAbjLxcoGzmRgGJRh11jBwFgtVTPEvyUXmbuyZPMDOQnMQmiDZ7mOixEFY3UTQ0TR0FvH2kecyJpq6iX5pC5eb4MmIKo6mQk6kPN9Rv9yihZvICS0auYPepTx53qCys6iVSZkGYVBR2VlULM9YaOcgSjIHC41CiMIMyzSokhQNnUWVgm2QlvLDty2PFmBUKSZGez6jzhrc/USqlxcsg8o1o5390ZxI8/bgyCggqJUrRwuIUWeN5KoaeR5hsDgLPt8yiJw12ObuWBgG06wdHAAAo81KEzRiURMAAAAASUVORK5CYII=
   hidden
   desc:Strange building</>Deals <b>50 septillion</b> base damage.</><i>For some reason, you find the manipulative property of an oversight to be well worth exploiting. Let's hope this doesn't bite us.</i>
   name:glitch|glitch
@@ -4521,6 +4688,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *dreammachine
+  // Building image: https://i.imgur.com/c6wbTjb.png
+  icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEaklEQVRoBd2aW2sTQRTHT2q91EvTmGjUqmiJYgsalAr6UItSCwqCCgo++KAvfoF+DME3wScffBTUJ8ELiCgqWJDU1ohWW+s1TWKaar1QtfI/2xNmNxtsds9q48Bmd2ZnZ/6/PXNmz2w2dPLsmSn6D1I9GOIb1tc0Sub5EDEIKJCpxSRGKIEA4u2TdE2xNLe1lvTaQFDae/Vm6eRsPmjf32WTV2fL1XDmvwEpG1paRomMT1I8HLM1lynmqNA411amlQkEBBDHD1hjOJMdY60fcmMUX9ZEfYODgcCog5gQ8VjE5YYnAoFRBdkUClNyxzoW7w5BtCLWRJlsjEh5mKk6O3wACRAYRn8zqYKYwsU3zLIgj1WHlgjN5Ap8CMuYQHD4oJIqSHM8yjpN8SJcINzOSR0/e9WhtWp5lK4/6CVTNI4ln/9kWcqP4ErXqlrk4eNndLBrJ125eZ+IErY+LUuESCYE20mFjBoInh+AeJvJGzDlCjH8fnyzgHCN1pNeDQSSE2tW84apF0BIsJKZpNws0zhWBRl8/YZBIOzovk7bjIUyJ5QGgLSh5uwYIvcfPqe+tLXSlNkpsqiRsCHJrCadaw0rtKdqEThyyrHIXLjYinYHhvLsG4iIg3B4VRC+wy4wlgVCYgjea1pD3SJoUGDMYeR0cG0I9KvmI3ybjZ/tmzcSHpBIJpRRRfUwMBBMxZ3tSYouibBvqKp2aSwwkJoP4/G07jlxhO8ZomAspJxQqKOdArOIttA/tacKUs2drqbunyBwXg2kkrDCxDjrcJu5Kl0zE+HOOiogEGQKNX1CwhN0bNYRIVowvkAgAhuc+9j+PaUXchcu3eKAUV5CJFutNysi3rmXdpzl1eQ9hyhyJ7ckEhwo7t21lWen+gVThJUgYMQyM10Zok2vT31PIALRvaO9dNMQ7XZ3bCVMuan0MOWpwEBSwQxT5FWqW/DoFcYTCMRhNRie10DvP44THPr6nUf8zNjSup66OyIMJBDYf/o6UVpsjYx8NE+x7wDUT2TsGeTL50kKL22glUsbCaE6hPBLhvQQ502lYg0TANaAcAw/GXoYllQ0r5z5sWeQ5Ma1dONuiuYumsMxFWIrrBCRRLgp491onuoXEAeS37/+YoD5DXUEuEwxz1ZBXOZ2rdlOpWPPINfu9VFLy3IafjlKt3tT1Da9Xs9irT79fsuEkkgYZQBAsiAsy0SX+HvF6gkEMwv+HkAc1dW5jQb6X9CjZyNU9/QVC4SVkCYnfvJeft7nrXFjOrkML9Tx85eDJxARhtkJW8+pQ9Tf/4KevH7D4gUAwk3Rcp3MWjI9C4Sc97L3DCIrQXR6+txlOn54N7UR0Wh2jAAgd19Em+LYqY0CWALJ6zME13oGsXVczNHp8xdZDH5M8W4WkZlJHNsPgHTqC0QaKRMy/T+JnHfuy+o7K3jIq4A4+w1CqLMPZ95X0Ohs7F/myyzi/KLgX4qrpm8biPltRzWNzIa6JRD5ymY2iPKigUFq9RMnE/g3fTq3t6hSFQAAAAAASUVORK5CYII=
   hidden
   desc:Fanatical building</>Deals <b>6.75 nonillion</b> base damage.</>Mines 0.001 base dreamy coins.</><i>Manipulates minds in dreams to mine Dreamy Coins. Oh, and unleashes the wrath of the unrealistic fantasy.</i>
   name:Dream Machine|Dream Machines
@@ -4543,6 +4712,8 @@ Buildings
 
   text:<b>[n:this]</b><b>[this]</b>
 *brickFactory
+  // Building image: https://i.imgur.com/tjOxaGs.png
+  icon:data:image/png;base64,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
   hidden
   desc:Special building</>Creates <b>0.05</b> base bricks.</><i>Creates artificial bricks with dark magic. The wizards will never know.</i>
   name:Brick Factory|Brick Factories
